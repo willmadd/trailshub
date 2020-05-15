@@ -11,7 +11,7 @@
         <!-- Styles -->
         <link rel="stylesheet" href="/css/app.css" media="all">
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADQ6jdzvTJFPsgPy36aj67-GVYnvNDVrs&libraries=places"></script>
-            <title>The Trail Map</title>
+            <title>The Trail Map | The UK's Best Mountain Biking Trails</title>
      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
    crossorigin=""/>

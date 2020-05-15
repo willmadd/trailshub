@@ -1,0 +1,101 @@
+.search-wrapper {
+  background-color: $blue;
+  width: 100%;
+  height: 544px;
+  background-image: url(/images/mountain-bikes.jpg);
+  background-position: center;
+  position: relative;
+  background-size: cover;
+  // transform:scaleY(-1);
+  &.secondary{
+    height:0;
+    transition: 1s;
+  }
+}
+.searchModal {
+  width: 480px;
+  height: 480px;
+  position: absolute;
+  background-color: $shade;
+  right: 32px;
+  top: 32px;
+  border-radius: 3px;
+  // opacity: 0.9;
+  border: 1px solid $accent;
+  z-index: 450;
+  &.secondary{
+    transition: 1s;
+        width: 20%;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top:0;
+    height: 100vh;
+  }
+  h2 {
+    color: $white;
+    padding: 24px;
+    text-align: left;
+  }
+}
+.searchBar{
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: auto 63px;
+}
+.submit-location{
+  height:69px;
+  border: 1px solid $accent;
+  border-left-width:0;
+  background-color: $primary;
+  border-radius: 0 5px 5px 0;
+  background-image: url(/images/find.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 36px;
+}
+.geosuggest__input{
+      width: 100%;
+    padding: 24px 0  24px 24px;
+    box-sizing: border-box;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid $accent;
+    border-right-color:$shade;
+        font-family: orkneybold;
+    font-size: 16px;
+}
+.geosuggest__input-wrapper{
+  padding:0;
+  border:0;
+}
+
+.geosuggest__suggests{
+  list-style: none;
+  padding:0;
+  margin:0;
+  text-align: left;
+  border: 1px solid $accent;
+  border-top-width: 0;
+  border-bottom-width:0;
+  background-color: $white;;
+  li{
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: 24px auto;
+    grid-gap: 12px;;
+    padding:12px;
+    border-bottom: 1px solid $shade;
+
+    &::before{
+      content:"";
+      display: block;
+      height:24px;
+      width:24px;
+      align-self: center;
+      background-image: url(/images/search-location-marker.svg);
+    }
+    &:hover{
+      background-color: $shade;
+    }
+  }
+}

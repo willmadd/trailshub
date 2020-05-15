@@ -1,0 +1,30 @@
+header{
+    font-family: 'orkneybold';
+    width:100%;
+    background-color: $accent;
+    padding:16px 32px;
+    color: $white;
+    text-align: left;
+    // display: none;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    letter-spacing: 1px;
+    button.signin{
+        background-color: $primary;
+        border:$shade;
+        border-radius:4px;
+        padding: 12px 48px;
+        font-family: orkneybold;
+        color:white;
+        text-transform: uppercase;
+        font-size:14px;
+        letter-spacing: 1px;
+        cursor: pointer;
+    }
+}
+
+.header-logo{
+    width:200px;
+}

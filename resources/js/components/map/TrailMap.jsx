@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import axios from 'axios'
 import {
   Map,
   TileLayer,
@@ -36,7 +37,7 @@ class TrailMap extends Component {
     });
   };
 
-  searchQuery = async () => {
+  // searchQuery = async () => {
     // const provider = new OpenStreetMapProvider();
     //   const provider = new EsriProvider();
     //   // search
@@ -44,14 +45,20 @@ class TrailMap extends Component {
     //     query: "Lake District National Park, United Kingdom",
     //   });
     //   console.log(results);
-  };
+  // };
 
   componentDidMount() {
-    this.searchQuery();
-    let jsonRoute = convertGpxToJson(routeNidderdale);
-    this.setState({
-      route: jsonRoute,
-    });
+    console.log('finding trails');
+  axios.get("/api/trails")
+  .then(res=>{
+    console.log('result!');
+    console.log(res);
+  });
+    // this.searchQuery();
+    // let jsonRoute = convertGpxToJson(routeNidderdale);
+    // this.setState({
+    //   route: jsonRoute,
+    // });
   }
 
 componentDidUpdate=(prevProps, prevState)=>{
@@ -66,7 +73,7 @@ componentDidUpdate=(prevProps, prevState)=>{
     let { initialLayout, center } = this.props;
     const position = [this.state.lat, this.state.lng];
     const route = this.state.route;
-
+console.log('map render');
     return (
       <Map
         className={`mapid ${initialLayout ? "initial" : "secondary"}`}

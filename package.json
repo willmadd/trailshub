@@ -17,7 +17,7 @@
         "cross-env": "^5.1",
         "jquery": "^3.2",
         "laravel-mix": "^4.0.7",
-        "lodash": "^4.17.13",
+        "lodash": "^4.17.20",
         "popper.js": "^1.12",
         "react": "^16.2.0",
         "react-dom": "^16.2.0",
@@ -30,9 +30,14 @@
         "@mapbox/togeojson": "^0.16.0",
         "date-fns": "^2.13.0",
         "haversine": "^1.1.1",
+        "history": "^5.0.0",
         "leaflet": "^1.6.0",
         "leaflet-geosearch": "^2.7.0",
         "react-geosuggest": "^2.13.0",
-        "react-leaflet": "^2.7.0"
+        "react-leaflet": "^2.7.0",
+        "react-redux": "^7.2.1",
+        "react-router-dom": "^5.2.0",
+        "redux": "^4.0.5",
+        "redux-thunk": "^2.3.0"
     }
 }

@@ -1,18 +1,32 @@
-import React, { Component } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 import '../../sass/app.scss'
-import Main from "./Main";
+import App from "./App";
+import thunk from "redux-thunk";
+import { Provider } from "react-redux";
+import { createStore, applyMiddleware, compose } from "redux";
+import { rootReducer } from "../redux/reducers";
+import { BrowserRouter as Router } from "react-router-dom";
 
-export default class TheTrailMap extends Component {
-    render() {
-        return (
-            <div className="App">
-                <Main />
-            </div>
-        );
-    }
-}
+const store = createStore(
+    rootReducer,
+    compose(
+        applyMiddleware(thunk),
+        window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+    )
+    
+);
 
 if (document.getElementById("thetrailmap")) {
-    ReactDOM.render(<TheTrailMap />, document.getElementById("thetrailmap"));
+    ReactDOM.render(
+        <React.StrictMode>
+            <Provider store={store}>
+                <Router>
+                    <App />
+                </Router>
+            </Provider>
+        </React.StrictMode>,
+        document.getElementById("thetrailmap")
+    );
 }
+

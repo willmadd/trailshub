@@ -1,6 +1,6 @@
-import Header from "./Header";
+import Header from "./header";
 import React, { Component } from "react";
-import LocationSearch from "./search/LocationSearch";
+import LocationSearch from "./locationSeach";
 import TrailMap from "./map/TrailMap";
 
 class Main extends Component {

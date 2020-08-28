@@ -89,8 +89,7 @@ console.log('map render');
             `https://api.mapbox.com/styles/v1/willmadd/${style_id}/tiles/{z}/{x}/{y}?access_token=` +
             access_token
           }
-          // url={`https://api.mapbox.com/styles/v1/mapbox/${style_id}/tiles/{z}/{x}/{y}?access_token=${access_token}`}
-          // url={`https://api.mapbox.com/styles/v1/${username}/${style_id}/tiles/256/{z}/{x}/{y}@2x?access_token=${access_token}`}
+
         />
         {/* {route && <GeoJSON positions={route.route} />} */}
         {/* <GeoJSON data={route.route} /> */}
@@ -101,11 +100,8 @@ console.log('map render');
             </div>
           )}
         </div>
-        <Marker position={position}>
-          <Popup>
-            A pretty CSS3 popup. <br /> Easily customizable.
-          </Popup>
-        </Marker>
+        <Marker position={position}/>
+
         {/* <GeoJSON mouseOver={this.highlightFeature} data={data} onClick={this.props.city} /> */}
       </Map>
     );

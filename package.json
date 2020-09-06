@@ -28,6 +28,7 @@
     "dependencies": {
         "@babel/plugin-proposal-class-properties": "^7.8.3",
         "@mapbox/togeojson": "^0.16.0",
+        "breakpoint-sass": "^2.7.1",
         "date-fns": "^2.13.0",
         "haversine": "^1.1.1",
         "history": "^5.0.0",

@@ -1,0 +1,6 @@
+.mob-hide {
+    display: none;
+    @include breakpoint($desktop){
+        display: unset;
+    }
+}

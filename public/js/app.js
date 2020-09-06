@@ -92269,12 +92269,27 @@ __webpack_require__.r(__webpack_exports__);
 
 var SearchBar = function SearchBar(_ref) {
   var submitLocation = _ref.submitLocation;
+  var searchSuggest = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])();
+
+  var animate = function animate(e) {
+    requestAnimationFrame(function () {
+      searchSuggest.current.transform = "translateX(40px)";
+      searchSuggest.current.transition = "transform 2s";
+    });
+  };
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {});
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "searchBar"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_geosuggest__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    onSuggestSelect: submitLocation
+    ref: searchSuggest,
+    onUpdateSuggests: function onUpdateSuggests(e) {
+      return animate(e);
+    },
+    onSuggestSelect: submitLocation,
+    placeholder: 'Find Mountain Bike Trails in Your Area'
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "submit-location"
+    className: "submit-location mob-hide"
   }));
 };
 
@@ -92302,7 +92317,9 @@ var SearchModal = function SearchModal(_ref) {
   var submitLocation = _ref.submitLocation;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "searchModal"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Search for Mountain Bike Trails in Your Area"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SearchBar__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    className: "mob-hide"
+  }, "Search for Mountain Bike Trails in Your Area"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SearchBar__WEBPACK_IMPORTED_MODULE_1__["default"], {
     submitLocation: submitLocation
   }));
 };
@@ -92567,8 +92584,8 @@ var trailsReducer = function trailsReducer() {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/williammaddicott/Desktop/thetrailmap/trailshub/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/williammaddicott/Desktop/thetrailmap/trailshub/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/william/Desktop/trailshub/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/william/Desktop/trailshub/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

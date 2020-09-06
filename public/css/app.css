@@ -10961,6 +10961,16 @@ a {
   text-decoration: none;
 }
 
+.mob-hide {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .mob-hide {
+    display: unset;
+  }
+}
+
 header {
   font-family: "orkneybold";
   width: 100%;
@@ -10993,52 +11003,59 @@ header button.signin {
 }
 
 .search-wrapper {
-  background-color: #58A4B0;
   width: 100%;
-  height: 544px;
-  background-image: url(/images/mountain-bikes.jpg);
   background-position: center;
-  position: relative;
   background-size: cover;
+  padding: 0;
 }
 
-.search-wrapper.secondary {
-  height: 0;
-  transition: 1s;
+@media (min-width: 1024px) {
+  .search-wrapper {
+    position: absolute;
+    height: 544px;
+  }
 }
 
 .searchModal {
-  width: 480px;
-  height: 480px;
-  position: absolute;
+  width: 100%;
+  height: 100%;
   background-color: #bac1b8;
   right: 32px;
   top: 32px;
-  border-radius: 3px;
   border: 1px solid #2B303A;
   z-index: 450;
 }
 
-.searchModal.secondary {
-  transition: 1s;
-  width: 20%;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-  top: 0;
-  height: 100vh;
+@media (min-width: 1024px) {
+  .searchModal {
+    border-radius: 3px;
+    width: 480px;
+    height: 480px;
+    position: absolute;
+  }
 }
 
 .searchModal h2 {
-  color: #fff;
   padding: 24px;
   text-align: left;
+  text-transform: uppercase;
+  font-size: 10px;
+  text-align: center;
+  font-weight: 600;
 }
 
-.searchBar {
-  padding: 0 24px;
-  display: grid;
-  grid-template-columns: auto 63px;
+@media (min-width: 768px) {
+  .searchModal h2 {
+    font-size: 36px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .searchBar {
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: auto 63px;
+  }
 }
 
 .submit-location {
@@ -11046,22 +11063,33 @@ header button.signin {
   border: 1px solid #2B303A;
   border-left-width: 0;
   background-color: #d64933;
-  border-radius: 0 5px 5px 0;
   background-image: url(/images/find.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 36px;
 }
 
+@media (min-width: 1024px) {
+  .submit-location {
+    border-radius: 0 5px 5px 0;
+  }
+}
+
 .geosuggest__input {
   width: 100%;
   padding: 24px 0 24px 24px;
   box-sizing: border-box;
-  border-radius: 5px 0 0 5px;
   border: 1px solid #2B303A;
-  border-right-color: #bac1b8;
+  border-width: 1px 0 0 0;
   font-family: orkneybold;
   font-size: 16px;
+}
+
+@media (min-width: 1024px) {
+  .geosuggest__input {
+    border-right-color: #bac1b8;
+    border-radius: 5px 0 0 5px;
+  }
 }
 
 .geosuggest__input-wrapper {
@@ -11074,9 +11102,8 @@ header button.signin {
   padding: 0;
   margin: 0;
   text-align: left;
-  border: 1px solid #2B303A;
-  border-top-width: 0;
-  border-bottom-width: 0;
+  border: 0 solid #2B303A;
+  border-top-width: 1px;
   background-color: #fff;
 }
 

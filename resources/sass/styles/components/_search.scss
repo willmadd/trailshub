@@ -13,27 +13,32 @@
 .searchModal {
   width: 100%;
   height:100%;
-  background-color: $shade;
   right: 32px;
-  top: 32px;
-  border: 1px solid $accent;
+  top: 0px;
   z-index: 450;
   @include breakpoint ($desktop) {
-    border-radius: 3px;
-    width: 480px;
-    height: 480px;
     position: absolute;
-
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 50%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    padding-top:16px;
   }
   h2 {
     padding: 24px;
-    text-align: left;
     text-transform: uppercase;
     font-size: 10px;
     text-align: center;
     font-weight: 600;
     @include breakpoint($tablet){
-      font-size: 36px;
+      padding:0;
+      width:100%;
+      font-size: 18px;
+      color: $white;
+      margin-bottom:16px;
     }
   }
 }
@@ -45,7 +50,7 @@
   }
 }
 .submit-location{
-  height:69px;
+  height:64px;
   border: 1px solid $accent;
   border-left-width:0;
   background-color: $primary;
@@ -59,7 +64,7 @@
 }
 .geosuggest__input{
       width: 100%;
-    padding: 24px 0  24px 24px;
+    padding: 18px 0  18px 24px;
     box-sizing: border-box;
     border: 1px solid $accent;
     border-width: 1px 0 0 0;

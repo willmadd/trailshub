@@ -10954,6 +10954,7 @@ h4,
 h5,
 h6 {
   margin: 0;
+  font-family: "Hind Madurai", sans-serif;
 }
 
 a {
@@ -11019,25 +11020,27 @@ header button.signin {
 .searchModal {
   width: 100%;
   height: 100%;
-  background-color: #bac1b8;
   right: 32px;
-  top: 32px;
-  border: 1px solid #2B303A;
+  top: 0px;
   z-index: 450;
 }
 
 @media (min-width: 1024px) {
   .searchModal {
-    border-radius: 3px;
-    width: 480px;
-    height: 480px;
     position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 50%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 16px;
   }
 }
 
 .searchModal h2 {
   padding: 24px;
-  text-align: left;
   text-transform: uppercase;
   font-size: 10px;
   text-align: center;
@@ -11046,7 +11049,11 @@ header button.signin {
 
 @media (min-width: 768px) {
   .searchModal h2 {
-    font-size: 36px;
+    padding: 0;
+    width: 100%;
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 16px;
   }
 }
 
@@ -11059,7 +11066,7 @@ header button.signin {
 }
 
 .submit-location {
-  height: 69px;
+  height: 64px;
   border: 1px solid #2B303A;
   border-left-width: 0;
   background-color: #d64933;
@@ -11077,7 +11084,7 @@ header button.signin {
 
 .geosuggest__input {
   width: 100%;
-  padding: 24px 0 24px 24px;
+  padding: 18px 0 18px 24px;
   box-sizing: border-box;
   border: 1px solid #2B303A;
   border-width: 1px 0 0 0;
@@ -11144,3 +11151,26 @@ header button.signin {
   position: relative;
 }
 
+var map = {
+	"./en_GB.json": "./resources/js/translations/locales/en_GB.json"
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "./resources/js/translations/locales sync recursive ^\\.\\/.*\\.json$";

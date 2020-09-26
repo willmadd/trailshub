@@ -92521,7 +92521,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../constants */ "./resources/js/constants/index.js");
-/* harmony import */ var react_leaflet__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-leaflet */ "./node_modules/react-leaflet/es/index.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var react_leaflet__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-leaflet */ "./node_modules/react-leaflet/es/index.js");
+
 
 
 
@@ -92545,17 +92547,30 @@ var MapWrapper = function MapWrapper(_ref) {
       setMatZoom = _useState4[1];
 
   var position = [mapViewport.lat, mapViewport.lng];
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_leaflet__WEBPACK_IMPORTED_MODULE_3__["Map"], {
-    className: "mapid initial}",
+  var routesOverview = Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["useSelector"])(function (state) {
+    return state.trailsReducer;
+  });
+
+  var fetchRoute = function fetchRoute() {
+    console.log('hello');
+  };
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_leaflet__WEBPACK_IMPORTED_MODULE_4__["Map"], {
+    className: "mapid",
     center: mapCenter,
     zoom: mapZoom,
     scrollWheelZoom: false,
-    bounds: bounds,
-    key: 1
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_leaflet__WEBPACK_IMPORTED_MODULE_3__["TileLayer"], {
-    attribution: "&copy <a href=\"http://osm.org/copyright\">OpenStreetMap</a> contributors",
-    url: "https://api.mapbox.com/styles/v1/willmadd/".concat(_constants__WEBPACK_IMPORTED_MODULE_2__["style_id"], "/tiles/{z}/{x}/{y}?access_token=") + _constants__WEBPACK_IMPORTED_MODULE_2__["access_token"]
-  }));
+    bounds: bounds
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_leaflet__WEBPACK_IMPORTED_MODULE_4__["TileLayer"], {
+    attribution: _constants__WEBPACK_IMPORTED_MODULE_2__["mapAttribution"],
+    url: _constants__WEBPACK_IMPORTED_MODULE_2__["tileLayerUrl"]
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "route-overview"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_leaflet__WEBPACK_IMPORTED_MODULE_4__["Polyline"], {
+    positions: routesOverview,
+    onClick: fetchRoute,
+    doubleClickZoom: true
+  })));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (MapWrapper);
@@ -92609,15 +92624,10 @@ var index = function index() {
 /*!*****************************************!*\
   !*** ./resources/js/constants/index.js ***!
   \*****************************************/
-/*! exports provided: style_id, access_token */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! exports provided: tileLayerUrl */
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "style_id", function() { return style_id; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "access_token", function() { return access_token; });
-var style_id = "cka5ncmgs19io1io3qn27wejb";
-var access_token = "pk.eyJ1Ijoid2lsbG1hZGQiLCJhIjoiY2thNW43amlvMDFteDNtcGEyMWpxeWwzcCJ9.wfx7i_G1rWq3roofKl7XhQ";
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /Users/william/Desktop/trailshub/resources/js/constants/index.js: Unexpected token (6:30)\n\n\u001b[0m \u001b[90m 4 | \u001b[39m\u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m tileLayerUrl \u001b[33m=\u001b[39m \u001b[32m`https://api.mapbox.com/styles/v1/willmadd/${style_id}/tiles/{z}/{x}/{y}?access_token=${access_token}`\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 5 | \u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 | \u001b[39m\u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m mapAttribution \u001b[33m=\u001b[39m \u001b[0m\n\u001b[0m \u001b[90m   | \u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n    at Object._raise (/Users/william/Desktop/trailshub/node_modules/@babel/parser/lib/index.js:742:17)\n    at Object.raiseWithData (/Users/william/Desktop/trailshub/node_modules/@babel/parser/lib/index.js:735:17)\n    at Object.raise (/Users/william/Desktop/trailshub/node_modules/@babel/parser/lib/index.js:729:17)\n    at Object.unexpected (/Users/william/Desktop/trailshub/node_modules/@babel/parser/lib/index.js:8779:16)\n    at Object.parseExprAtom (/Users/william/Desktop/trailshub/node_modules/@babel/parser/lib/index.js:10074:20)\n    at Object.parseExprAtom (/Users/william/Desktop/trailshub/node_modules/@babel/parser/lib/index.js:4626:20)\n    at Object.parseExprSubscripts (/Users/william/Desktop/trailshub/node_modules/@babel/parser/lib/index.js:9624:23)\n    at Object.parseMaybeUnary (/Users/william/Desktop/trailshub/node_modules/@babel/parser/lib/index.js:9604:21)\n    at Object.parseExprOps (/Users/william/Desktop/trailshub/node_modules/@babel/parser/lib/index.js:9474:23)\n    at Object.parseMaybeConditional (/Users/william/Desktop/trailshub/node_modules/@babel/parser/lib/index.js:9447:23)\n    at Object.parseMaybeAssign (/Users/william/Desktop/trailshub/node_modules/@babel/parser/lib/index.js:9402:21)\n    at Object.parseVar (/Users/william/Desktop/trailshub/node_modules/@babel/parser/lib/index.js:11763:26)\n    at Object.parseVarStatement (/Users/william/Desktop/trailshub/node_modules/@babel/parser/lib/index.js:11572:10)\n    at Object.parseStatementContent (/Users/william/Desktop/trailshub/node_modules/@babel/parser/lib/index.js:11171:21)\n    at Object.parseStatement (/Users/william/Desktop/trailshub/node_modules/@babel/parser/lib/index.js:11104:17)\n    at Object.parseExportDeclaration (/Users/william/Desktop/trailshub/node_modules/@babel/parser/lib/index.js:12313:17)\n    at Object.maybeParseExportDeclaration (/Users/william/Desktop/trailshub/node_modules/@babel/parser/lib/index.js:12269:31)\n    at Object.parseExport (/Users/william/Desktop/trailshub/node_modules/@babel/parser/lib/index.js:12199:29)\n    at Object.parseStatementContent (/Users/william/Desktop/trailshub/node_modules/@babel/parser/lib/index.js:11208:27)\n    at Object.parseStatement (/Users/william/Desktop/trailshub/node_modules/@babel/parser/lib/index.js:11104:17)\n    at Object.parseBlockOrModuleBlockBody (/Users/william/Desktop/trailshub/node_modules/@babel/parser/lib/index.js:11679:25)\n    at Object.parseBlockBody (/Users/william/Desktop/trailshub/node_modules/@babel/parser/lib/index.js:11665:10)\n    at Object.parseTopLevel (/Users/william/Desktop/trailshub/node_modules/@babel/parser/lib/index.js:11035:10)\n    at Object.parse (/Users/william/Desktop/trailshub/node_modules/@babel/parser/lib/index.js:12671:10)\n    at parse (/Users/william/Desktop/trailshub/node_modules/@babel/parser/lib/index.js:12722:38)\n    at parser (/Users/william/Desktop/trailshub/node_modules/@babel/core/lib/parser/index.js:54:34)\n    at parser.next (<anonymous>)\n    at normalizeFile (/Users/william/Desktop/trailshub/node_modules/@babel/core/lib/transformation/normalize-file.js:93:38)\n    at normalizeFile.next (<anonymous>)\n    at run (/Users/william/Desktop/trailshub/node_modules/@babel/core/lib/transformation/index.js:31:50)\n    at run.next (<anonymous>)\n    at Function.transform (/Users/william/Desktop/trailshub/node_modules/@babel/core/lib/transform.js:27:41)\n    at transform.next (<anonymous>)\n    at step (/Users/william/Desktop/trailshub/node_modules/gensync/index.js:254:32)\n    at /Users/william/Desktop/trailshub/node_modules/gensync/index.js:266:13\n    at async.call.result.err.err (/Users/william/Desktop/trailshub/node_modules/gensync/index.js:216:11)");
 
 /***/ }),
 
@@ -92837,8 +92847,8 @@ var routes = [{
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/williammaddicott/Desktop/projects/trailshub/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/williammaddicott/Desktop/projects/trailshub/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/william/Desktop/trailshub/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/william/Desktop/trailshub/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

@@ -19,11 +19,6 @@ const App = () => {
         <div className="Trails-Hub-App">
             <Header />
             <Switch>
-                {/* <Route
-                    exact
-                    path="/"
-                    render={routerProps => <Map {...routerProps} />}
-                /> */}
                 {routes.map(
                     (route, index) => <RouteFromArray key={index} {...route}/>
                 )}

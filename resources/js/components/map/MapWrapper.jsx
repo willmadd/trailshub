@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import { style_id, access_token } from '../../constants';
+import { tileLayerUrl, mapAttribution } from '../../constants';
+import {useSelector, useDispatch} from 'react-redux';
 import {
     Map,
     TileLayer,
@@ -11,40 +12,34 @@ import {
 } from "react-leaflet";
 
 const MapWrapper = ({ mapCenter, bounds }) => {
-    const [mapViewport, setMapViewport] = useState({ lat: 51.505, lng: -0.09 });
 
-    const [mapZoom, setMatZoom] = useState(5);
+    let [mapViewport, setMapViewport] = useState({ lat: 51.505, lng: -0.09 });
+
+    let [mapZoom, setMatZoom] = useState(5);
 
     const position = [mapViewport.lat, mapViewport.lng];
 
+    const routesOverview = useSelector(state=>state.trailsReducer);
+
+    const fetchRoute = () => {
+        console.log('hello');
+    }
+
     return (
         <Map
-            className={`mapid initial}`}
+            className={`mapid`}
             center={mapCenter}
             zoom={mapZoom}
             scrollWheelZoom={false}
-            bounds={bounds}
-            key={1}
-        >
-            <TileLayer
-                attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                url={
-                    `https://api.mapbox.com/styles/v1/willmadd/${style_id}/tiles/{z}/{x}/{y}?access_token=` +
-                    access_token
-                }
-            />
-            {/* {route && <GeoJSON positions={route.route} />} */}
-            {/* <GeoJSON data={route.route} /> */}
-            {/* <div className="hel">
-                {route && (
-                    <div className="polygon">
-                        <Polyline positions={route.route} />
-                    </div>
-                )}
-            </div> */}
-            {/* <Marker position={position} /> */}
+            bounds={bounds}>
 
-            {/* <GeoJSON mouseOver={this.highlightFeature} data={data} onClick={this.props.city} /> */}
+            <TileLayer
+                attribution={mapAttribution}
+                url={tileLayerUrl}
+            />
+            <div className="route-overview">
+                <Polyline positions={routesOverview} onClick={fetchRoute} doubleClickZoom={true}/>
+            </div>
         </Map>
     );
 };

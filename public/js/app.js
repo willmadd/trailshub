@@ -92253,7 +92253,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _redux_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../redux/actions */ "./resources/js/redux/actions/index.js");
+/* harmony import */ var _store_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../store/actions */ "./resources/js/store/actions/index.js");
 /* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../routes */ "./resources/js/routes/index.js");
 /* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./header */ "./resources/js/components/header/index.jsx");
 /* harmony import */ var _map__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./map */ "./resources/js/components/map/index.jsx");
@@ -92271,7 +92271,7 @@ __webpack_require__.r(__webpack_exports__);
 var App = function App() {
   var dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["useDispatch"])();
   Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
-    dispatch(Object(_redux_actions__WEBPACK_IMPORTED_MODULE_4__["getTrailsOverview"])());
+    dispatch(Object(_store_actions__WEBPACK_IMPORTED_MODULE_4__["getTrailsOverview"])());
   }, []);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "Trails-Hub-App"
@@ -92541,7 +92541,7 @@ var MapWrapper = function MapWrapper(_ref) {
       mapViewport = _useState2[0],
       setMapViewport = _useState2[1];
 
-  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(5),
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(10),
       _useState4 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_useState3, 2),
       mapZoom = _useState4[0],
       setMatZoom = _useState4[1];
@@ -92555,21 +92555,32 @@ var MapWrapper = function MapWrapper(_ref) {
     console.log('hello');
   };
 
+  var clickOnRoute = function clickOnRoute(e) {
+    console.log('click detected');
+    console.log(e);
+  };
+
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_leaflet__WEBPACK_IMPORTED_MODULE_4__["Map"], {
     className: "mapid",
     center: mapCenter,
     zoom: mapZoom,
     scrollWheelZoom: false,
     bounds: bounds
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_leaflet__WEBPACK_IMPORTED_MODULE_4__["TileLayer"], {
+  }, "doubleClickZoom=", true, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_leaflet__WEBPACK_IMPORTED_MODULE_4__["TileLayer"], {
     attribution: _constants__WEBPACK_IMPORTED_MODULE_2__["mapAttribution"],
     url: _constants__WEBPACK_IMPORTED_MODULE_2__["tileLayerUrl"]
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "route-overview"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_leaflet__WEBPACK_IMPORTED_MODULE_4__["Polyline"], {
-    positions: routesOverview,
-    onClick: fetchRoute,
-    doubleClickZoom: true
+  }, routesOverview.map(function (route, i) {
+    console.log(route);
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_leaflet__WEBPACK_IMPORTED_MODULE_4__["Polyline"], {
+      key: "".concat(route[0].lat, "-").concat(i),
+      positions: route,
+      onClick: fetchRoute,
+      doubleClickZoom: true,
+      fill: 'blue',
+      color: '#D64933'
+    });
   })));
 };
 
@@ -92598,7 +92609,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var index = function index() {
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])([[50.505, -29.09], [52.505, 29.09]]),
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])([[49.959999905, -7.57216793459], [58.6350001085, 1.68153079591]]),
       _useState2 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_useState, 2),
       bounds = _useState2[0],
       setBounds = _useState2[1];
@@ -92608,9 +92619,17 @@ var index = function index() {
       mapCenter = _useState4[0],
       setMapCenter = _useState4[1];
 
+  var submitLocation = function submitLocation(e) {
+    var viewport = e.gmaps.geometry.viewport;
+    var newBounds = [[viewport.Ya.i, viewport.Sa.i], [viewport.Ya.j, viewport.Sa.j]];
+    setBounds(newBounds);
+  };
+
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "map"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_locationSeach__WEBPACK_IMPORTED_MODULE_3__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_MapWrapper__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_locationSeach__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    submitLocation: submitLocation
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_MapWrapper__WEBPACK_IMPORTED_MODULE_2__["default"], {
     mapCenter: mapCenter,
     bounds: bounds
   }));
@@ -92624,52 +92643,18 @@ var index = function index() {
 /*!*****************************************!*\
   !*** ./resources/js/constants/index.js ***!
   \*****************************************/
-/*! exports provided: tileLayerUrl */
-/***/ (function(module, exports) {
-
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /Users/william/Desktop/trailshub/resources/js/constants/index.js: Unexpected token (6:30)\n\n\u001b[0m \u001b[90m 4 | \u001b[39m\u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m tileLayerUrl \u001b[33m=\u001b[39m \u001b[32m`https://api.mapbox.com/styles/v1/willmadd/${style_id}/tiles/{z}/{x}/{y}?access_token=${access_token}`\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 5 | \u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 | \u001b[39m\u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m mapAttribution \u001b[33m=\u001b[39m \u001b[0m\n\u001b[0m \u001b[90m   | \u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n    at Object._raise (/Users/william/Desktop/trailshub/node_modules/@babel/parser/lib/index.js:742:17)\n    at Object.raiseWithData (/Users/william/Desktop/trailshub/node_modules/@babel/parser/lib/index.js:735:17)\n    at Object.raise (/Users/william/Desktop/trailshub/node_modules/@babel/parser/lib/index.js:729:17)\n    at Object.unexpected (/Users/william/Desktop/trailshub/node_modules/@babel/parser/lib/index.js:8779:16)\n    at Object.parseExprAtom (/Users/william/Desktop/trailshub/node_modules/@babel/parser/lib/index.js:10074:20)\n    at Object.parseExprAtom (/Users/william/Desktop/trailshub/node_modules/@babel/parser/lib/index.js:4626:20)\n    at Object.parseExprSubscripts (/Users/william/Desktop/trailshub/node_modules/@babel/parser/lib/index.js:9624:23)\n    at Object.parseMaybeUnary (/Users/william/Desktop/trailshub/node_modules/@babel/parser/lib/index.js:9604:21)\n    at Object.parseExprOps (/Users/william/Desktop/trailshub/node_modules/@babel/parser/lib/index.js:9474:23)\n    at Object.parseMaybeConditional (/Users/william/Desktop/trailshub/node_modules/@babel/parser/lib/index.js:9447:23)\n    at Object.parseMaybeAssign (/Users/william/Desktop/trailshub/node_modules/@babel/parser/lib/index.js:9402:21)\n    at Object.parseVar (/Users/william/Desktop/trailshub/node_modules/@babel/parser/lib/index.js:11763:26)\n    at Object.parseVarStatement (/Users/william/Desktop/trailshub/node_modules/@babel/parser/lib/index.js:11572:10)\n    at Object.parseStatementContent (/Users/william/Desktop/trailshub/node_modules/@babel/parser/lib/index.js:11171:21)\n    at Object.parseStatement (/Users/william/Desktop/trailshub/node_modules/@babel/parser/lib/index.js:11104:17)\n    at Object.parseExportDeclaration (/Users/william/Desktop/trailshub/node_modules/@babel/parser/lib/index.js:12313:17)\n    at Object.maybeParseExportDeclaration (/Users/william/Desktop/trailshub/node_modules/@babel/parser/lib/index.js:12269:31)\n    at Object.parseExport (/Users/william/Desktop/trailshub/node_modules/@babel/parser/lib/index.js:12199:29)\n    at Object.parseStatementContent (/Users/william/Desktop/trailshub/node_modules/@babel/parser/lib/index.js:11208:27)\n    at Object.parseStatement (/Users/william/Desktop/trailshub/node_modules/@babel/parser/lib/index.js:11104:17)\n    at Object.parseBlockOrModuleBlockBody (/Users/william/Desktop/trailshub/node_modules/@babel/parser/lib/index.js:11679:25)\n    at Object.parseBlockBody (/Users/william/Desktop/trailshub/node_modules/@babel/parser/lib/index.js:11665:10)\n    at Object.parseTopLevel (/Users/william/Desktop/trailshub/node_modules/@babel/parser/lib/index.js:11035:10)\n    at Object.parse (/Users/william/Desktop/trailshub/node_modules/@babel/parser/lib/index.js:12671:10)\n    at parse (/Users/william/Desktop/trailshub/node_modules/@babel/parser/lib/index.js:12722:38)\n    at parser (/Users/william/Desktop/trailshub/node_modules/@babel/core/lib/parser/index.js:54:34)\n    at parser.next (<anonymous>)\n    at normalizeFile (/Users/william/Desktop/trailshub/node_modules/@babel/core/lib/transformation/normalize-file.js:93:38)\n    at normalizeFile.next (<anonymous>)\n    at run (/Users/william/Desktop/trailshub/node_modules/@babel/core/lib/transformation/index.js:31:50)\n    at run.next (<anonymous>)\n    at Function.transform (/Users/william/Desktop/trailshub/node_modules/@babel/core/lib/transform.js:27:41)\n    at transform.next (<anonymous>)\n    at step (/Users/william/Desktop/trailshub/node_modules/gensync/index.js:254:32)\n    at /Users/william/Desktop/trailshub/node_modules/gensync/index.js:266:13\n    at async.call.result.err.err (/Users/william/Desktop/trailshub/node_modules/gensync/index.js:216:11)");
-
-/***/ }),
-
-/***/ "./resources/js/redux/actions/index.js":
-/*!*********************************************!*\
-  !*** ./resources/js/redux/actions/index.js ***!
-  \*********************************************/
-/*! exports provided: getTrailsOverview */
+/*! exports provided: tileLayerUrl, mapAttribution */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getTrailsOverview", function() { return getTrailsOverview; });
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./types */ "./resources/js/redux/actions/types.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "tileLayerUrl", function() { return tileLayerUrl; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mapAttribution", function() { return mapAttribution; });
+var style_id = "cka5ncmgs19io1io3qn27wejb";
+var access_token = "pk.eyJ1Ijoid2lsbG1hZGQiLCJhIjoiY2thNW43amlvMDFteDNtcGEyMWpxeWwzcCJ9.wfx7i_G1rWq3roofKl7XhQ"; //map style url
 
-
-var getTrailsOverview = function getTrailsOverview() {
-  return function (dispatch) {
-    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/gettrails").then(function (res) {
-      return dispatch({
-        type: _types__WEBPACK_IMPORTED_MODULE_1__["FETCH_TRAIL_OVERVIEW"],
-        payload: res.data
-      });
-    });
-  };
-};
-
-/***/ }),
-
-/***/ "./resources/js/redux/actions/types.js":
-/*!*********************************************!*\
-  !*** ./resources/js/redux/actions/types.js ***!
-  \*********************************************/
-/*! exports provided: FETCH_TRAIL_OVERVIEW */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FETCH_TRAIL_OVERVIEW", function() { return FETCH_TRAIL_OVERVIEW; });
-var FETCH_TRAIL_OVERVIEW = "FETCH_TRAIL_OVERVIEW";
+var tileLayerUrl = "https://api.mapbox.com/styles/v1/willmadd/".concat(style_id, "/tiles/{z}/{x}/{y}?access_token=").concat(access_token);
+var mapAttribution = '&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors';
 
 /***/ }),
 
@@ -92829,6 +92814,48 @@ var routes = [{
 
 /***/ }),
 
+/***/ "./resources/js/store/actions/index.js":
+/*!*********************************************!*\
+  !*** ./resources/js/store/actions/index.js ***!
+  \*********************************************/
+/*! exports provided: getTrailsOverview */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getTrailsOverview", function() { return getTrailsOverview; });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./types */ "./resources/js/store/actions/types.js");
+
+
+var getTrailsOverview = function getTrailsOverview() {
+  return function (dispatch) {
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/gettrails").then(function (res) {
+      return dispatch({
+        type: _types__WEBPACK_IMPORTED_MODULE_1__["FETCH_TRAIL_OVERVIEW"],
+        payload: res.data
+      });
+    });
+  };
+};
+
+/***/ }),
+
+/***/ "./resources/js/store/actions/types.js":
+/*!*********************************************!*\
+  !*** ./resources/js/store/actions/types.js ***!
+  \*********************************************/
+/*! exports provided: FETCH_TRAIL_OVERVIEW */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FETCH_TRAIL_OVERVIEW", function() { return FETCH_TRAIL_OVERVIEW; });
+var FETCH_TRAIL_OVERVIEW = "FETCH_TRAIL_OVERVIEW";
+
+/***/ }),
+
 /***/ "./resources/sass/app.scss":
 /*!*********************************!*\
   !*** ./resources/sass/app.scss ***!
@@ -92847,8 +92874,8 @@ var routes = [{
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/william/Desktop/trailshub/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/william/Desktop/trailshub/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/williammaddicott/Desktop/projects/trailshub/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/williammaddicott/Desktop/projects/trailshub/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

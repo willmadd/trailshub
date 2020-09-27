@@ -11136,8 +11136,14 @@ header button.signin {
   background-color: #bac1b8;
 }
 
+.geosuggest__suggests--hidden {
+  max-height: 0;
+  overflow: hidden;
+  border-width: 0;
+}
+
 .leaflet-container {
-  height: 600px;
+  height: 1000px;
   width: 100%;
 }
 

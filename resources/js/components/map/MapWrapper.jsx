@@ -15,7 +15,7 @@ const MapWrapper = ({ mapCenter, bounds }) => {
 
     let [mapViewport, setMapViewport] = useState({ lat: 51.505, lng: -0.09 });
 
-    let [mapZoom, setMatZoom] = useState(5);
+    let [mapZoom, setMatZoom] = useState(10);
 
     const position = [mapViewport.lat, mapViewport.lng];
 
@@ -25,6 +25,11 @@ const MapWrapper = ({ mapCenter, bounds }) => {
         console.log('hello');
     }
 
+const clickOnRoute=(e)=>{
+    console.log('click detected');
+    console.log(e)
+;}
+
     return (
         <Map
             className={`mapid`}
@@ -32,13 +37,17 @@ const MapWrapper = ({ mapCenter, bounds }) => {
             zoom={mapZoom}
             scrollWheelZoom={false}
             bounds={bounds}>
+                doubleClickZoom={true}
 
             <TileLayer
                 attribution={mapAttribution}
                 url={tileLayerUrl}
             />
             <div className="route-overview">
-                <Polyline positions={routesOverview} onClick={fetchRoute} doubleClickZoom={true}/>
+            {routesOverview.map((route, i)=>{
+console.log(route);
+                return <Polyline key={`${route[0].lat}-${i}`} positions={route} onClick={fetchRoute} doubleClickZoom={true} fill={'blue'} color={'#D64933'}/>
+            })}
             </div>
         </Map>
     );

@@ -110,3 +110,9 @@
     }
   }
 }
+
+.geosuggest__suggests--hidden {
+  max-height: 0;
+  overflow: hidden;
+  border-width: 0;
+}

@@ -6,15 +6,21 @@ import LocationSearch from '../locationSeach';
 const index = () => {
 
     const [bounds, setBounds] = useState([
-        [50.505, -29.09],
-        [52.505, 29.09]
+        [49.959999905, -7.57216793459],
+        [58.6350001085, 1.68153079591]
     ]);
     
     const [mapCenter, setMapCenter] = useState([0,0]);
 
+    const submitLocation = (e) => {
+        const {viewport} = e.gmaps.geometry;
+        let newBounds = [[viewport.Ya.i, viewport.Sa.i],[viewport.Ya.j, viewport.Sa.j]]
+        setBounds(newBounds);
+    } 
+
     return (
         <div className="map">
-            <LocationSearch />
+            <LocationSearch submitLocation={submitLocation}/>
             <MapWrapper mapCenter={mapCenter} bounds={bounds} />
         </div>
     );

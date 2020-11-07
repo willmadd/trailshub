@@ -1,0 +1,15 @@
+@import "../../../sass/styles/ui/colours";
+
+.stats-tab{
+    display: flex;
+    justify-content: space-between;
+    color: $accent;
+    h5{
+        display: flex;
+        img{
+            height:18px;
+            width:18px;
+            margin-right:4px;
+        }
+    }
+}

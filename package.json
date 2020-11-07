@@ -35,9 +35,11 @@
         "leaflet": "^1.6.0",
         "leaflet-geosearch": "^2.7.0",
         "react-geosuggest": "^2.13.0",
+        "react-html-parser": "^2.0.2",
         "react-leaflet": "^2.7.0",
         "react-redux": "^7.2.1",
         "react-router-dom": "^5.2.0",
+        "react-vis": "^1.11.7",
         "redux": "^4.0.5",
         "redux-thunk": "^2.3.0"
     }

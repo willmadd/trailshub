@@ -10,7 +10,7 @@ export const ReactLazyPreload = importStatement => {
   };
 
 
-export  const preloadRouteComponent = (path) => {
+export const preloadRouteComponent = (path) => {
     const component = findComponentForRoute(path, routes);
     if (component && component.preload) {
       component.preload();

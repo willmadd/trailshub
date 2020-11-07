@@ -19,5 +19,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('gettrails', 'TrailController@getTrails');
 
-Route::get('gettrail/{trailIdentifier}', 'TrailController@getTrailBySlug');
+Route::get('gettrail/{trailIdentifier}/{coords}', 'TrailController@getTrailBySlug');
 
+Route::get('gettrailsbytag/{tag}', 'TrailController@getTrailByTag');

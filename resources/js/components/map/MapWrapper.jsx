@@ -1,6 +1,9 @@
-import React, {useState} from 'react';
-import { tileLayerUrl, mapAttribution } from '../../constants';
-import {useSelector, useDispatch} from 'react-redux';
+import React, { useState } from "react";
+import { tileLayerUrl, mapAttribution } from "../../constants";
+import { useSelector, useDispatch } from "react-redux";
+import { useHistory } from "react-router-dom";
+import {slugify} from "../../utils/slugify";
+import { preloadRouteComponent } from "../../routes/helpers";
 import {
     Map,
     TileLayer,
@@ -12,6 +15,7 @@ import {
 } from "react-leaflet";
 
 const MapWrapper = ({ mapCenter, bounds }) => {
+    const history = useHistory();
 
     let [mapViewport, setMapViewport] = useState({ lat: 51.505, lng: -0.09 });
 
@@ -19,16 +23,14 @@ const MapWrapper = ({ mapCenter, bounds }) => {
 
     const position = [mapViewport.lat, mapViewport.lng];
 
-    const routesOverview = useSelector(state=>state.trailsReducer);
+    const routesOverview = useSelector(state => state.trails);
 
-    const fetchRoute = () => {
-        console.log('hello');
-    }
-
-const clickOnRoute=(e)=>{
-    console.log('click detected');
-    console.log(e)
-;}
+    const fetchRoute = (routeSlug, coords) => {
+        history.push({
+            pathname: `${slugify(routeSlug)}`,
+            state: { coords: coords }
+        });
+    };
 
     return (
         <Map
@@ -36,18 +38,31 @@ const clickOnRoute=(e)=>{
             center={mapCenter}
             zoom={mapZoom}
             scrollWheelZoom={false}
-            bounds={bounds}>
-                doubleClickZoom={true}
-
-            <TileLayer
-                attribution={mapAttribution}
-                url={tileLayerUrl}
-            />
+            bounds={bounds}
+            doubleClickZoom={true}
+        >
+            <TileLayer attribution={mapAttribution} url={tileLayerUrl} />
             <div className="route-overview">
-            {routesOverview.map((route, i)=>{
-console.log(route);
-                return <Polyline key={`${route[0].lat}-${i}`} positions={route} onClick={fetchRoute} doubleClickZoom={true} fill={'blue'} color={'#D64933'}/>
-            })}
+                {routesOverview.trails &&
+                    routesOverview.trails.map((route, i) => {
+                        return (
+                            <Polyline
+                                key={`${route.coords[0].lat}-${i}`}
+                                onMouseEnter={() =>
+                                    preloadRouteComponent(
+                                        `trails/${route.slug}`
+                                    )
+                                }
+                                positions={route.coords}
+                                onClick={() =>
+                                    fetchRoute(route.slug, route.coords)
+                                }
+                                doubleClickZoom={true}
+                                fill={"blue"}
+                                color={"#D64933"}
+                            />
+                        );
+                    })}
             </div>
         </Map>
     );

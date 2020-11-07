@@ -1,4 +1,5 @@
 import { combineReducers } from "redux";
-import { trailsReducer } from './trailsReducer';
+import { trails } from './trailsReducer';
+import {config} from '../appLoad/reducers';
 
-export const rootReducer = combineReducers({trailsReducer})
+export const rootReducer = combineReducers({config, trails })

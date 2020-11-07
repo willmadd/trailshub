@@ -237,20 +237,29 @@ module.exports = _arrayWithHoles;
 
 /***/ }),
 
-/***/ "./node_modules/@babel/runtime/helpers/arrayWithoutHoles.js":
-/*!******************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/arrayWithoutHoles.js ***!
-  \******************************************************************/
+/***/ "./node_modules/@babel/runtime/helpers/defineProperty.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/defineProperty.js ***!
+  \***************************************************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-var arrayLikeToArray = __webpack_require__(/*! ./arrayLikeToArray */ "./node_modules/@babel/runtime/helpers/arrayLikeToArray.js");
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
 
-function _arrayWithoutHoles(arr) {
-  if (Array.isArray(arr)) return arrayLikeToArray(arr);
+  return obj;
 }
 
-module.exports = _arrayWithoutHoles;
+module.exports = _defineProperty;
 
 /***/ }),
 
@@ -433,21 +442,6 @@ module.exports = _extends;
 
 /***/ }),
 
-/***/ "./node_modules/@babel/runtime/helpers/iterableToArray.js":
-/*!****************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/iterableToArray.js ***!
-  \****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _iterableToArray(iter) {
-  if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);
-}
-
-module.exports = _iterableToArray;
-
-/***/ }),
-
 /***/ "./node_modules/@babel/runtime/helpers/iterableToArrayLimit.js":
 /*!*********************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/iterableToArrayLimit.js ***!
@@ -501,21 +495,6 @@ module.exports = _nonIterableRest;
 
 /***/ }),
 
-/***/ "./node_modules/@babel/runtime/helpers/nonIterableSpread.js":
-/*!******************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/nonIterableSpread.js ***!
-  \******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _nonIterableSpread() {
-  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-}
-
-module.exports = _nonIterableSpread;
-
-/***/ }),
-
 /***/ "./node_modules/@babel/runtime/helpers/slicedToArray.js":
 /*!**************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/slicedToArray.js ***!
@@ -536,29 +515,6 @@ function _slicedToArray(arr, i) {
 }
 
 module.exports = _slicedToArray;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/toConsumableArray.js":
-/*!******************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/toConsumableArray.js ***!
-  \******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var arrayWithoutHoles = __webpack_require__(/*! ./arrayWithoutHoles */ "./node_modules/@babel/runtime/helpers/arrayWithoutHoles.js");
-
-var iterableToArray = __webpack_require__(/*! ./iterableToArray */ "./node_modules/@babel/runtime/helpers/iterableToArray.js");
-
-var unsupportedIterableToArray = __webpack_require__(/*! ./unsupportedIterableToArray */ "./node_modules/@babel/runtime/helpers/unsupportedIterableToArray.js");
-
-var nonIterableSpread = __webpack_require__(/*! ./nonIterableSpread */ "./node_modules/@babel/runtime/helpers/nonIterableSpread.js");
-
-function _toConsumableArray(arr) {
-  return arrayWithoutHoles(arr) || iterableToArray(arr) || unsupportedIterableToArray(arr) || nonIterableSpread();
-}
-
-module.exports = _toConsumableArray;
 
 /***/ }),
 
@@ -6885,6 +6841,112 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 	} else {}
 }());
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/sass/styles/globalstyles.scss":
+/*!************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./resources/sass/styles/globalstyles.scss ***!
+  \************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "h1, h2, h3, h4, h5, h6 {\n  margin: 0;\n  font-family: \"Hind Madurai\", sans-serif;\n}\n\na {\n  color: inherit;\n  text-decoration: none;\n}\n\nhtml, body {\n  height: 100%;\n  background-color: #bac1b8;\n}\n\n.mob-hide {\n  display: none;\n}\n@media (min-width: 1024px) {\n  .mob-hide {\n    display: unset;\n  }\n}\n\nheader {\n  font-family: \"orkneybold\";\n  width: 100%;\n  background-color: #2B303A;\n  padding: 16px 32px;\n  color: #fff;\n  text-align: left;\n  box-sizing: border-box;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  letter-spacing: 1px;\n}\nheader button.signin {\n  background-color: #d64933;\n  border: #bac1b8;\n  border-radius: 4px;\n  padding: 12px 48px;\n  font-family: orkneybold;\n  color: white;\n  text-transform: uppercase;\n  font-size: 14px;\n  letter-spacing: 1px;\n  cursor: pointer;\n}\n\n.header-logo {\n  width: 200px;\n}\n\n.search-wrapper {\n  width: 100%;\n  background-position: center;\n  background-size: cover;\n  padding: 0;\n}\n@media (min-width: 1024px) {\n  .search-wrapper {\n    position: absolute;\n    height: 544px;\n  }\n}\n\n.searchModal {\n  width: 100%;\n  height: 100%;\n  right: 32px;\n  top: 0px;\n  z-index: 450;\n}\n@media (min-width: 1024px) {\n  .searchModal {\n    position: absolute;\n    left: 0;\n    right: 0;\n    margin: auto;\n    width: 50%;\n    max-width: 450px;\n    display: flex;\n    flex-direction: column;\n    padding-top: 16px;\n  }\n}\n.searchModal h2 {\n  padding: 24px;\n  text-transform: uppercase;\n  font-size: 10px;\n  text-align: center;\n  font-weight: 600;\n}\n@media (min-width: 768px) {\n  .searchModal h2 {\n    padding: 0;\n    width: 100%;\n    font-size: 18px;\n    color: #fff;\n    margin-bottom: 16px;\n  }\n}\n\n@media (min-width: 1024px) {\n  .searchBar {\n    padding: 0 24px;\n    display: grid;\n    grid-template-columns: auto 63px;\n  }\n}\n\n.submit-location {\n  height: 64px;\n  border: 1px solid #2B303A;\n  border-left-width: 0;\n  background-color: #d64933;\n  background-image: url(/images/find.svg);\n  background-repeat: no-repeat;\n  background-position: center;\n  background-size: 36px;\n}\n@media (min-width: 1024px) {\n  .submit-location {\n    border-radius: 0 5px 5px 0;\n  }\n}\n\n.geosuggest__input {\n  width: 100%;\n  padding: 18px 0 18px 24px;\n  box-sizing: border-box;\n  border: 1px solid #2B303A;\n  border-width: 1px 0 0 0;\n  font-family: orkneybold;\n  font-size: 16px;\n}\n@media (min-width: 1024px) {\n  .geosuggest__input {\n    border-right-color: #bac1b8;\n    border-radius: 5px 0 0 5px;\n  }\n}\n\n.geosuggest__input-wrapper {\n  padding: 0;\n  border: 0;\n}\n\n.geosuggest__suggests {\n  list-style: none;\n  padding: 0;\n  margin: 0;\n  text-align: left;\n  border: 0 solid #2B303A;\n  border-top-width: 1px;\n  background-color: #fff;\n}\n.geosuggest__suggests li {\n  cursor: pointer;\n  display: grid;\n  grid-template-columns: 24px auto;\n  grid-gap: 12px;\n  padding: 12px;\n  border-bottom: 1px solid #bac1b8;\n}\n.geosuggest__suggests li::before {\n  content: \"\";\n  display: block;\n  height: 24px;\n  width: 24px;\n  align-self: center;\n  background-image: url(/images/search-location-marker.svg);\n}\n.geosuggest__suggests li:hover {\n  background-color: #bac1b8;\n}\n\n.geosuggest__suggests--hidden {\n  max-height: 0;\n  overflow: hidden;\n  border-width: 0;\n}\n\n.leaflet-container {\n  height: 1000px;\n  width: 100%;\n}\n.leaflet-container.secondary {\n  width: 80%;\n  margin-left: auto;\n  height: 100vh;\n}\n\n.main-container {\n  position: relative;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/lib/css-base.js":
+/*!*************************************************!*\
+  !*** ./node_modules/css-loader/lib/css-base.js ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/*
+	MIT License http://www.opensource.org/licenses/mit-license.php
+	Author Tobias Koppers @sokra
+*/
+// css base code, injected by the css-loader
+module.exports = function(useSourceMap) {
+	var list = [];
+
+	// return the list of modules as css string
+	list.toString = function toString() {
+		return this.map(function (item) {
+			var content = cssWithMappingToString(item, useSourceMap);
+			if(item[2]) {
+				return "@media " + item[2] + "{" + content + "}";
+			} else {
+				return content;
+			}
+		}).join("");
+	};
+
+	// import a list of modules into the list
+	list.i = function(modules, mediaQuery) {
+		if(typeof modules === "string")
+			modules = [[null, modules, ""]];
+		var alreadyImportedModules = {};
+		for(var i = 0; i < this.length; i++) {
+			var id = this[i][0];
+			if(typeof id === "number")
+				alreadyImportedModules[id] = true;
+		}
+		for(i = 0; i < modules.length; i++) {
+			var item = modules[i];
+			// skip already imported module
+			// this implementation is not 100% perfect for weird media query combinations
+			//  when a module is imported multiple times with different media queries.
+			//  I hope this will never occur (Hey this way we have smaller bundles)
+			if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
+				if(mediaQuery && !item[2]) {
+					item[2] = mediaQuery;
+				} else if(mediaQuery) {
+					item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
+				}
+				list.push(item);
+			}
+		}
+	};
+	return list;
+};
+
+function cssWithMappingToString(item, useSourceMap) {
+	var content = item[1] || '';
+	var cssMapping = item[3];
+	if (!cssMapping) {
+		return content;
+	}
+
+	if (useSourceMap && typeof btoa === 'function') {
+		var sourceMapping = toComment(cssMapping);
+		var sourceURLs = cssMapping.sources.map(function (source) {
+			return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */'
+		});
+
+		return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
+	}
+
+	return [content].join('\n');
+}
+
+// Adapted from convert-source-map (MIT)
+function toComment(sourceMap) {
+	// eslint-disable-next-line no-undef
+	var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
+	var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
+
+	return '/*# ' + data + ' */';
+}
 
 
 /***/ }),
@@ -91825,6 +91887,515 @@ if (false) {} else {
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/lib/addStyles.js":
+/*!****************************************************!*\
+  !*** ./node_modules/style-loader/lib/addStyles.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/*
+	MIT License http://www.opensource.org/licenses/mit-license.php
+	Author Tobias Koppers @sokra
+*/
+
+var stylesInDom = {};
+
+var	memoize = function (fn) {
+	var memo;
+
+	return function () {
+		if (typeof memo === "undefined") memo = fn.apply(this, arguments);
+		return memo;
+	};
+};
+
+var isOldIE = memoize(function () {
+	// Test for IE <= 9 as proposed by Browserhacks
+	// @see http://browserhacks.com/#hack-e71d8692f65334173fee715c222cb805
+	// Tests for existence of standard globals is to allow style-loader
+	// to operate correctly into non-standard environments
+	// @see https://github.com/webpack-contrib/style-loader/issues/177
+	return window && document && document.all && !window.atob;
+});
+
+var getTarget = function (target, parent) {
+  if (parent){
+    return parent.querySelector(target);
+  }
+  return document.querySelector(target);
+};
+
+var getElement = (function (fn) {
+	var memo = {};
+
+	return function(target, parent) {
+                // If passing function in options, then use it for resolve "head" element.
+                // Useful for Shadow Root style i.e
+                // {
+                //   insertInto: function () { return document.querySelector("#foo").shadowRoot }
+                // }
+                if (typeof target === 'function') {
+                        return target();
+                }
+                if (typeof memo[target] === "undefined") {
+			var styleTarget = getTarget.call(this, target, parent);
+			// Special case to return head of iframe instead of iframe itself
+			if (window.HTMLIFrameElement && styleTarget instanceof window.HTMLIFrameElement) {
+				try {
+					// This will throw an exception if access to iframe is blocked
+					// due to cross-origin restrictions
+					styleTarget = styleTarget.contentDocument.head;
+				} catch(e) {
+					styleTarget = null;
+				}
+			}
+			memo[target] = styleTarget;
+		}
+		return memo[target]
+	};
+})();
+
+var singleton = null;
+var	singletonCounter = 0;
+var	stylesInsertedAtTop = [];
+
+var	fixUrls = __webpack_require__(/*! ./urls */ "./node_modules/style-loader/lib/urls.js");
+
+module.exports = function(list, options) {
+	if (typeof DEBUG !== "undefined" && DEBUG) {
+		if (typeof document !== "object") throw new Error("The style-loader cannot be used in a non-browser environment");
+	}
+
+	options = options || {};
+
+	options.attrs = typeof options.attrs === "object" ? options.attrs : {};
+
+	// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
+	// tags it will allow on a page
+	if (!options.singleton && typeof options.singleton !== "boolean") options.singleton = isOldIE();
+
+	// By default, add <style> tags to the <head> element
+        if (!options.insertInto) options.insertInto = "head";
+
+	// By default, add <style> tags to the bottom of the target
+	if (!options.insertAt) options.insertAt = "bottom";
+
+	var styles = listToStyles(list, options);
+
+	addStylesToDom(styles, options);
+
+	return function update (newList) {
+		var mayRemove = [];
+
+		for (var i = 0; i < styles.length; i++) {
+			var item = styles[i];
+			var domStyle = stylesInDom[item.id];
+
+			domStyle.refs--;
+			mayRemove.push(domStyle);
+		}
+
+		if(newList) {
+			var newStyles = listToStyles(newList, options);
+			addStylesToDom(newStyles, options);
+		}
+
+		for (var i = 0; i < mayRemove.length; i++) {
+			var domStyle = mayRemove[i];
+
+			if(domStyle.refs === 0) {
+				for (var j = 0; j < domStyle.parts.length; j++) domStyle.parts[j]();
+
+				delete stylesInDom[domStyle.id];
+			}
+		}
+	};
+};
+
+function addStylesToDom (styles, options) {
+	for (var i = 0; i < styles.length; i++) {
+		var item = styles[i];
+		var domStyle = stylesInDom[item.id];
+
+		if(domStyle) {
+			domStyle.refs++;
+
+			for(var j = 0; j < domStyle.parts.length; j++) {
+				domStyle.parts[j](item.parts[j]);
+			}
+
+			for(; j < item.parts.length; j++) {
+				domStyle.parts.push(addStyle(item.parts[j], options));
+			}
+		} else {
+			var parts = [];
+
+			for(var j = 0; j < item.parts.length; j++) {
+				parts.push(addStyle(item.parts[j], options));
+			}
+
+			stylesInDom[item.id] = {id: item.id, refs: 1, parts: parts};
+		}
+	}
+}
+
+function listToStyles (list, options) {
+	var styles = [];
+	var newStyles = {};
+
+	for (var i = 0; i < list.length; i++) {
+		var item = list[i];
+		var id = options.base ? item[0] + options.base : item[0];
+		var css = item[1];
+		var media = item[2];
+		var sourceMap = item[3];
+		var part = {css: css, media: media, sourceMap: sourceMap};
+
+		if(!newStyles[id]) styles.push(newStyles[id] = {id: id, parts: [part]});
+		else newStyles[id].parts.push(part);
+	}
+
+	return styles;
+}
+
+function insertStyleElement (options, style) {
+	var target = getElement(options.insertInto)
+
+	if (!target) {
+		throw new Error("Couldn't find a style target. This probably means that the value for the 'insertInto' parameter is invalid.");
+	}
+
+	var lastStyleElementInsertedAtTop = stylesInsertedAtTop[stylesInsertedAtTop.length - 1];
+
+	if (options.insertAt === "top") {
+		if (!lastStyleElementInsertedAtTop) {
+			target.insertBefore(style, target.firstChild);
+		} else if (lastStyleElementInsertedAtTop.nextSibling) {
+			target.insertBefore(style, lastStyleElementInsertedAtTop.nextSibling);
+		} else {
+			target.appendChild(style);
+		}
+		stylesInsertedAtTop.push(style);
+	} else if (options.insertAt === "bottom") {
+		target.appendChild(style);
+	} else if (typeof options.insertAt === "object" && options.insertAt.before) {
+		var nextSibling = getElement(options.insertAt.before, target);
+		target.insertBefore(style, nextSibling);
+	} else {
+		throw new Error("[Style Loader]\n\n Invalid value for parameter 'insertAt' ('options.insertAt') found.\n Must be 'top', 'bottom', or Object.\n (https://github.com/webpack-contrib/style-loader#insertat)\n");
+	}
+}
+
+function removeStyleElement (style) {
+	if (style.parentNode === null) return false;
+	style.parentNode.removeChild(style);
+
+	var idx = stylesInsertedAtTop.indexOf(style);
+	if(idx >= 0) {
+		stylesInsertedAtTop.splice(idx, 1);
+	}
+}
+
+function createStyleElement (options) {
+	var style = document.createElement("style");
+
+	if(options.attrs.type === undefined) {
+		options.attrs.type = "text/css";
+	}
+
+	if(options.attrs.nonce === undefined) {
+		var nonce = getNonce();
+		if (nonce) {
+			options.attrs.nonce = nonce;
+		}
+	}
+
+	addAttrs(style, options.attrs);
+	insertStyleElement(options, style);
+
+	return style;
+}
+
+function createLinkElement (options) {
+	var link = document.createElement("link");
+
+	if(options.attrs.type === undefined) {
+		options.attrs.type = "text/css";
+	}
+	options.attrs.rel = "stylesheet";
+
+	addAttrs(link, options.attrs);
+	insertStyleElement(options, link);
+
+	return link;
+}
+
+function addAttrs (el, attrs) {
+	Object.keys(attrs).forEach(function (key) {
+		el.setAttribute(key, attrs[key]);
+	});
+}
+
+function getNonce() {
+	if (false) {}
+
+	return __webpack_require__.nc;
+}
+
+function addStyle (obj, options) {
+	var style, update, remove, result;
+
+	// If a transform function was defined, run it on the css
+	if (options.transform && obj.css) {
+	    result = typeof options.transform === 'function'
+		 ? options.transform(obj.css) 
+		 : options.transform.default(obj.css);
+
+	    if (result) {
+	    	// If transform returns a value, use that instead of the original css.
+	    	// This allows running runtime transformations on the css.
+	    	obj.css = result;
+	    } else {
+	    	// If the transform function returns a falsy value, don't add this css.
+	    	// This allows conditional loading of css
+	    	return function() {
+	    		// noop
+	    	};
+	    }
+	}
+
+	if (options.singleton) {
+		var styleIndex = singletonCounter++;
+
+		style = singleton || (singleton = createStyleElement(options));
+
+		update = applyToSingletonTag.bind(null, style, styleIndex, false);
+		remove = applyToSingletonTag.bind(null, style, styleIndex, true);
+
+	} else if (
+		obj.sourceMap &&
+		typeof URL === "function" &&
+		typeof URL.createObjectURL === "function" &&
+		typeof URL.revokeObjectURL === "function" &&
+		typeof Blob === "function" &&
+		typeof btoa === "function"
+	) {
+		style = createLinkElement(options);
+		update = updateLink.bind(null, style, options);
+		remove = function () {
+			removeStyleElement(style);
+
+			if(style.href) URL.revokeObjectURL(style.href);
+		};
+	} else {
+		style = createStyleElement(options);
+		update = applyToTag.bind(null, style);
+		remove = function () {
+			removeStyleElement(style);
+		};
+	}
+
+	update(obj);
+
+	return function updateStyle (newObj) {
+		if (newObj) {
+			if (
+				newObj.css === obj.css &&
+				newObj.media === obj.media &&
+				newObj.sourceMap === obj.sourceMap
+			) {
+				return;
+			}
+
+			update(obj = newObj);
+		} else {
+			remove();
+		}
+	};
+}
+
+var replaceText = (function () {
+	var textStore = [];
+
+	return function (index, replacement) {
+		textStore[index] = replacement;
+
+		return textStore.filter(Boolean).join('\n');
+	};
+})();
+
+function applyToSingletonTag (style, index, remove, obj) {
+	var css = remove ? "" : obj.css;
+
+	if (style.styleSheet) {
+		style.styleSheet.cssText = replaceText(index, css);
+	} else {
+		var cssNode = document.createTextNode(css);
+		var childNodes = style.childNodes;
+
+		if (childNodes[index]) style.removeChild(childNodes[index]);
+
+		if (childNodes.length) {
+			style.insertBefore(cssNode, childNodes[index]);
+		} else {
+			style.appendChild(cssNode);
+		}
+	}
+}
+
+function applyToTag (style, obj) {
+	var css = obj.css;
+	var media = obj.media;
+
+	if(media) {
+		style.setAttribute("media", media)
+	}
+
+	if(style.styleSheet) {
+		style.styleSheet.cssText = css;
+	} else {
+		while(style.firstChild) {
+			style.removeChild(style.firstChild);
+		}
+
+		style.appendChild(document.createTextNode(css));
+	}
+}
+
+function updateLink (link, options, obj) {
+	var css = obj.css;
+	var sourceMap = obj.sourceMap;
+
+	/*
+		If convertToAbsoluteUrls isn't defined, but sourcemaps are enabled
+		and there is no publicPath defined then lets turn convertToAbsoluteUrls
+		on by default.  Otherwise default to the convertToAbsoluteUrls option
+		directly
+	*/
+	var autoFixUrls = options.convertToAbsoluteUrls === undefined && sourceMap;
+
+	if (options.convertToAbsoluteUrls || autoFixUrls) {
+		css = fixUrls(css);
+	}
+
+	if (sourceMap) {
+		// http://stackoverflow.com/a/26603875
+		css += "\n/*# sourceMappingURL=data:application/json;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + " */";
+	}
+
+	var blob = new Blob([css], { type: "text/css" });
+
+	var oldSrc = link.href;
+
+	link.href = URL.createObjectURL(blob);
+
+	if(oldSrc) URL.revokeObjectURL(oldSrc);
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/lib/urls.js":
+/*!***********************************************!*\
+  !*** ./node_modules/style-loader/lib/urls.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+/**
+ * When source maps are enabled, `style-loader` uses a link element with a data-uri to
+ * embed the css on the page. This breaks all relative urls because now they are relative to a
+ * bundle instead of the current page.
+ *
+ * One solution is to only use full urls, but that may be impossible.
+ *
+ * Instead, this function "fixes" the relative urls to be absolute according to the current page location.
+ *
+ * A rudimentary test suite is located at `test/fixUrls.js` and can be run via the `npm test` command.
+ *
+ */
+
+module.exports = function (css) {
+  // get current location
+  var location = typeof window !== "undefined" && window.location;
+
+  if (!location) {
+    throw new Error("fixUrls requires window.location");
+  }
+
+	// blank or null?
+	if (!css || typeof css !== "string") {
+	  return css;
+  }
+
+  var baseUrl = location.protocol + "//" + location.host;
+  var currentDir = baseUrl + location.pathname.replace(/\/[^\/]*$/, "/");
+
+	// convert each url(...)
+	/*
+	This regular expression is just a way to recursively match brackets within
+	a string.
+
+	 /url\s*\(  = Match on the word "url" with any whitespace after it and then a parens
+	   (  = Start a capturing group
+	     (?:  = Start a non-capturing group
+	         [^)(]  = Match anything that isn't a parentheses
+	         |  = OR
+	         \(  = Match a start parentheses
+	             (?:  = Start another non-capturing groups
+	                 [^)(]+  = Match anything that isn't a parentheses
+	                 |  = OR
+	                 \(  = Match a start parentheses
+	                     [^)(]*  = Match anything that isn't a parentheses
+	                 \)  = Match a end parentheses
+	             )  = End Group
+              *\) = Match anything and then a close parens
+          )  = Close non-capturing group
+          *  = Match anything
+       )  = Close capturing group
+	 \)  = Match a close parens
+
+	 /gi  = Get all matches, not the first.  Be case insensitive.
+	 */
+	var fixedCss = css.replace(/url\s*\(((?:[^)(]|\((?:[^)(]+|\([^)(]*\))*\))*)\)/gi, function(fullMatch, origUrl) {
+		// strip quotes (if they exist)
+		var unquotedOrigUrl = origUrl
+			.trim()
+			.replace(/^"(.*)"$/, function(o, $1){ return $1; })
+			.replace(/^'(.*)'$/, function(o, $1){ return $1; });
+
+		// already a full url? no change
+		if (/^(#|data:|http:\/\/|https:\/\/|file:\/\/\/|\s*$)/i.test(unquotedOrigUrl)) {
+		  return fullMatch;
+		}
+
+		// convert the url to a full url
+		var newUrl;
+
+		if (unquotedOrigUrl.indexOf("//") === 0) {
+		  	//TODO: should we add protocol?
+			newUrl = unquotedOrigUrl;
+		} else if (unquotedOrigUrl.indexOf("/") === 0) {
+			// path should be relative to the base url
+			newUrl = baseUrl + unquotedOrigUrl; // already starts with '/'
+		} else {
+			// path should be relative to current directory
+			newUrl = currentDir + unquotedOrigUrl.replace(/^\.\//, ""); // Strip leading './'
+		}
+
+		// send back the fixed url(...)
+		return "url(" + JSON.stringify(newUrl) + ")";
+	});
+
+	// send back the fixed css
+	return fixedCss;
+};
+
+
+/***/ }),
+
 /***/ "./node_modules/symbol-observable/es/index.js":
 /*!****************************************************!*\
   !*** ./node_modules/symbol-observable/es/index.js ***!
@@ -92258,6 +92829,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./header */ "./resources/js/components/header/index.jsx");
 /* harmony import */ var _map__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./map */ "./resources/js/components/map/index.jsx");
 /* harmony import */ var _routes_RouteFromArray__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../routes/RouteFromArray */ "./resources/js/routes/RouteFromArray.jsx");
+/* harmony import */ var _store_appLoad_actions__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../store/appLoad/actions */ "./resources/js/store/appLoad/actions.js");
+
 
 
 
@@ -92269,9 +92842,21 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var App = function App() {
+  var initialConfig = {
+    imperial: true
+  };
   var dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["useDispatch"])();
   Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
     dispatch(Object(_store_actions__WEBPACK_IMPORTED_MODULE_4__["getTrailsOverview"])());
+
+    if (localStorage.getItem("trailsHubConfig")) {
+      var configFromLocalStorage = JSON.parse(localStorage.getItem("trailsHubConfig"));
+      dispatch(Object(_store_appLoad_actions__WEBPACK_IMPORTED_MODULE_9__["config"])(configFromLocalStorage));
+    } else {
+      dispatch(Object(_store_appLoad_actions__WEBPACK_IMPORTED_MODULE_9__["config"])({
+        imperial: true
+      }));
+    }
   }, []);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "Trails-Hub-App"
@@ -92334,6 +92919,34 @@ var Logo = function Logo() {
 
 /***/ }),
 
+/***/ "./resources/js/components/header/UnitsToggle.jsx":
+/*!********************************************************!*\
+  !*** ./resources/js/components/header/UnitsToggle.jsx ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var UnitsToggle = function UnitsToggle(props) {
+  var imperial = props.imperial,
+      toggleUnits = props.toggleUnits;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    type: "button",
+    onClick: function onClick() {
+      return toggleUnits(!imperial);
+    }
+  }, "Change Units"), imperial ? "imperial" : "metric");
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (UnitsToggle);
+
+/***/ }),
+
 /***/ "./resources/js/components/header/index.jsx":
 /*!**************************************************!*\
   !*** ./resources/js/components/header/index.jsx ***!
@@ -92347,6 +92960,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Logo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Logo */ "./resources/js/components/header/Logo.jsx");
 /* harmony import */ var _LoginButton__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./LoginButton */ "./resources/js/components/header/LoginButton.jsx");
+/* harmony import */ var _containers_unitsToggle__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../containers/unitsToggle */ "./resources/js/containers/unitsToggle/index.js");
+
 
 
 
@@ -92354,7 +92969,7 @@ __webpack_require__.r(__webpack_exports__);
 var Header = function Header() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "/"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Logo__WEBPACK_IMPORTED_MODULE_1__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_LoginButton__WEBPACK_IMPORTED_MODULE_2__["default"], null));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Logo__WEBPACK_IMPORTED_MODULE_1__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_unitsToggle__WEBPACK_IMPORTED_MODULE_3__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_LoginButton__WEBPACK_IMPORTED_MODULE_2__["default"], null));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Header);
@@ -92374,13 +92989,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _sass_app_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../sass/app.scss */ "./resources/sass/app.scss");
-/* harmony import */ var _sass_app_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_sass_app_scss__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _sass_styles_globalstyles_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../sass/styles/globalstyles.scss */ "./resources/sass/styles/globalstyles.scss");
+/* harmony import */ var _sass_styles_globalstyles_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_sass_styles_globalstyles_scss__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./App */ "./resources/js/components/App.js");
 /* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! redux-thunk */ "./node_modules/redux-thunk/es/index.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
-/* harmony import */ var _redux_reducers__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../redux/reducers */ "./resources/js/redux/reducers/index.js");
+/* harmony import */ var _store_reducers__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../store/reducers */ "./resources/js/store/reducers/index.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 
 
@@ -92391,7 +93006,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var store = Object(redux__WEBPACK_IMPORTED_MODULE_6__["createStore"])(_redux_reducers__WEBPACK_IMPORTED_MODULE_7__["rootReducer"], Object(redux__WEBPACK_IMPORTED_MODULE_6__["compose"])(Object(redux__WEBPACK_IMPORTED_MODULE_6__["applyMiddleware"])(redux_thunk__WEBPACK_IMPORTED_MODULE_4__["default"]), window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()));
+var store = Object(redux__WEBPACK_IMPORTED_MODULE_6__["createStore"])(_store_reducers__WEBPACK_IMPORTED_MODULE_7__["rootReducer"], Object(redux__WEBPACK_IMPORTED_MODULE_6__["compose"])(Object(redux__WEBPACK_IMPORTED_MODULE_6__["applyMiddleware"])(redux_thunk__WEBPACK_IMPORTED_MODULE_4__["default"]), window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()));
 
 if (document.getElementById("thetrailmap")) {
   react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.StrictMode, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Suspense, {
@@ -92522,7 +93137,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../constants */ "./resources/js/constants/index.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var react_leaflet__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-leaflet */ "./node_modules/react-leaflet/es/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _utils_slugify__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../utils/slugify */ "./resources/js/utils/slugify.js");
+/* harmony import */ var _routes_helpers__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../routes/helpers */ "./resources/js/routes/helpers.js");
+/* harmony import */ var react_leaflet__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-leaflet */ "./node_modules/react-leaflet/es/index.js");
+
+
+
 
 
 
@@ -92532,6 +93153,7 @@ __webpack_require__.r(__webpack_exports__);
 var MapWrapper = function MapWrapper(_ref) {
   var mapCenter = _ref.mapCenter,
       bounds = _ref.bounds;
+  var history = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["useHistory"])();
 
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])({
     lat: 51.505,
@@ -92548,38 +93170,43 @@ var MapWrapper = function MapWrapper(_ref) {
 
   var position = [mapViewport.lat, mapViewport.lng];
   var routesOverview = Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["useSelector"])(function (state) {
-    return state.trailsReducer;
+    return state.trails;
   });
 
-  var fetchRoute = function fetchRoute() {
-    console.log('hello');
+  var fetchRoute = function fetchRoute(routeSlug, coords) {
+    history.push({
+      pathname: "".concat(Object(_utils_slugify__WEBPACK_IMPORTED_MODULE_5__["slugify"])(routeSlug)),
+      state: {
+        coords: coords
+      }
+    });
   };
 
-  var clickOnRoute = function clickOnRoute(e) {
-    console.log('click detected');
-    console.log(e);
-  };
-
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_leaflet__WEBPACK_IMPORTED_MODULE_4__["Map"], {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_leaflet__WEBPACK_IMPORTED_MODULE_7__["Map"], {
     className: "mapid",
     center: mapCenter,
     zoom: mapZoom,
     scrollWheelZoom: false,
-    bounds: bounds
-  }, "doubleClickZoom=", true, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_leaflet__WEBPACK_IMPORTED_MODULE_4__["TileLayer"], {
+    bounds: bounds,
+    doubleClickZoom: true
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_leaflet__WEBPACK_IMPORTED_MODULE_7__["TileLayer"], {
     attribution: _constants__WEBPACK_IMPORTED_MODULE_2__["mapAttribution"],
     url: _constants__WEBPACK_IMPORTED_MODULE_2__["tileLayerUrl"]
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "route-overview"
-  }, routesOverview.map(function (route, i) {
-    console.log(route);
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_leaflet__WEBPACK_IMPORTED_MODULE_4__["Polyline"], {
-      key: "".concat(route[0].lat, "-").concat(i),
-      positions: route,
-      onClick: fetchRoute,
+  }, routesOverview.trails && routesOverview.trails.map(function (route, i) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_leaflet__WEBPACK_IMPORTED_MODULE_7__["Polyline"], {
+      key: "".concat(route.coords[0].lat, "-").concat(i),
+      onMouseEnter: function onMouseEnter() {
+        return Object(_routes_helpers__WEBPACK_IMPORTED_MODULE_6__["preloadRouteComponent"])("trails/".concat(route.slug));
+      },
+      positions: route.coords,
+      onClick: function onClick() {
+        return fetchRoute(route.slug, route.coords);
+      },
       doubleClickZoom: true,
-      fill: 'blue',
-      color: '#D64933'
+      fill: "blue",
+      color: "#D64933"
     });
   })));
 };
@@ -92658,57 +93285,39 @@ var mapAttribution = '&amp;copy <a href="http://osm.org/copyright">OpenStreetMap
 
 /***/ }),
 
-/***/ "./resources/js/redux/reducers/index.js":
-/*!**********************************************!*\
-  !*** ./resources/js/redux/reducers/index.js ***!
-  \**********************************************/
-/*! exports provided: rootReducer */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "rootReducer", function() { return rootReducer; });
-/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
-/* harmony import */ var _trailsReducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./trailsReducer */ "./resources/js/redux/reducers/trailsReducer.js");
-
-
-var rootReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
-  trailsReducer: _trailsReducer__WEBPACK_IMPORTED_MODULE_1__["trailsReducer"]
-});
-
-/***/ }),
-
-/***/ "./resources/js/redux/reducers/trailsReducer.js":
+/***/ "./resources/js/containers/unitsToggle/index.js":
 /*!******************************************************!*\
-  !*** ./resources/js/redux/reducers/trailsReducer.js ***!
+  !*** ./resources/js/containers/unitsToggle/index.js ***!
   \******************************************************/
-/*! exports provided: trailsReducer */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "trailsReducer", function() { return trailsReducer; });
-/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ "./node_modules/@babel/runtime/helpers/toConsumableArray.js");
-/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _components_header_UnitsToggle__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/header/UnitsToggle */ "./resources/js/components/header/UnitsToggle.jsx");
+/* harmony import */ var _store_appLoad_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../store/appLoad/actions */ "./resources/js/store/appLoad/actions.js");
 
-var initialState = [];
-var trailsReducer = function trailsReducer() {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
 
-  var _ref = arguments.length > 1 ? arguments[1] : undefined,
-      type = _ref.type,
-      payload = _ref.payload;
 
-  console.log(payload);
 
-  switch (type) {
-    case "FETCH_TRAIL_OVERVIEW":
-      return payload;
-
-    default:
-      return _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0___default()(state);
-  }
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    imperial: state.config.imperial
+  };
 };
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    toggleUnits: function toggleUnits(bool) {
+      return dispatch(Object(_store_appLoad_actions__WEBPACK_IMPORTED_MODULE_2__["config"])({
+        imperial: bool
+      }));
+    }
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mapStateToProps, mapDispatchToProps)(_components_header_UnitsToggle__WEBPACK_IMPORTED_MODULE_1__["default"]));
 
 /***/ }),
 
@@ -92801,15 +93410,30 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./helpers */ "./resources/js/routes/helpers.js");
+ // import Tags from '../components/routepage/Tags';
 
 
 var Home = Object(_helpers__WEBPACK_IMPORTED_MODULE_1__["ReactLazyPreload"])(function () {
-  return __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! ../pages/HomePage */ "./resources/js/pages/HomePage.jsx"));
+  return __webpack_require__.e(/*! import() */ 3).then(__webpack_require__.bind(null, /*! ../pages/HomePage */ "./resources/js/pages/HomePage.jsx"));
+});
+var RouteTemplate = Object(_helpers__WEBPACK_IMPORTED_MODULE_1__["ReactLazyPreload"])(function () {
+  return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(1)]).then(__webpack_require__.bind(null, /*! ../components/routepage/ */ "./resources/js/components/routepage/index.jsx"));
+});
+var Tags = Object(_helpers__WEBPACK_IMPORTED_MODULE_1__["ReactLazyPreload"])(function () {
+  return __webpack_require__.e(/*! import() */ 2).then(__webpack_require__.bind(null, /*! ../components/tags */ "./resources/js/components/tags/index.jsx"));
 });
 var routes = [{
   path: "/",
   exact: true,
   component: Home
+}, {
+  path: "/trails/:tag",
+  exact: true,
+  component: Tags
+}, {
+  path: "/:trailIdentifier",
+  exact: true,
+  component: RouteTemplate
 }];
 
 /***/ }),
@@ -92856,6 +93480,176 @@ var FETCH_TRAIL_OVERVIEW = "FETCH_TRAIL_OVERVIEW";
 
 /***/ }),
 
+/***/ "./resources/js/store/appLoad/actions.js":
+/*!***********************************************!*\
+  !*** ./resources/js/store/appLoad/actions.js ***!
+  \***********************************************/
+/*! exports provided: config */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "config", function() { return config; });
+/* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./types */ "./resources/js/store/appLoad/types.js");
+
+var config = function config(payload) {
+  return {
+    type: _types__WEBPACK_IMPORTED_MODULE_0__["TOGGLE_UNITS"],
+    payload: payload
+  };
+};
+
+/***/ }),
+
+/***/ "./resources/js/store/appLoad/reducers.js":
+/*!************************************************!*\
+  !*** ./resources/js/store/appLoad/reducers.js ***!
+  \************************************************/
+/*! exports provided: config */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "config", function() { return config; });
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js");
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./types */ "./resources/js/store/appLoad/types.js");
+
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+
+var initialState = {
+  imperial: true
+};
+var config = function config() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
+
+  var _ref = arguments.length > 1 ? arguments[1] : undefined,
+      type = _ref.type,
+      payload = _ref.payload;
+
+  switch (type) {
+    case _types__WEBPACK_IMPORTED_MODULE_1__["TOGGLE_UNITS"]:
+      var newConfig = _objectSpread(_objectSpread({}, state), payload);
+
+      saveConfigInLocalStorage(newConfig);
+      return newConfig;
+
+    default:
+      return state;
+  }
+};
+
+var saveConfigInLocalStorage = function saveConfigInLocalStorage(config) {
+  localStorage.setItem("trailsHubConfig", JSON.stringify(config));
+};
+
+/***/ }),
+
+/***/ "./resources/js/store/appLoad/types.js":
+/*!*********************************************!*\
+  !*** ./resources/js/store/appLoad/types.js ***!
+  \*********************************************/
+/*! exports provided: TOGGLE_UNITS */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TOGGLE_UNITS", function() { return TOGGLE_UNITS; });
+var TOGGLE_UNITS = "TOGGLE_UNITS";
+
+/***/ }),
+
+/***/ "./resources/js/store/reducers/index.js":
+/*!**********************************************!*\
+  !*** ./resources/js/store/reducers/index.js ***!
+  \**********************************************/
+/*! exports provided: rootReducer */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "rootReducer", function() { return rootReducer; });
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
+/* harmony import */ var _trailsReducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./trailsReducer */ "./resources/js/store/reducers/trailsReducer.js");
+/* harmony import */ var _appLoad_reducers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../appLoad/reducers */ "./resources/js/store/appLoad/reducers.js");
+
+
+
+var rootReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
+  config: _appLoad_reducers__WEBPACK_IMPORTED_MODULE_2__["config"],
+  trails: _trailsReducer__WEBPACK_IMPORTED_MODULE_1__["trails"]
+});
+
+/***/ }),
+
+/***/ "./resources/js/store/reducers/trailsReducer.js":
+/*!******************************************************!*\
+  !*** ./resources/js/store/reducers/trailsReducer.js ***!
+  \******************************************************/
+/*! exports provided: trails */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "trails", function() { return trails; });
+var initialState = [];
+var trails = function trails() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
+
+  var _ref = arguments.length > 1 ? arguments[1] : undefined,
+      type = _ref.type,
+      payload = _ref.payload;
+
+  switch (type) {
+    case "FETCH_TRAIL_OVERVIEW":
+      return payload;
+
+    default:
+      return state;
+  }
+};
+
+/***/ }),
+
+/***/ "./resources/js/utils/slugify.js":
+/*!***************************************!*\
+  !*** ./resources/js/utils/slugify.js ***!
+  \***************************************/
+/*! exports provided: slugify, unslugify */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "slugify", function() { return slugify; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unslugify", function() { return unslugify; });
+var slugify = function slugify(str) {
+  str = str.replace(/^\s+|\s+$/g, ''); // trim
+
+  str = str.toLowerCase(); // remove accents, swap ñ for n, etc
+
+  var from = "àáäâèéëêìíïîòóöôùúüûñç·/_,:;";
+  var to = "aaaaeeeeiiiioooouuuunc------";
+
+  for (var i = 0, l = from.length; i < l; i++) {
+    str = str.replace(new RegExp(from.charAt(i), 'g'), to.charAt(i));
+  }
+
+  str = str.replace(/[^a-z0-9 -]/g, '') // remove invalid chars
+  .replace(/\s+/g, '-') // collapse whitespace and replace by -
+  .replace(/-+/g, '-'); // collapse dashes
+
+  return str;
+};
+var unslugify = function unslugify(slug) {
+  return slug.replace(/-/gi, ' ');
+};
+
+/***/ }),
+
 /***/ "./resources/sass/app.scss":
 /*!*********************************!*\
   !*** ./resources/sass/app.scss ***!
@@ -92867,6 +93661,36 @@ var FETCH_TRAIL_OVERVIEW = "FETCH_TRAIL_OVERVIEW";
 
 /***/ }),
 
+/***/ "./resources/sass/styles/globalstyles.scss":
+/*!*************************************************!*\
+  !*** ./resources/sass/styles/globalstyles.scss ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader!../../../node_modules/postcss-loader/src??ref--7-2!../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!./globalstyles.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/sass/styles/globalstyles.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ 0:
 /*!*************************************************************!*\
   !*** multi ./resources/js/app.js ./resources/sass/app.scss ***!
@@ -92874,8 +93698,8 @@ var FETCH_TRAIL_OVERVIEW = "FETCH_TRAIL_OVERVIEW";
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/williammaddicott/Desktop/projects/trailshub/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/williammaddicott/Desktop/projects/trailshub/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/william/Desktop/trailshub/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/william/Desktop/trailshub/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

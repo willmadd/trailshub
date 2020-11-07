@@ -1,24 +1,27 @@
-@font-face {
-    font-family: 'orkneyregular';
-    src: url('../../../fonts/Orkney\ Regular.woff2') format('woff2'),
-         url('../../../fonts/Orkney\ Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+// @font-face {
+//     font-family: 'orkneyregular';
+//     src: url('../../../fonts/Orkney\ Regular.woff2') format('woff2'),
+//          url('../../../fonts/Orkney\ Regular.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
+//     // src: url('../../../fonts/Orkney\ Bold.woff')
 
-}
+// }
 
-@font-face {
-    font-family: 'orkneybold';
-    src: url('../../../fonts/Orkney\ Bold.woff2') format('woff2'),
-         url('../../../fonts/Orkney\ Bold.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+// @font-face {
+//     font-family: 'orkneybold';
+//     src: url('../../../fonts/Orkney\ Bold.woff2') format('woff2'),
+//          url('../../../fonts/Orkney\ Bold.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
 
-}
+// }
+
+
 
 $headingFont: 'Hind Madurai', sans-serif;
 
-$bodyFont: 'orkneyregular';
+// $bodyFont: 'orkneyregular';
 
 
 h1,h2,h3,h4,h5,h6{

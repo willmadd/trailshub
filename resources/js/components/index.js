@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "../../sass/app.scss";
+import "../../sass/styles/globalstyles.scss";
 import App from "./App";
 import thunk from "redux-thunk";
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware, compose } from "redux";
-import { rootReducer } from "../redux/reducers";
+import { rootReducer } from "../store/reducers";
 import { BrowserRouter as Router } from "react-router-dom";
 
 const store = createStore(

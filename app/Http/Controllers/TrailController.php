@@ -56,6 +56,16 @@ class TrailController extends Controller
              200);
     
     }
+
+    public function getRecentTrails($limit)
+    {
+        $recentTrails = DB::table('trails')->select(['id', 'user_id', 'main_image', 'activity', 'title', 'hire_centre' , 'tags', 'difficulty', 'slug', 'ascent', 'descent', 'distance', 'time'])->latest('created_at')->limit($limit)->get();
+    
+    
+        return response()->json(
+            $recentTrails,
+             200);
+    }
 }
 
 

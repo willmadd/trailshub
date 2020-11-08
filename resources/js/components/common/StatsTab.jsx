@@ -38,7 +38,7 @@ return (
                 <h5><img src={distanceIcon}/>
                     {imperial
                         ? `${Math.round(distance * MetersToFt * ftToMiles)} miles`
-                        : `${distance/1000} km`}
+                        : `${Math.round(distance/1000*100)/100} km`}
                 </h5>
             )}
         </div>

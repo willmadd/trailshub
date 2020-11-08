@@ -2,10 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { unslugify } from "../../utils/slugify";
 import Loader from "../loader";
-import "./tags.scss";
-import DifficultyTab from "../common/difficultyTab";
-// import StatsTab from "../common/StatsTab";
-import StatsTab from "../../containers/statsContainer/index";
+// import "./tags.scss";
+import RouteCard from "../common/RouteCard";
 
 const index = ({ match }) => {
     const { tag } = match.params;
@@ -40,25 +38,26 @@ const index = ({ match }) => {
                 <div className="tags-list">
                     {regionData&&regionData.description &&<p>{regionData.description}</p>}
                     {trails.map(trail => (
-                        <a
-                            key={trail.slug}
-                            href={`/${trail.slug}`}
-                            className="tag-card"
-                        >
-                            <img key={trail.id} src={trail.main_image} onLoad={imageLoaded}/>
-                            <div className="tag-text">
-                                <div className="text-upper">
-                                <h3>{trail.title}</h3>
-                                <DifficultyTab level={trail.difficulty} />
-                                </div>
-                                <StatsTab
-                                    ascent={trail.ascent}
-                                    descent={trail.descent}
-                                    distance={trail.distance}
-                                    time={trail.time}
-                                />
-                            </div>
-                        </a>
+                        // <a
+                        //     key={trail.slug}
+                        //     href={`/${trail.slug}`}
+                        //     className="tag-card"
+                        // >
+                        //     <img key={trail.id} src={trail.main_image} onLoad={imageLoaded}/>
+                        //     <div className="tag-text">
+                        //         <div className="text-upper">
+                        //         <h3>{trail.title}</h3>
+                        //         <DifficultyTab level={trail.difficulty} />
+                        //         </div>
+                        //         <StatsTab
+                        //             ascent={trail.ascent}
+                        //             descent={trail.descent}
+                        //             distance={trail.distance}
+                        //             time={trail.time}
+                        //         />
+                        //     </div>
+                        // </a>
+                        <RouteCard trail={trail} imageLoaded={imageLoaded}/>
                     ))}
                 </div>
             )}

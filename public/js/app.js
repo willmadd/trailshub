@@ -6845,6 +6845,25 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/components/header/unitsToggle.scss":
+/*!********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./resources/js/components/header/unitsToggle.scss ***!
+  \********************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".switch {\n  position: relative;\n  display: inline-block;\n  width: 60px;\n  height: 12px;\n}\n\n.switch input {\n  opacity: 0;\n  width: 0;\n  height: 0;\n}\n\n.slider {\n  position: absolute;\n  cursor: pointer;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background-color: #0C7C59;\n  transition: 0.4s;\n}\n\n.slider:before {\n  position: absolute;\n  content: \"\";\n  height: 8px;\n  width: 8px;\n  left: 4px;\n  bottom: 4px;\n  background-color: white;\n  transition: 0.4s;\n}\n\ninput:checked + .slider {\n  background-color: #0C7C59;\n}\n\ninput:focus + .slider {\n  box-shadow: 0 0 1px #0C7C59;\n}\n\ninput:checked + .slider:before {\n  transform: translateX(26px);\n}\n\n/* Rounded sliders */\n.slider.round {\n  border-radius: 6px;\n}\n\n.slider.round:before {\n  border-radius: 50%;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/sass/styles/globalstyles.scss":
 /*!************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./resources/sass/styles/globalstyles.scss ***!
@@ -6857,7 +6876,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "h1, h2, h3, h4, h5, h6 {\n  margin: 0;\n  font-family: \"Hind Madurai\", sans-serif;\n}\n\na {\n  color: inherit;\n  text-decoration: none;\n}\n\nhtml, body {\n  height: 100%;\n  background-color: #bac1b8;\n}\n\n.mob-hide {\n  display: none;\n}\n@media (min-width: 1024px) {\n  .mob-hide {\n    display: unset;\n  }\n}\n\nheader {\n  font-family: \"orkneybold\";\n  width: 100%;\n  background-color: #2B303A;\n  padding: 16px 32px;\n  color: #fff;\n  text-align: left;\n  box-sizing: border-box;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  letter-spacing: 1px;\n}\nheader button.signin {\n  background-color: #d64933;\n  border: #bac1b8;\n  border-radius: 4px;\n  padding: 12px 48px;\n  font-family: orkneybold;\n  color: white;\n  text-transform: uppercase;\n  font-size: 14px;\n  letter-spacing: 1px;\n  cursor: pointer;\n}\n\n.header-logo {\n  width: 200px;\n}\n\n.search-wrapper {\n  width: 100%;\n  background-position: center;\n  background-size: cover;\n  padding: 0;\n}\n@media (min-width: 1024px) {\n  .search-wrapper {\n    position: absolute;\n    height: 544px;\n  }\n}\n\n.searchModal {\n  width: 100%;\n  height: 100%;\n  right: 32px;\n  top: 0px;\n  z-index: 450;\n}\n@media (min-width: 1024px) {\n  .searchModal {\n    position: absolute;\n    left: 0;\n    right: 0;\n    margin: auto;\n    width: 50%;\n    max-width: 450px;\n    display: flex;\n    flex-direction: column;\n    padding-top: 16px;\n  }\n}\n.searchModal h2 {\n  padding: 24px;\n  text-transform: uppercase;\n  font-size: 10px;\n  text-align: center;\n  font-weight: 600;\n}\n@media (min-width: 768px) {\n  .searchModal h2 {\n    padding: 0;\n    width: 100%;\n    font-size: 18px;\n    color: #fff;\n    margin-bottom: 16px;\n  }\n}\n\n@media (min-width: 1024px) {\n  .searchBar {\n    padding: 0 24px;\n    display: grid;\n    grid-template-columns: auto 63px;\n  }\n}\n\n.submit-location {\n  height: 64px;\n  border: 1px solid #2B303A;\n  border-left-width: 0;\n  background-color: #d64933;\n  background-image: url(/images/find.svg);\n  background-repeat: no-repeat;\n  background-position: center;\n  background-size: 36px;\n}\n@media (min-width: 1024px) {\n  .submit-location {\n    border-radius: 0 5px 5px 0;\n  }\n}\n\n.geosuggest__input {\n  width: 100%;\n  padding: 18px 0 18px 24px;\n  box-sizing: border-box;\n  border: 1px solid #2B303A;\n  border-width: 1px 0 0 0;\n  font-family: orkneybold;\n  font-size: 16px;\n}\n@media (min-width: 1024px) {\n  .geosuggest__input {\n    border-right-color: #bac1b8;\n    border-radius: 5px 0 0 5px;\n  }\n}\n\n.geosuggest__input-wrapper {\n  padding: 0;\n  border: 0;\n}\n\n.geosuggest__suggests {\n  list-style: none;\n  padding: 0;\n  margin: 0;\n  text-align: left;\n  border: 0 solid #2B303A;\n  border-top-width: 1px;\n  background-color: #fff;\n}\n.geosuggest__suggests li {\n  cursor: pointer;\n  display: grid;\n  grid-template-columns: 24px auto;\n  grid-gap: 12px;\n  padding: 12px;\n  border-bottom: 1px solid #bac1b8;\n}\n.geosuggest__suggests li::before {\n  content: \"\";\n  display: block;\n  height: 24px;\n  width: 24px;\n  align-self: center;\n  background-image: url(/images/search-location-marker.svg);\n}\n.geosuggest__suggests li:hover {\n  background-color: #bac1b8;\n}\n\n.geosuggest__suggests--hidden {\n  max-height: 0;\n  overflow: hidden;\n  border-width: 0;\n}\n\n.leaflet-container {\n  height: 1000px;\n  width: 100%;\n}\n.leaflet-container.secondary {\n  width: 80%;\n  margin-left: auto;\n  height: 100vh;\n}\n\n.main-container {\n  position: relative;\n}", ""]);
+exports.push([module.i, "h1, h2, h3, h4, h5, h6 {\n  margin: 0;\n  font-family: \"Hind Madurai\", sans-serif;\n}\n\na {\n  color: inherit;\n  text-decoration: none;\n}\n\nhtml, body {\n  height: 100%;\n  background-color: #bac1b8;\n}\n\n.mob-hide {\n  display: none;\n}\n@media (min-width: 1024px) {\n  .mob-hide {\n    display: unset;\n  }\n}\n\nheader {\n  font-family: \"orkneybold\";\n  width: 100%;\n  background-color: #2B303A;\n  padding: 16px 32px;\n  color: #fff;\n  text-align: left;\n  box-sizing: border-box;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  letter-spacing: 1px;\n}\nheader button.signin {\n  background-color: #d64933;\n  border: #bac1b8;\n  border-radius: 4px;\n  padding: 12px 48px;\n  font-family: orkneybold;\n  color: white;\n  text-transform: uppercase;\n  font-size: 14px;\n  letter-spacing: 1px;\n  cursor: pointer;\n}\n\n.header-logo {\n  width: 200px;\n}\n\n.search-wrapper {\n  width: 100%;\n  background-position: center;\n  background-size: cover;\n  padding: 0;\n}\n@media (min-width: 1024px) {\n  .search-wrapper {\n    position: absolute;\n    height: 544px;\n  }\n}\n\n.searchModal {\n  width: 100%;\n  height: 100%;\n  right: 32px;\n  top: 0px;\n  z-index: 450;\n}\n@media (min-width: 1024px) {\n  .searchModal {\n    position: absolute;\n    left: 0;\n    right: 0;\n    margin: auto;\n    width: 50%;\n    max-width: 450px;\n    display: flex;\n    flex-direction: column;\n    padding-top: 16px;\n  }\n}\n.searchModal h2 {\n  padding: 24px;\n  text-transform: uppercase;\n  font-size: 10px;\n  text-align: center;\n  font-weight: 600;\n}\n@media (min-width: 768px) {\n  .searchModal h2 {\n    padding: 0;\n    width: 100%;\n    font-size: 18px;\n    color: #fff;\n    margin-bottom: 16px;\n  }\n}\n\n@media (min-width: 1024px) {\n  .searchBar {\n    padding: 0 24px;\n    display: grid;\n    grid-template-columns: auto 63px;\n  }\n}\n\n.submit-location {\n  height: 64px;\n  border: 1px solid #2B303A;\n  border-left-width: 0;\n  background-color: #d64933;\n  background-image: url(/images/find.svg);\n  background-repeat: no-repeat;\n  background-position: center;\n  background-size: 36px;\n}\n@media (min-width: 1024px) {\n  .submit-location {\n    border-radius: 0 5px 5px 0;\n  }\n}\n\n.geosuggest__input {\n  width: 100%;\n  padding: 18px 0 18px 24px;\n  box-sizing: border-box;\n  border: 1px solid #2B303A;\n  border-width: 1px 0 0 0;\n  font-family: orkneybold;\n  font-size: 16px;\n}\n@media (min-width: 1024px) {\n  .geosuggest__input {\n    border-right-color: #bac1b8;\n    border-radius: 5px 0 0 5px;\n  }\n}\n\n.geosuggest__input-wrapper {\n  padding: 0;\n  border: 0;\n}\n\n.geosuggest__suggests {\n  list-style: none;\n  padding: 0;\n  margin: 0;\n  text-align: left;\n  border: 0 solid #2B303A;\n  border-top-width: 1px;\n  background-color: #fff;\n}\n.geosuggest__suggests li {\n  cursor: pointer;\n  display: grid;\n  grid-template-columns: 24px auto;\n  grid-gap: 12px;\n  padding: 12px;\n  border-bottom: 1px solid #bac1b8;\n}\n.geosuggest__suggests li::before {\n  content: \"\";\n  display: block;\n  height: 24px;\n  width: 24px;\n  align-self: center;\n  background-image: url(/images/search-location-marker.svg);\n}\n.geosuggest__suggests li:hover {\n  background-color: #bac1b8;\n}\n\n.geosuggest__suggests--hidden {\n  max-height: 0;\n  overflow: hidden;\n  border-width: 0;\n}\n\n.leaflet-container {\n  height: 600px;\n  width: 100%;\n}\n.leaflet-container.secondary {\n  width: 80%;\n  margin-left: auto;\n  height: 100vh;\n}\n\n.main-container {\n  position: relative;\n}", ""]);
 
 // exports
 
@@ -92930,17 +92949,26 @@ var Logo = function Logo() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _unitsToggle_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./unitsToggle.scss */ "./resources/js/components/header/unitsToggle.scss");
+/* harmony import */ var _unitsToggle_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_unitsToggle_scss__WEBPACK_IMPORTED_MODULE_1__);
+
 
 
 var UnitsToggle = function UnitsToggle(props) {
   var imperial = props.imperial,
-      toggleUnits = props.toggleUnits;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    type: "button",
+      toggleUnits = props.toggleUnits; // const [checked, setChecked] = useState(!!imperial)
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, 'm', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    "class": "switch"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "checkbox",
     onClick: function onClick() {
       return toggleUnits(!imperial);
-    }
-  }, "Change Units"), imperial ? "imperial" : "metric");
+    },
+    checked: imperial
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    "class": "slider round"
+  })), 'ft');
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (UnitsToggle);
@@ -92967,12 +92995,44 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Header = function Header() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "header-left"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "/"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Logo__WEBPACK_IMPORTED_MODULE_1__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_unitsToggle__WEBPACK_IMPORTED_MODULE_3__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_LoginButton__WEBPACK_IMPORTED_MODULE_2__["default"], null));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Logo__WEBPACK_IMPORTED_MODULE_1__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_unitsToggle__WEBPACK_IMPORTED_MODULE_3__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_LoginButton__WEBPACK_IMPORTED_MODULE_2__["default"], null));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Header);
+
+/***/ }),
+
+/***/ "./resources/js/components/header/unitsToggle.scss":
+/*!*********************************************************!*\
+  !*** ./resources/js/components/header/unitsToggle.scss ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!./unitsToggle.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/components/header/unitsToggle.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
 
 /***/ }),
 
@@ -93414,13 +93474,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Home = Object(_helpers__WEBPACK_IMPORTED_MODULE_1__["ReactLazyPreload"])(function () {
-  return __webpack_require__.e(/*! import() */ 3).then(__webpack_require__.bind(null, /*! ../pages/HomePage */ "./resources/js/pages/HomePage.jsx"));
+  return Promise.all(/*! import() */[__webpack_require__.e(3), __webpack_require__.e(4)]).then(__webpack_require__.bind(null, /*! ../pages/HomePage */ "./resources/js/pages/HomePage.jsx"));
 });
 var RouteTemplate = Object(_helpers__WEBPACK_IMPORTED_MODULE_1__["ReactLazyPreload"])(function () {
   return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(1)]).then(__webpack_require__.bind(null, /*! ../components/routepage/ */ "./resources/js/components/routepage/index.jsx"));
 });
 var Tags = Object(_helpers__WEBPACK_IMPORTED_MODULE_1__["ReactLazyPreload"])(function () {
-  return __webpack_require__.e(/*! import() */ 2).then(__webpack_require__.bind(null, /*! ../components/tags */ "./resources/js/components/tags/index.jsx"));
+  return Promise.all(/*! import() */[__webpack_require__.e(3), __webpack_require__.e(5)]).then(__webpack_require__.bind(null, /*! ../components/tags */ "./resources/js/components/tags/index.jsx"));
 });
 var routes = [{
   path: "/",

@@ -3,40 +3,5 @@
 .tags-page {
     background-color: $shade;
     padding: 16px 0;
-    h1{
-        text-transform: uppercase;
-        text-align: center;
-        margin:16px;
-    }
-    img{
-        width: 100%;
-    }
-    .tags-list{
-        display: grid;
-        // padding:16px;
-        margin:16px;
-    }
-    .tag-card{
-        border: 1px solid $accent;
-        position: relative;
-        &:hover{
-            border: 2px solid $accent;
-            transition: 0.25s;
-        }
-    }
-    .tag-text{
-        position: absolute;
-    bottom: 8px;
-    left: 8px;
-    background-color: $white;
-    width: calc(100% - 16px);
-    padding: 8px;
-    border: 1px solid $accent;
 
-    }
-    .text-upper{
-        display: grid;
-        grid-template-columns: 1fr auto;
-        margin-bottom:8px;
-    }
 }

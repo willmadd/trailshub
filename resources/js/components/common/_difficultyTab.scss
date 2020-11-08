@@ -3,15 +3,19 @@
 .difficulty-indicator {
     text-transform: uppercase;
     padding:8px;
+    display: flex;
+    align-items: center;
     h5{
         font-size: 10px;
         font-weight: 700;
     }
     &.easy {
         background-color: $easy;
+        color: $white;
     }
     &.intermediate {
         background-color: $intermediate;
+        color: $white;
     }
     &.hard {
         background-color: $hard;
@@ -19,5 +23,6 @@
     }
     &.extreme {
         background-color: $extreme;
+        color: $white;
     }
 }

@@ -6,7 +6,7 @@ const HomePage = () => {
     return (
         <div className="homepage">
             <Map />
-            <RouteCarousel quantity={4} query={"all"}/>
+            <RouteCarousel quantity={2} query={"all"}/>
         </div>
     );
 };

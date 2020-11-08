@@ -1,9 +1,110 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[3],{
 
-/***/ "./resources/js/components/routeCarousel/RouteCard.jsx":
-/*!*************************************************************!*\
-  !*** ./resources/js/components/routeCarousel/RouteCard.jsx ***!
-  \*************************************************************/
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/components/common/_difficultyTab.scss":
+/*!***********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./resources/js/components/common/_difficultyTab.scss ***!
+  \***********************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".difficulty-indicator {\n  text-transform: uppercase;\n  padding: 8px;\n  display: flex;\n  align-items: center;\n}\n.difficulty-indicator h5 {\n  font-size: 10px;\n  font-weight: 700;\n}\n.difficulty-indicator.easy {\n  background-color: green;\n  color: #fff;\n}\n.difficulty-indicator.intermediate {\n  background-color: #CA0B00;\n  color: #fff;\n}\n.difficulty-indicator.hard {\n  background-color: black;\n  color: #fff;\n}\n.difficulty-indicator.extreme {\n  background-color: orange;\n  color: #fff;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/components/common/routeCard.scss":
+/*!******************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./resources/js/components/common/routeCard.scss ***!
+  \******************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "h1 {\n  text-transform: uppercase;\n  text-align: center;\n  margin: 16px;\n}\n\nimg {\n  width: 100%;\n}\n\n.tags-list {\n  display: grid;\n  margin: 16px;\n}\n\n.tag-card {\n  border: 1px solid #2B303A;\n  position: relative;\n  margin-bottom: 16px;\n}\n.tag-card:hover {\n  border: 2px solid #2B303A;\n  transition: 0.25s;\n}\n\n.tag-text {\n  position: absolute;\n  bottom: 8px;\n  left: 8px;\n  background-color: #fff;\n  width: calc(100% - 16px);\n  padding: 8px;\n  border: 1px solid #2B303A;\n}\n\n.text-upper {\n  display: grid;\n  grid-template-columns: 1fr auto;\n  margin-bottom: 8px;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/components/common/statsTab.scss":
+/*!*****************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./resources/js/components/common/statsTab.scss ***!
+  \*****************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".stats-tab {\n  display: flex;\n  justify-content: space-between;\n  color: #2B303A;\n}\n.stats-tab h5 {\n  display: flex;\n}\n.stats-tab h5 img {\n  height: 18px;\n  width: 18px;\n  margin-right: 4px;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./resources/images/icons/ascent.svg":
+/*!*******************************************!*\
+  !*** ./resources/images/icons/ascent.svg ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/ascent.svg?4523a4a7ccc4c4a735e4f260224d053d";
+
+/***/ }),
+
+/***/ "./resources/images/icons/descent.svg":
+/*!********************************************!*\
+  !*** ./resources/images/icons/descent.svg ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/descent.svg?d80a39495905448c2a12bf348ee518b1";
+
+/***/ }),
+
+/***/ "./resources/images/icons/distance.svg":
+/*!*********************************************!*\
+  !*** ./resources/images/icons/distance.svg ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/distance.svg?03c2513393f16010ce28c2f927ffaf5a";
+
+/***/ }),
+
+/***/ "./resources/images/icons/time.svg":
+/*!*****************************************!*\
+  !*** ./resources/images/icons/time.svg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/time.svg?f19eab6d6e90c13cc89282a324e8bb41";
+
+/***/ }),
+
+/***/ "./resources/js/components/common/Difficulty_Tab.jsx":
+/*!***********************************************************!*\
+  !*** ./resources/js/components/common/Difficulty_Tab.jsx ***!
+  \***********************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -11,20 +112,76 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _difficultyTab_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_difficultyTab.scss */ "./resources/js/components/common/_difficultyTab.scss");
+/* harmony import */ var _difficultyTab_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_difficultyTab_scss__WEBPACK_IMPORTED_MODULE_1__);
 
 
-var RouteCard = function RouteCard() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null);
+
+var DifficultyTab = function DifficultyTab(_ref) {
+  var level = _ref.level;
+  var grade = level === 1 ? "easy" : level === 2 ? "intermediate" : level === 3 ? "hard" : "extreme";
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "difficulty-indicator ".concat(grade)
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, grade));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (DifficultyTab);
+
+/***/ }),
+
+/***/ "./resources/js/components/common/RouteCard.jsx":
+/*!******************************************************!*\
+  !*** ./resources/js/components/common/RouteCard.jsx ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Difficulty_Tab__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Difficulty_Tab */ "./resources/js/components/common/Difficulty_Tab.jsx");
+/* harmony import */ var _containers_statsContainer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../containers/statsContainer */ "./resources/js/containers/statsContainer/index.js");
+/* harmony import */ var _routeCard_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./routeCard.scss */ "./resources/js/components/common/routeCard.scss");
+/* harmony import */ var _routeCard_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_routeCard_scss__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+
+var RouteCard = function RouteCard(_ref) {
+  var trail = _ref.trail,
+      imageLoaded = _ref.imageLoaded;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    key: trail.slug,
+    href: "/".concat(trail.slug),
+    className: "tag-card"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    key: trail.id,
+    src: trail.main_image,
+    onLoad: imageLoaded
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "tag-text"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "text-upper"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, trail.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Difficulty_Tab__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    level: trail.difficulty
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_statsContainer__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    ascent: trail.ascent,
+    descent: trail.descent,
+    distance: trail.distance,
+    time: trail.time
+  })));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (RouteCard);
 
 /***/ }),
 
-/***/ "./resources/js/components/routeCarousel/index.js":
-/*!********************************************************!*\
-  !*** ./resources/js/components/routeCarousel/index.js ***!
-  \********************************************************/
+/***/ "./resources/js/components/common/StatsTab.jsx":
+/*!*****************************************************!*\
+  !*** ./resources/js/components/common/StatsTab.jsx ***!
+  \*****************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -34,147 +191,186 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _RouteCard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./RouteCard */ "./resources/js/components/routeCarousel/RouteCard.jsx");
-/* harmony import */ var _translations_translator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../translations/translator */ "./resources/js/translations/translator.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _utils_secondsToTime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../utils/secondsToTime */ "./resources/js/utils/secondsToTime.js");
+/* harmony import */ var _statsTab_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./statsTab.scss */ "./resources/js/components/common/statsTab.scss");
+/* harmony import */ var _statsTab_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_statsTab_scss__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _images_icons_ascent_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../images/icons/ascent.svg */ "./resources/images/icons/ascent.svg");
+/* harmony import */ var _images_icons_ascent_svg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_images_icons_ascent_svg__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _images_icons_descent_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../images/icons/descent.svg */ "./resources/images/icons/descent.svg");
+/* harmony import */ var _images_icons_descent_svg__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_images_icons_descent_svg__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _images_icons_time_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../images/icons/time.svg */ "./resources/images/icons/time.svg");
+/* harmony import */ var _images_icons_time_svg__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_images_icons_time_svg__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _images_icons_distance_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../images/icons/distance.svg */ "./resources/images/icons/distance.svg");
+/* harmony import */ var _images_icons_distance_svg__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_images_icons_distance_svg__WEBPACK_IMPORTED_MODULE_7__);
 
 
 
 
 
 
-var RouteCarousel = function RouteCarousel(_ref) {
-  var quantity = _ref.quantity,
-      searchTerm = _ref.searchTerm;
 
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])([]),
-      _useState2 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_useState, 2),
-      routes = _useState2[0],
-      setRoutes = _useState2[1];
 
-  Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {});
 
-  var getCarouselRoutes = function getCarouselRoutes() {// axios.get
-  };
+var StatsTab = function StatsTab(props) {
+  var ascent = props.ascent,
+      descent = props.descent,
+      time = props.time,
+      distance = props.distance,
+      imperial = props.imperial;
+  var MetersToFt = 3.28084;
+  var ftToMiles = 0.000189394;
+
+  var _secondsToTime = Object(_utils_secondsToTime__WEBPACK_IMPORTED_MODULE_2__["default"])(time),
+      _secondsToTime2 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_secondsToTime, 3),
+      hours = _secondsToTime2[0],
+      min = _secondsToTime2[1],
+      sec = _secondsToTime2[2];
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "route-carousel"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "".concat(Object(_translations_translator__WEBPACK_IMPORTED_MODULE_3__["__"])("Discover our most recent routes"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "carousel-wrapper"
-  }, routes.map(function (route, index) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_RouteCard__WEBPACK_IMPORTED_MODULE_2__["default"], {
-      key: index,
-      route: route
-    });
-  })));
+    className: "stats-tab"
+  }, ascent && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h5", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+    src: _images_icons_ascent_svg__WEBPACK_IMPORTED_MODULE_4___default.a
+  }), imperial ? "".concat(Math.round(ascent * MetersToFt), " ft") : "".concat(ascent, " m")), descent && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h5", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+    src: _images_icons_descent_svg__WEBPACK_IMPORTED_MODULE_5___default.a
+  }), imperial ? "".concat(Math.round(descent * MetersToFt), " ft") : "".concat(descent, " m")), time && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h5", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+    src: _images_icons_time_svg__WEBPACK_IMPORTED_MODULE_6___default.a
+  }), hours, "h ", min, "m"), distance && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h5", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+    src: _images_icons_distance_svg__WEBPACK_IMPORTED_MODULE_7___default.a
+  }), imperial ? "".concat(Math.round(distance * MetersToFt * ftToMiles), " miles") : "".concat(Math.round(distance / 1000 * 100) / 100, " km")));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (RouteCarousel);
+/* harmony default export */ __webpack_exports__["default"] = (StatsTab);
 
 /***/ }),
 
-/***/ "./resources/js/pages/HomePage.jsx":
-/*!*****************************************!*\
-  !*** ./resources/js/pages/HomePage.jsx ***!
-  \*****************************************/
+/***/ "./resources/js/components/common/_difficultyTab.scss":
+/*!************************************************************!*\
+  !*** ./resources/js/components/common/_difficultyTab.scss ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!./_difficultyTab.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/components/common/_difficultyTab.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/components/common/routeCard.scss":
+/*!*******************************************************!*\
+  !*** ./resources/js/components/common/routeCard.scss ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!./routeCard.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/components/common/routeCard.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/components/common/statsTab.scss":
+/*!******************************************************!*\
+  !*** ./resources/js/components/common/statsTab.scss ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!./statsTab.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/components/common/statsTab.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/containers/statsContainer/index.js":
+/*!*********************************************************!*\
+  !*** ./resources/js/containers/statsContainer/index.js ***!
+  \*********************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_map__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/map */ "./resources/js/components/map/index.jsx");
-/* harmony import */ var _components_routeCarousel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/routeCarousel */ "./resources/js/components/routeCarousel/index.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _components_common_StatsTab__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/common/StatsTab */ "./resources/js/components/common/StatsTab.jsx");
 
 
 
-
-var HomePage = function HomePage() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "homepage"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_map__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_routeCarousel__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    quantity: 4,
-    query: "all"
-  }));
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    imperial: state.config.imperial
+  };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (HomePage);
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mapStateToProps)(_components_common_StatsTab__WEBPACK_IMPORTED_MODULE_1__["default"]));
 
 /***/ }),
 
-/***/ "./resources/js/translations/locales sync recursive ^\\.\\/.*\\.json$":
-/*!***************************************************************!*\
-  !*** ./resources/js/translations/locales sync ^\.\/.*\.json$ ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var map = {
-	"./en_GB.json": "./resources/js/translations/locales/en_GB.json"
-};
-
-
-function webpackContext(req) {
-	var id = webpackContextResolve(req);
-	return __webpack_require__(id);
-}
-function webpackContextResolve(req) {
-	if(!__webpack_require__.o(map, req)) {
-		var e = new Error("Cannot find module '" + req + "'");
-		e.code = 'MODULE_NOT_FOUND';
-		throw e;
-	}
-	return map[req];
-}
-webpackContext.keys = function webpackContextKeys() {
-	return Object.keys(map);
-};
-webpackContext.resolve = webpackContextResolve;
-module.exports = webpackContext;
-webpackContext.id = "./resources/js/translations/locales sync recursive ^\\.\\/.*\\.json$";
-
-/***/ }),
-
-/***/ "./resources/js/translations/locales/en_GB.json":
-/*!******************************************************!*\
-  !*** ./resources/js/translations/locales/en_GB.json ***!
-  \******************************************************/
-/*! exports provided: Likes, Welcome to Welcome to React-Laravel-Instagram, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"Likes\":\"Likes\",\"Welcome to Welcome to React-Laravel-Instagram\":\"Welcome to React-Laravel-Instagram\"}");
-
-/***/ }),
-
-/***/ "./resources/js/translations/translator.js":
-/*!*************************************************!*\
-  !*** ./resources/js/translations/translator.js ***!
-  \*************************************************/
-/*! exports provided: __ */
+/***/ "./resources/js/utils/secondsToTime.js":
+/*!*********************************************!*\
+  !*** ./resources/js/utils/secondsToTime.js ***!
+  \*********************************************/
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__", function() { return __; });
-var __ = function __(translation) {
-  var translationsFile = findTranslationsFile('en_GB');
-
-  if (translationsFile) {
-    return translationsFile[translation] || translation;
-  } else {
-    return translation;
-  }
-};
-
-var findTranslationsFile = function findTranslationsFile(locale) {
-  try {
-    return __webpack_require__("./resources/js/translations/locales sync recursive ^\\.\\/.*\\.json$")("./".concat(locale, ".json"));
-  } catch (err) {
-    return null;
-  }
-};
+/* harmony default export */ __webpack_exports__["default"] = (function (seconds) {
+  return new Date(seconds * 1000).toISOString().substr(11, 8).split(":").map(function (time) {
+    return Number(time);
+  });
+});
 
 /***/ })
 

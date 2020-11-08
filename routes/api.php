@@ -22,3 +22,6 @@ Route::get('gettrails', 'TrailController@getTrails');
 Route::get('gettrail/{trailIdentifier}/{coords}', 'TrailController@getTrailBySlug');
 
 Route::get('gettrailsbytag/{tag}', 'TrailController@getTrailByTag');
+
+Route::get('getrecenttrails/{limit}', 'TrailController@getRecentTrails');
+

@@ -8,7 +8,7 @@ export const getTrailsOverview = () => {
         axios.get("/api/gettrails").then(res =>
             dispatch({
                 type: FETCH_TRAIL_OVERVIEW,
-                payload: res.data
+                payload: res.data.trails
             })
         );
     };

@@ -3,17 +3,20 @@ import axios from "axios";
 // import Loader from "react-loader-spinner";
 import Tags from "./Tags";
 import DownloadGPX from "./DownloadGPX";
-import Youtube from "./Youtube";
+import Youtube from "../common/Youtube";
 import TrailText from "./TrailText";
 // import { convertGpxToJson } from "../../../helpers/gpxToJson";
-import Statistics from "./Statistics";
+
 import SingleTrailMap from "./SingleTrailMap";
 import ElevationProfile from "./ElevationProfile";
 
-import './routepage.scss';
+import "./routepage.scss";
+import ImageCarousel from "./ImageCarousel";
+import StatsTab from "../common/StatsTab";
+import DifficultyTab from "../common/DifficultyTab";
 
-const RouteTemplate = ({ match, location }) => {
-    let  {trailIdentifier }= match.params;
+const RouteTemplate = ({ match, location, units }) => {
+    let { trailIdentifier } = match.params;
     const [trail, setTrail] = useState({
         title: "",
         id: "",
@@ -44,8 +47,6 @@ const RouteTemplate = ({ match, location }) => {
         }
     ]);
 
-
-
     useEffect(() => {
         // async function fetchData() {
         //     const result = await axios(`/api/gettrail/${id}`);
@@ -54,29 +55,29 @@ const RouteTemplate = ({ match, location }) => {
         //     // setJson(gpsJson);
         //     // setElevationData(createElevationData(gpsJson));
         // }
-        location.state && setTrail({
-            ...trail,
-            coords:location.state.coords
-        })
+        location.state &&
+            setTrail({
+                ...trail,
+                coords: location.state.coords
+            });
         const fetchData = () => {
-            // console.log("use effect");
-            // console.log(location.state);
-            // console.log(location.state.coords.length);
             axios
-            .get(
-                `/api/gettrail/${trailIdentifier}${location.state &&
-                    location.state.coords.length > 0 ?
-                    "/nocoords":"/coords"}`
-                    )
-                    .then(res => {
-                        console.log('thhtht');
-                        console.log(res);
-                        setTrail({
-                            ...trail,
-                            ...res.data,
-                            coords: res.data.coords?JSON.parse(res.data.coords):trail.coords,
-                        })
-                        setLoading(false);
+                .get(
+                    `/api/gettrail/${trailIdentifier}${
+                        location.state && location.state.coords.length > 0
+                            ? "/nocoords"
+                            : "/coords"
+                    }`
+                )
+                .then(res => {
+                    setTrail({
+                        ...trail,
+                        ...res.data,
+                        coords: res.data.coords
+                            ? JSON.parse(res.data.coords)
+                            : location.state.coords
+                    });
+                    setLoading(false);
                 });
         };
         fetchData();
@@ -94,9 +95,9 @@ const RouteTemplate = ({ match, location }) => {
         });
         return data;
     };
-//     console.log('trail is');
-// console.log(trail);
-// console.log(loading);
+    //     console.log('trail is');
+    // console.log(trail);
+    // console.log(loading);
     return (
         <div>
             {/* <Loader
@@ -107,15 +108,27 @@ const RouteTemplate = ({ match, location }) => {
                 visible={loading}
             /> */}
             {!loading && (
-                <div className="route-container">
-                    <h1>{`${trail.title}`}</h1>
-                    <Tags tagString={trail.tags} />
-                    <Youtube />
-                    {/* <Statistics stats={json} difficulty={trail.difficulty}/> */}
+                <div className="route">
+                    <h1>{decodeURIComponent(`${trail.title}`)}</h1>
+                    <div className="route__one">
+                        <div className="route__one__left">
+                            <Tags tagsArr={trail.tags} />
+                            <DifficultyTab level={Number(trail.difficulty)}/>
+                            <TrailText text={trail.summary} />
+                            
+                            <StatsTab ascent={trail.ascent} descent={trail.descent} time={trail.time} distance={trail.distance} imperial={units.imperial}/>
                     <DownloadGPX file={trail.gpx} title={trail.title} />
-                    {/* <SingleTrailMap route={trail.coords} /> */}
-                    {/* <ElevationProfile route={elevationData} /> */}
                     <TrailText text={trail.description} />
+                        </div>
+                        <div>
+                        <SingleTrailMap route={trail.coords} />
+                    <Youtube url={decodeURIComponent(trail.youtube_link)} />
+
+                        </div>
+                    </div>
+
+                    <ImageCarousel images={trail.images} />
+                    {/* <ElevationProfile route={elevationData} /> */}
                 </div>
             )}
         </div>

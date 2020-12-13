@@ -15,6 +15,7 @@ const RouteCarousel = ({quantity, searchTerm}) => {
     const getCarouselRoutes = () => {
         axios.get(`/api/getrecenttrails/${quantity}`)
         .then(res=>{
+            console.log(res.data);
             setRoutes(res.data)
         })
     }

@@ -16,6 +16,8 @@ useEffect(()=>{
 
 })
 
+
+
     return (
         <div className="searchBar">
             <Geosuggest ref={searchSuggest} onUpdateSuggests={(e)=>animate(e)} onSuggestSelect={submitLocation} placeholder={'Find Mountain Bike Trails in Your Area'}/>

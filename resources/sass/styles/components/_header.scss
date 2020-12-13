@@ -1,4 +1,4 @@
-header{
+.header{
     font-family: 'orkneybold';
     width:100%;
     background-color: $accent;
@@ -11,6 +11,12 @@ header{
     justify-content: space-between;
     align-items: center;
     letter-spacing: 1px;
+    &__left{
+        display: flex;
+    }
+    &__centre{
+        width:100%;
+    }
     button.signin{
         background-color: $primary;
         border:$shade;
@@ -26,5 +32,6 @@ header{
 }
 
 .header-logo{
-    width:200px;
+    width:75px;
+    margin-right:16px;
 }

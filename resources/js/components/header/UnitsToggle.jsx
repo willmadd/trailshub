@@ -10,11 +10,11 @@ const {imperial, toggleUnits} = props;
     return (
         <div>
             {'m'}
-            <label class="switch">
+            <label className="switch">
                 
-            <input type="checkbox" onClick={()=>toggleUnits(!imperial)} checked={imperial}/>
+            <input type="checkbox" onChange={()=>toggleUnits(!imperial)} checked={imperial}/>
             
-            <span class="slider round"></span>
+            <span className="slider round"></span>
             </label>
             {'ft'}
 

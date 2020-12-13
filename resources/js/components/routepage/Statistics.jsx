@@ -1,9 +1,10 @@
 import React from "react";
 import { __ } from "../../../translations/translator";
-import DifficultyIndicator from "./difficultyIndicator";
+import DifficultyTab from "../common/DifficultyTab";
+// import DifficultyIndicator from "./difficultyIndicator";
+import * as settings from '../../../settings'
 
-
-const Statistics = ({ stats, difficulty }) => {
+const Statistics = ({ stats, difficulty, imperial }) => {
     let KMtoMileRatio = 0.621371;
     let FTtoMeterRatio = 3.280839895;
     let metersPerDecondToMilesPerHour = 2.2369;
@@ -15,7 +16,9 @@ const Statistics = ({ stats, difficulty }) => {
                 <div className="statAreaContent">
                     <div className="icon icon-difficulty"></div>
                     <div className="statAreaText">
-                        <DifficultyIndicator diff={Number(difficulty)}/>
+                        {/* <DifficultyIndicator diff={Number(difficulty)}/> */}
+                        
+                       <DifficultyTab level={Number(difficulty)}/>
                     </div>
                 </div>
             </div>
@@ -23,10 +26,11 @@ const Statistics = ({ stats, difficulty }) => {
                 <div className="statAreaContent">
                     <div className="icon icon-distance"></div>
                     <div className="statAreaText">
-                        <p>{`${stats.totalDistance.toFixed(2)} KM`}</p>
-                        <p>{`${(stats.totalDistance * KMtoMileRatio).toFixed(
+                        {imperial?<p>{`${stats.distance.toFixed(2)} KM`}</p>:<p>{`${(stats.distance * settings.KMtoMileRatio).toFixed(
                             2
-                        )} Miles`}</p>
+                        )} Miles`}</p>}
+                        
+
                     </div>
                 </div>
             </div>
@@ -34,7 +38,7 @@ const Statistics = ({ stats, difficulty }) => {
                 <div className="statAreaContent">
                     <div className="icon icon-time"></div>
                     <div className="statAreaText">
-                {stats.totalTime?<p>{`${new Date(stats.totalTime * 1000)
+                {stats.time?<p>{`${new Date(stats.time * 1000)
                             .toISOString()
                             .substr(11, 5)}`}</p>:<p>No Time Data Available</p>}
 
@@ -45,7 +49,7 @@ const Statistics = ({ stats, difficulty }) => {
                 <div className="statAreaContent">
                     <div className="icon icon-speed"></div>
                     <div className="statAreaText">
-                    {stats.totalTime?<React.Fragment>
+                    {stats.time?<React.Fragment>
                         <p>{`${(mph/KMtoMileRatio).toFixed(2)} KPH`}</p>
                         <p>{`${mph.toFixed(2)} MPH`}</p>
                     </React.Fragment>:<p>No Speed Data Available</p>}
@@ -55,12 +59,12 @@ const Statistics = ({ stats, difficulty }) => {
             <div className="ascent statArea">
                 <div className="statAreaContent">
                     <div className="icon icon-ascent"></div>
-                        {!stats.totalPositiveElevation?<p>No Elevation Data Available</p>:
+                        {!stats.ascent?<p>No Elevation Data Available</p>:
                     <div className="statAreaText">
-                        <p>{`${stats.totalPositiveElevation.toFixed(0)} M`}</p>
+                        <p>{`${stats.ascent.toFixed(0)} M`}</p>
                         <p>
                             {`${(
-                                stats.totalPositiveElevation * FTtoMeterRatio
+                                stats.ascent * FTtoMeterRatio
                             ).toFixed(0)} ft`}
                         </p>
                     </div>
@@ -70,12 +74,12 @@ const Statistics = ({ stats, difficulty }) => {
             <div className="descent statArea">
                 <div className="statAreaContent">
                     <div className="icon icon-descent"></div>
-                    {!stats.totalPositiveElevation?<p>No Elevation Data Available</p>:                    
+                    {!stats.ascent?<p>No Elevation Data Available</p>:                    
                     <div className="statAreaText">
-                        <p>{`${stats.totalNegativeElevation.toFixed(0)} M`}</p>
+                        <p>{`${stats.descent.toFixed(0)} M`}</p>
                         <p>
                             {`${(
-                                stats.totalNegativeElevation * FTtoMeterRatio
+                                stats.descent * FTtoMeterRatio
                             ).toFixed(0)} ft`}
                         </p>
                     </div>

@@ -1,13 +1,14 @@
 import React from "react";
-import DifficultyTab from './Difficulty_Tab';
+import DifficultyTab from './DifficultyTab';
 import StatsTab from '../../containers/statsContainer';
 import './routeCard.scss'
 
-const RouteCard = ({ trail, imageLoaded }) => {
+const RouteCard = ({ trail, imageLoaded, loadingComplete }) => {
     return (
-        <a key={trail.slug} href={`/${trail.slug}`} className="tag-card">
-            <img key={trail.id} src={trail.main_image} onLoad={imageLoaded} />
+        <a key={trail.slug} href={`/${trail.slug}`} className="tag-card" style={{ display: loadingComplete ? "block" : "block" }}>
+            <img key={trail.id} src={trail.image.url} onLoad={imageLoaded} />
             <div className="tag-text">
+                <h1>HELLLLO</h1>
                 <div className="text-upper">
                     <h3>{trail.title}</h3>
                     <DifficultyTab level={trail.difficulty} />

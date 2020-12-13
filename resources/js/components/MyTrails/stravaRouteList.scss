@@ -1,0 +1,25 @@
+.strava-routes {
+    li {
+        animation: slideDown 0.5s ease;
+        margin-left: 0;
+        width: 100%;
+        position: relative;
+        >p{
+            padding-right: 64px;
+        }
+    }
+    p {
+        margin: 0;
+    }
+}
+.select-route {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    padding: 4px 8px;
+    display: flex;
+    p {
+        height: 16px;
+        padding: 0;
+    }
+}

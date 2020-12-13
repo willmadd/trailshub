@@ -5,7 +5,7 @@ import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from
 const TrailText = ({text}) => {
     return (
         <div className="trail-text">
-            { ReactHtmlParser(text) }
+            {decodeURIComponent(ReactHtmlParser(text) )}
         </div>
     );
 };

@@ -63,6 +63,14 @@ return [
             'bucket' => env('AWS_BUCKET'),
             'url' => env('AWS_URL'),
         ],
+        'logs' => [
+            'driver' => 'local',
+            'root' => storage_path('logs'),
+        ],
+        'customDrive' => [
+            'driver' => 'local',
+            'root' => base_path(), // here put your full path
+         ],
 
     ],
 

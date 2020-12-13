@@ -13,8 +13,10 @@ const index = () => {
     const [mapCenter, setMapCenter] = useState([0,0]);
 
     const submitLocation = (e) => {
+        console.log(e);
         const {viewport} = e.gmaps.geometry;
-        let newBounds = [[viewport.Ya.i, viewport.Sa.i],[viewport.Ya.j, viewport.Sa.j]]
+        console.log();
+        let newBounds = [[viewport.Wa.i, viewport.Ra.i],[viewport.Wa.j, viewport.Ra.j]]
         setBounds(newBounds);
     } 
 

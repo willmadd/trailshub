@@ -4,7 +4,7 @@ const Logo = () => {
     return (
         <img
             className="header-logo"
-            src="/images/trailmaplogowhite.svg"
+            src="/images/logo.svg"
             alt=""
         />
     );

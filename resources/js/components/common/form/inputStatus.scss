@@ -1,0 +1,72 @@
+@import '../../../../sass/styles/ui/colours';
+
+.status-container{
+    border: 1px solid $accent;
+    border-width: 1px 1px 1px 0;
+    border-radius: 0 2px 2px 0;
+    height:32px;
+    width:32px;
+    background: $white;
+
+}
+
+.status-unset{
+// background: green;
+
+}
+
+.status-valid{
+    display: inline-block;
+    transform: rotate(45deg);
+    height: 25px;
+    width: 12px;
+    margin-left: 10px; 
+    border-bottom: 7px solid #78b13f;
+    border-right: 7px solid #78b13f;
+
+}
+.status-pending{
+    border-radius: 50%;
+    border: 3px solid orange;
+    height: 22px;
+    width: 22px;
+    margin-top: 4px;
+    margin-left: 4px;
+    border-left-color: white;
+    animation: infinite-spinning 2s infinite;
+}
+
+
+
+.status-error {
+  position: relative;
+  /* right: 32px; */
+  /* top: 32px; */
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+}
+
+.status-error:before, .status-error:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 30px;
+  width: 4px;
+  background-color: $primary;
+}
+.status-error:before {
+  transform: rotate(45deg);
+}
+.status-error:after {
+  transform: rotate(-45deg);
+}
+
+@keyframes infinite-spinning {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }

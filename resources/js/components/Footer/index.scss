@@ -1,0 +1,11 @@
+@import '../../../sass/styles/ui/colours';
+
+footer{
+    width:100%;
+    padding:32px;
+    display: flex;
+    align-items: center;
+    color: $white;
+    background-color: $accent;
+    margin-top:36px;
+}

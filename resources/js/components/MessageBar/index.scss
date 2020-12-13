@@ -1,0 +1,20 @@
+@import "../../../sass/styles/ui/colours";
+@import "../../../sass/styles/ui/screens";
+
+.message-bar{
+    position: fixed;
+    top: -40px;
+    left: 0;
+    height: 40px;
+    // background-color: red;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $button;
+    color: $shade;
+    z-index:400;
+    &.active{
+        top:0;
+    }
+}

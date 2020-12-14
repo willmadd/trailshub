@@ -1,5 +1,5 @@
 import React from "react";
-import "./_difficultyTab.scss";
+import "./difficultyTab.scss";
 
 const DifficultyTab = ({ level }) => {
 

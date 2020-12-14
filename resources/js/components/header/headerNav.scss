@@ -1,0 +1,12 @@
+.header{
+    nav{
+        ul{
+            display:flex;
+            justify-content: space-around;
+            li{
+                padding:0;
+                list-style: none;
+            }
+        }
+    }
+}

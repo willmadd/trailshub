@@ -26,12 +26,14 @@ const MapWrapper = ({ mapCenter, bounds }) => {
     const routesOverview = useSelector(state => state.trails);
 
     const fetchRoute = (routeSlug, coords) => {
+        console.log('fetch!!');
         history.push({
             pathname: `${slugify(routeSlug)}`,
             state: { coords: coords }
         });
     };
-
+console.log('trails overview');
+console.log(routesOverview)
     return (
         <Map
             className={`mapid`}
@@ -43,8 +45,8 @@ const MapWrapper = ({ mapCenter, bounds }) => {
         >
             <TileLayer attribution={mapAttribution} url={tileLayerUrl} />
             <div className="route-overview">
-                {routesOverview.trails &&
-                    routesOverview.trails.map((route, i) => {
+                {routesOverview &&
+                    routesOverview.map((route, i) => {
                         return (
                             <Polyline
                                 key={`${route.coords[0].lat}-${i}`}

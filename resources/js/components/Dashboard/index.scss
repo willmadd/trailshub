@@ -1,0 +1,12 @@
+.account-dashboard{
+    display:grid;
+    grid-template-columns: 230px auto;
+    margin-top:24px;
+    grid-gap:24px;
+    main{
+        margin-right:24px;
+    }
+}
+img{
+    width:100%;
+}

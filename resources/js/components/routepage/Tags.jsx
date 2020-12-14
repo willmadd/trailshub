@@ -1,8 +1,7 @@
 import React from "react";
 import {slugify} from "../../utils/slugify";
 
-const Tags = ({ tagString }) => {
-    let tagsArr = tagString.split(",");
+const Tags = ({ tagsArr }) => {
     return (
         <div className="tags-area">
             {tagsArr.map(tag => (

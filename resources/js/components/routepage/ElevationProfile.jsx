@@ -11,12 +11,20 @@ class ElevationProfile extends Component {
     render() {
 
 const styles = {fontFamily:"'Questrial', sans-serif"}
-const {hoverOnLine, route} = this.props;;
+const {hoverOnLine, route} = this.props;
+
+const graphData = route.map(dataPoint=>{
+    return {
+        y:dataPoint.elevation,
+        x:dataPoint.distance
+    }
+})
+
         return (
             <div className="ElevationProfile">
-                {(route.length > 0 && route[0].y) ?<FlexibleWidthXYPlot height={150} style={styles}>
+                {(graphData.length > 0 && graphData[0].y) ?<FlexibleWidthXYPlot height={150} style={styles}>
                     <LineSeries
-                        data={route}
+                        data={graphData}
                         onNearestXY={hoverOnLine}
                         color="#87BE31"
                     />

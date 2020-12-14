@@ -1,0 +1,17 @@
+.link{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top:36px;
+    &__area{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        li{
+            list-style: none;;
+            a{
+                text-decoration: underline;
+            }
+        }
+    
+    }
+}

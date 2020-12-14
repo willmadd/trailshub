@@ -13,3 +13,10 @@ const mix = require('laravel-mix');
 
 mix.react('resources/js/app.js', 'public/js')
    .sass('resources/sass/app.scss', 'public/css');
+
+
+   // mix.browserSync('localhost:8000');
+//Add your own php artisan serve's url and port
+//For me url is localhost or 127.0.0.1 and port is 8000
+
+// mix.js('resources/js/app.js', 'js');

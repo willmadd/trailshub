@@ -95492,13 +95492,13 @@ var DashboardWrapper = Object(_helpers__WEBPACK_IMPORTED_MODULE_1__["ReactLazyPr
   return __webpack_require__.e(/*! import() */ 10).then(__webpack_require__.bind(null, /*! ../containers/Dashboard */ "./resources/js/containers/Dashboard/index.js"));
 });
 var Home = Object(_helpers__WEBPACK_IMPORTED_MODULE_1__["ReactLazyPreload"])(function () {
-  return Promise.all(/*! import() */[__webpack_require__.e(1), __webpack_require__.e(16)]).then(__webpack_require__.bind(null, /*! ../pages/HomePage */ "./resources/js/pages/HomePage.jsx"));
+  return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(16), __webpack_require__.e(20)]).then(__webpack_require__.bind(null, /*! ../pages/HomePage */ "./resources/js/pages/HomePage.jsx"));
 });
 var RouteTemplate = Object(_helpers__WEBPACK_IMPORTED_MODULE_1__["ReactLazyPreload"])(function () {
-  return Promise.all(/*! import() */[__webpack_require__.e(19), __webpack_require__.e(0), __webpack_require__.e(5)]).then(__webpack_require__.bind(null, /*! ../containers/RoutePage/ */ "./resources/js/containers/RoutePage/index.js"));
+  return Promise.all(/*! import() */[__webpack_require__.e(19), __webpack_require__.e(0), __webpack_require__.e(5), __webpack_require__.e(8)]).then(__webpack_require__.bind(null, /*! ../containers/RoutePage/ */ "./resources/js/containers/RoutePage/index.js"));
 });
 var Tags = Object(_helpers__WEBPACK_IMPORTED_MODULE_1__["ReactLazyPreload"])(function () {
-  return Promise.all(/*! import() */[__webpack_require__.e(1), __webpack_require__.e(12)]).then(__webpack_require__.bind(null, /*! ../components/tags */ "./resources/js/components/tags/index.jsx"));
+  return Promise.all(/*! import() */[__webpack_require__.e(16), __webpack_require__.e(1)]).then(__webpack_require__.bind(null, /*! ../components/tags */ "./resources/js/components/tags/index.jsx"));
 });
 var SignUpPage = Object(_helpers__WEBPACK_IMPORTED_MODULE_1__["ReactLazyPreload"])(function () {
   return Promise.all(/*! import() */[__webpack_require__.e(2), __webpack_require__.e(4), __webpack_require__.e(9)]).then(__webpack_require__.bind(null, /*! ../components/SignUpPage */ "./resources/js/components/SignUpPage/index.jsx"));

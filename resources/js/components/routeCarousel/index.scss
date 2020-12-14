@@ -1,0 +1,32 @@
+
+.carousel{
+    margin-top:36px;
+    margin-left: auto;
+    width: 960px;
+    margin-right: auto;
+    &__container{
+        margin-top:12px;
+        .slick-slide{
+            padding:8px;
+        }
+    }
+}
+.slick-track {
+    display: flex !important;
+}
+.slick-slide {
+    height: inherit !important;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    a{
+        height:100%;
+    }
+    > div{
+        height:100%;
+        img{
+            object-fit: cover;
+            height:100%;
+        }
+    }
+}

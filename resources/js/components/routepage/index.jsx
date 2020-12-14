@@ -122,13 +122,13 @@ const RouteTemplate = ({ match, location, units }) => {
                         </div>
                         <div>
                         <SingleTrailMap route={trail.coords} />
+                    <ElevationProfile route={trail.coords} />
                     <Youtube url={decodeURIComponent(trail.youtube_link)} />
 
                         </div>
                     </div>
 
                     <ImageCarousel images={trail.images} />
-                    {/* <ElevationProfile route={elevationData} /> */}
                 </div>
             )}
         </div>

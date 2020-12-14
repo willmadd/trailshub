@@ -16,6 +16,7 @@ const DownloadGPX = ({file,title}) => {
 
     return (
         <div className="download-area">
+            Need to get the gpx file fetched from laravel once clicked
             <button onClick={downloadGpxFile}>Download GPX File</button>
         </div>
     );

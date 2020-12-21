@@ -70,3 +70,7 @@ export const getTrailById = (id) => {
         },
       });
 };
+
+export const getLocationCoords = (location) =>{
+    return axios.get(`${settings.beBaseUrl}/api/location/${location}`)
+}

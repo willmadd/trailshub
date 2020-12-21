@@ -85,10 +85,7 @@ console.log('map render');
       >
         <TileLayer
           attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-          url={
-            `https://api.mapbox.com/styles/v1/willmadd/${style_id}/tiles/{z}/{x}/{y}?access_token=` +
-            access_token
-          }
+          url={'http://localhost:8000/api/location/mapstyles'}
 
         />
         {/* {route && <GeoJSON positions={route.route} />} */}

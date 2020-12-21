@@ -31,7 +31,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "h1 {\n  text-transform: uppercase;\n  text-align: center;\n  margin: 16px;\n}\n\nimg {\n  width: 100%;\n}\n\n.tags-list {\n  display: grid;\n  margin: 16px;\n}\n\n.tag-card {\n  border: 1px solid #2B303A;\n  position: relative;\n  margin-bottom: 16px;\n}\n.tag-card:hover {\n  border: 2px solid #2B303A;\n  transition: 0.25s;\n}\n\n.tag-text {\n  position: absolute;\n  bottom: 8px;\n  left: 8px;\n  background-color: #fff;\n  width: calc(100% - 16px);\n  padding: 8px;\n  border: 1px solid #2B303A;\n}\n\n.text-upper {\n  display: grid;\n  grid-template-columns: 1fr auto;\n  margin-bottom: 8px;\n}", ""]);
+exports.push([module.i, "h1 {\n  text-transform: uppercase;\n  text-align: center;\n  margin: 16px;\n}\n\nimg {\n  width: 100%;\n  height: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n\n.tags-list {\n  display: grid;\n  margin: 16px;\n}\n\n.tag-card {\n  border: 1px solid #2B303A;\n  position: relative;\n  margin-bottom: 16px;\n}\n.tag-card:hover {\n  border: 2px solid #2B303A;\n  transition: 0.25s;\n}\n\n.tag-text {\n  position: absolute;\n  bottom: 8px;\n  left: 8px;\n  background-color: #fff;\n  width: calc(100% - 16px);\n  padding: 8px;\n  border: 1px solid #2B303A;\n}\n\n.text-upper {\n  display: grid;\n  grid-template-columns: 1fr auto;\n  margin-bottom: 8px;\n}\n\n.card-tags {\n  display: flex;\n  justify-content: space-between;\n  margin-bottom: 12px;\n}\n.card-tags p {\n  padding: 4px 8px;\n  margin: 0;\n  border: 1px solid #2B303A;\n}", ""]);
 
 // exports
 
@@ -144,6 +144,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _containers_statsContainer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../containers/statsContainer */ "./resources/js/containers/statsContainer/index.js");
 /* harmony import */ var _routeCard_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./routeCard.scss */ "./resources/js/components/common/routeCard.scss");
 /* harmony import */ var _routeCard_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_routeCard_scss__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+
 
 
 
@@ -152,7 +154,8 @@ __webpack_require__.r(__webpack_exports__);
 var RouteCard = function RouteCard(_ref) {
   var trail = _ref.trail,
       imageLoaded = _ref.imageLoaded,
-      loadingComplete = _ref.loadingComplete;
+      loadingComplete = _ref.loadingComplete,
+      tags = _ref.tags;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     key: trail.slug,
     href: "/".concat(trail.slug),
@@ -160,9 +163,9 @@ var RouteCard = function RouteCard(_ref) {
     style: {
       display: loadingComplete ? "block" : "block"
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+  }, trail.images && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     key: trail.id,
-    src: trail.image.url,
+    src: "/".concat(trail.images[0]),
     onLoad: imageLoaded
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "tag-text"
@@ -170,6 +173,13 @@ var RouteCard = function RouteCard(_ref) {
     className: "text-upper"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, decodeURIComponent(trail.title)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_DifficultyTab__WEBPACK_IMPORTED_MODULE_1__["default"], {
     level: trail.difficulty
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "card-tags"
+  }, trail.tags && trail.tags.map(function (tag) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      key: tag,
+      to: "/tags/".concat(tag)
+    }, tag);
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_statsContainer__WEBPACK_IMPORTED_MODULE_2__["default"], {
     ascent: trail.ascent,
     descent: trail.descent,

@@ -129,6 +129,8 @@ if($request->status==="pending"){
         "summary"=>'required|string',
         "time"=>'required|integer',
         "youtube_link"=>'required|string',
+        "start_lat"=>"numeric",
+        "start_lng"=>"numeric",
     ]);
 }else{
     $request->validate([
@@ -154,7 +156,10 @@ if($request->status==="pending"){
             "strava_link"=>$request->strava_link,
             "summary"=>$request->summary,
             // "tags"=>$request->tags,
+            "start_lat"=>$request->start_lat,
+            "start_lng"=>$request->start_lng,
             "time"=>$request->time,
+            // "start_lng"=>98798,
             "youtube_link"=>$request->youtube_link,
             "user_id"=>auth()->user()->id,
             // "status"=>"pending",
@@ -187,6 +192,7 @@ if($request->status==="pending"){
         [
             "id"=>$trail ->id,
             "images"=>$request->input('images'),
+            "request" => $request->start_lng
         ],
             200);
     }

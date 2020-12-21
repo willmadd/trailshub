@@ -511,7 +511,25 @@ var TrailEditor = function TrailEditor(_ref) {
     react_scroll__WEBPACK_IMPORTED_MODULE_15__["animateScroll"].scrollTo(400);
   };
 
+  var createStartCoords = function createStartCoords(coords) {
+    if (Array.isArray(coords[0])) {
+      console.log('is ar');
+      return {
+        start_lat: coords[0][0],
+        start_lng: coords[0][1]
+      };
+    } else {
+      console.log('is not arr');
+      return {
+        start_lat: coords[0].lat,
+        start_lng: coords[0].lon
+      };
+    }
+  };
+
   var handleSubmit = function handleSubmit(status) {
+    var startPos = createStartCoords(createTrail.coords); // console.log(...)
+
     var trail = {
       activity: createTrail.activity,
       ascent: createTrail.ascent,
@@ -538,8 +556,8 @@ var TrailEditor = function TrailEditor(_ref) {
       id: createTrail.id
     };
     console.log('-=-=-=-=-=');
-    console.log(trail);
-    _auth_api__WEBPACK_IMPORTED_MODULE_12__["submitRoute"](trail).then(function (res) {
+    console.log(_objectSpread(_objectSpread({}, trail), startPos));
+    _auth_api__WEBPACK_IMPORTED_MODULE_12__["submitRoute"](_objectSpread(_objectSpread({}, trail), startPos)).then(function (res) {
       setMessage("Trail Saved");
       setCreateTrail(function (state) {
         return _objectSpread(_objectSpread({}, state), {}, {

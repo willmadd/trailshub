@@ -157,7 +157,26 @@ const [loading, setLoading] = useState(true)
         scroll.scrollTo(400);
     };
 
+const createStartCoords = (coords) => {
+    if (Array.isArray(coords[0])){
+        console.log('is ar');
+        return {
+            start_lat:coords[0][0],
+            start_lng: coords[0][1]
+        }
+    }else{
+        console.log('is not arr');
+        return{
+            start_lat:coords[0].lat,
+            start_lng: coords[0].lon
+        }
+    }
+}
+
     const handleSubmit = status => {
+        const startPos = createStartCoords(createTrail.coords);
+        // console.log(...)
+        
         const trail = {
             activity: createTrail.activity,
             ascent: createTrail.ascent,
@@ -177,11 +196,11 @@ const [loading, setLoading] = useState(true)
             title: createTrail.title,
             youtube_link: createTrail.youtube_link,
             status: status,
-            id: createTrail.id
+            id: createTrail.id,
         };
         console.log('-=-=-=-=-=');
-        console.log(trail);
-        api.submitRoute(trail).then(res => {
+        console.log({...trail, ...startPos});
+        api.submitRoute({...trail, ...startPos}).then(res => {
             setMessage("Trail Saved");
             setCreateTrail(state => ({
                 ...state,

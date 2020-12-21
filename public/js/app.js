@@ -94499,7 +94499,7 @@ __webpack_require__(/*! ./components/index */ "./resources/js/components/index.j
 /*!**********************************!*\
   !*** ./resources/js/auth/api.js ***!
   \**********************************/
-/*! exports provided: signUp, tokenActivate, userSignIn, getUserData, logout, submitRoute, getTrailById */
+/*! exports provided: signUp, tokenActivate, userSignIn, getUserData, logout, submitRoute, getTrailById, getLocationCoords */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -94511,6 +94511,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logout", function() { return logout; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "submitRoute", function() { return submitRoute; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getTrailById", function() { return getTrailById; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getLocationCoords", function() { return getLocationCoords; });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _settings__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../settings */ "./resources/settings.js");
@@ -94564,6 +94565,9 @@ var getTrailById = function getTrailById(id) {
       Authorization: "Bearer ".concat(token)
     }
   });
+};
+var getLocationCoords = function getLocationCoords(location) {
+  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("".concat(_settings__WEBPACK_IMPORTED_MODULE_1__["default"].beBaseUrl, "/api/location/").concat(location));
 };
 
 /***/ }),
@@ -95111,12 +95115,30 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _SearchBar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SearchBar */ "./resources/js/components/locationSeach/SearchBar.jsx");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
 
 
-;
 
-var SearchModal = function SearchModal(_ref) {
-  var submitLocation = _ref.submitLocation;
+
+
+var SearchModal = function SearchModal(props) {
+  console.log('dddd');
+  console.log(props); // let location = useLocation();
+  // let history = useHistory();
+
+  var _useParams = Object(react_router__WEBPACK_IMPORTED_MODULE_3__["useParams"])(),
+      location = _useParams.location; // console.log(location)
+  // console.log(history)
+
+
+  console.log(location);
+  console.log('ddddd');
+  var submitLocation = props.submitLocation;
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    // let location = new URLSearchParams(location.search).get("location")
+    console.log(location);
+  }, []);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "searchModal"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
@@ -95489,13 +95511,13 @@ var MyRoutes = Object(_helpers__WEBPACK_IMPORTED_MODULE_1__["ReactLazyPreload"])
   return __webpack_require__.e(/*! import() */ 3).then(__webpack_require__.bind(null, /*! ../components/MyTrails */ "./resources/js/components/MyTrails/index.js"));
 });
 var DashboardWrapper = Object(_helpers__WEBPACK_IMPORTED_MODULE_1__["ReactLazyPreload"])(function () {
-  return __webpack_require__.e(/*! import() */ 10).then(__webpack_require__.bind(null, /*! ../containers/Dashboard */ "./resources/js/containers/Dashboard/index.js"));
+  return __webpack_require__.e(/*! import() */ 5).then(__webpack_require__.bind(null, /*! ../containers/Dashboard */ "./resources/js/containers/Dashboard/index.js"));
 });
 var Home = Object(_helpers__WEBPACK_IMPORTED_MODULE_1__["ReactLazyPreload"])(function () {
-  return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(16), __webpack_require__.e(20)]).then(__webpack_require__.bind(null, /*! ../pages/HomePage */ "./resources/js/pages/HomePage.jsx"));
+  return Promise.all(/*! import() */[__webpack_require__.e(10), __webpack_require__.e(16), __webpack_require__.e(20)]).then(__webpack_require__.bind(null, /*! ../pages/HomePage */ "./resources/js/pages/HomePage.jsx"));
 });
 var RouteTemplate = Object(_helpers__WEBPACK_IMPORTED_MODULE_1__["ReactLazyPreload"])(function () {
-  return Promise.all(/*! import() */[__webpack_require__.e(19), __webpack_require__.e(0), __webpack_require__.e(5), __webpack_require__.e(8)]).then(__webpack_require__.bind(null, /*! ../containers/RoutePage/ */ "./resources/js/containers/RoutePage/index.js"));
+  return Promise.all(/*! import() */[__webpack_require__.e(19), __webpack_require__.e(10), __webpack_require__.e(0), __webpack_require__.e(8)]).then(__webpack_require__.bind(null, /*! ../containers/RoutePage/ */ "./resources/js/containers/RoutePage/index.js"));
 });
 var Tags = Object(_helpers__WEBPACK_IMPORTED_MODULE_1__["ReactLazyPreload"])(function () {
   return Promise.all(/*! import() */[__webpack_require__.e(16), __webpack_require__.e(1)]).then(__webpack_require__.bind(null, /*! ../components/tags */ "./resources/js/components/tags/index.jsx"));
@@ -95515,6 +95537,9 @@ var EmailValidationPage = Object(_helpers__WEBPACK_IMPORTED_MODULE_1__["ReactLaz
 var Test = Object(_helpers__WEBPACK_IMPORTED_MODULE_1__["ReactLazyPreload"])(function () {
   return Promise.all(/*! import() */[__webpack_require__.e(2), __webpack_require__.e(15)]).then(__webpack_require__.bind(null, /*! ../components/test/index */ "./resources/js/components/test/index.jsx"));
 });
+var PlacePage = Object(_helpers__WEBPACK_IMPORTED_MODULE_1__["ReactLazyPreload"])(function () {
+  return Promise.all(/*! import() */[__webpack_require__.e(16), __webpack_require__.e(12)]).then(__webpack_require__.bind(null, /*! ../components/PlacePage */ "./resources/js/components/PlacePage/index.js"));
+});
 
 
 var routes = [{
@@ -95533,6 +95558,10 @@ var routes = [{
   path: _routes_routeID__WEBPACK_IMPORTED_MODULE_2__["default"].memberDashboard,
   exact: false,
   component: DashboardWrapper
+}, {
+  path: _routes_routeID__WEBPACK_IMPORTED_MODULE_2__["default"].place,
+  exact: true,
+  component: PlacePage
 }, {
   path: _routes_routeID__WEBPACK_IMPORTED_MODULE_2__["default"].signUp,
   exact: true,
@@ -95575,9 +95604,10 @@ __webpack_require__.r(__webpack_exports__);
   creatTrail: '/dashboard/trails/create',
   logout: '/dashboard/logout',
   signupActivate: '/signup/activate/:token',
-  tags: '/trails/:tag',
+  tags: '/tags/:tag',
   trail: '/:trailIdentifier',
-  stravaCallback: '/strava_auth'
+  stravaCallback: '/strava_auth',
+  place: '/trails/:place'
 });
 
 /***/ }),

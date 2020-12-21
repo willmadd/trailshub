@@ -38,6 +38,10 @@ const Test = ReactLazyPreload(() =>
 import("../components/test/index")
 );
 
+const PlacePage = ReactLazyPreload(() =>
+import("../components/PlacePage")
+);
+
 import RouteID from '../routes/routeID'
 import Callback from '../components/Oauth/Callback';
 
@@ -47,6 +51,7 @@ export const routes = [
     {path: "/test", exact:true, component: Test},
     {path: RouteID.stravaCallback, exact:true, component: Callback},
     {path: RouteID.memberDashboard, exact:false, component: DashboardWrapper},
+    {path: RouteID.place, exact:true, component: PlacePage},
     {path: RouteID.signUp, exact:true, component: SignUpPage},
     {path: RouteID.signUpSuccess, exact:true, component: SignUpSuccess},
     {path: RouteID.signupActivate, exact:true, component: EmailValidationPage},

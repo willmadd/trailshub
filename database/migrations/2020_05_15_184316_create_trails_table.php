@@ -33,6 +33,8 @@ class CreateTrailsTable extends Migration
             $table->integer('descent')->nullable();
             $table->integer('distance')->nullable();
             $table->integer('time')->nullable();
+            $table->integer('start_lat')->nullable();
+            $table->integer('start_lng')->nullable();
             $table->longText('gpx')->nullable();
             $table->longText('coords')->nullable();
             $table->longText('summary')->nullable();

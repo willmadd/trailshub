@@ -33,6 +33,13 @@ Route::get('gettrailsbytag/{tag}', 'TrailController@getTrailByTag');
 
 Route::get('getrecenttrails/{limit}', 'TrailController@getRecentTrails');
 
+Route::get('getrecenttrails/{limit}', 'TrailController@getRecentTrails');
+
+Route::get('location/{location}', 'LocationController@getLocationTrails');
+
+Route::get('map/mapstyles', 'LocationController@getMapStyles');
+
+
 Route::group([
     'prefix' => 'auth'
 ], function () {

@@ -7,7 +7,8 @@ export default {
     creatTrail:'/dashboard/trails/create',
     logout:'/dashboard/logout',
     signupActivate:'/signup/activate/:token',
-    tags:'/trails/:tag',
+    tags:'/tags/:tag',
     trail:'/:trailIdentifier',
     stravaCallback:'/strava_auth',
+    place:'/trails/:place'
 }

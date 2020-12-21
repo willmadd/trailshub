@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Trails extends Model
 {
     protected $fillable = [
-      'activity', 'approved', 'ascent', 'coords', 'created_at' , 'descent' , 'description' , 'difficulty' , 'distance', 'gpx', 'hire_centre', 'no_times_downloaded', 'slug', 'strava_link', 'summary', 'tags' , 'time', 'title', 'user_id', 'youtube_link'
+      'activity', 'approved', 'ascent', 'coords', 'created_at' , 'descent' , 'description' , 'difficulty' , 'distance', 'gpx', 'hire_centre', 'no_times_downloaded', 'slug', 'strava_link', 'summary', 'tags' , 'time', 'title', 'user_id', 'youtube_link', 'start_lat' , 'start_lng'
   ];
 
           public function index()

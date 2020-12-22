@@ -94569,6 +94569,7 @@ var getTrailById = function getTrailById(id) {
 var getLocationCoords = function getLocationCoords(location) {
   console.log('dddd');
   console.log("http://localhost:8000");
+  onsole.log(process.env.MIX_ROOT);
   console.log(process.env);
   return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("".concat("http://localhost:8000", "/api/location/").concat(location));
 };

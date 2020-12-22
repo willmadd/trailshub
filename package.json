@@ -36,6 +36,7 @@
         "compress.js": "^1.1.2",
         "date-fns": "^2.13.0",
         "debounce": "^1.2.0",
+        "dotenv": "^8.2.0",
         "google-polyline": "^1.0.3",
         "haversine": "^1.1.1",
         "history": "^5.0.0",

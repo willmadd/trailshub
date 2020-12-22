@@ -94524,16 +94524,16 @@ var axiosConfig = {
   }
 };
 var signUp = function signUp(user) {
-  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("".concat(_settings__WEBPACK_IMPORTED_MODULE_1__["default"].beBaseUrl, "/api/auth/signup"), user, axiosConfig);
+  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("".concat("http://localhost:8000", "/api/auth/signup"), user, axiosConfig);
 };
 var tokenActivate = function tokenActivate(token) {
-  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("".concat(_settings__WEBPACK_IMPORTED_MODULE_1__["default"].beBaseUrl, "/api/auth/signup/activate/").concat(token));
+  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("".concat("http://localhost:8000", "/api/auth/signup/activate/").concat(token));
 };
 var userSignIn = function userSignIn(user) {
-  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("".concat(_settings__WEBPACK_IMPORTED_MODULE_1__["default"].beBaseUrl, "/api/auth/login"), user);
+  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("".concat("http://localhost:8000", "/api/auth/login"), user);
 };
 var getUserData = function getUserData(token) {
-  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("".concat(_settings__WEBPACK_IMPORTED_MODULE_1__["default"].beBaseUrl, "/api/auth/user"), {
+  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("".concat("http://localhost:8000", "/api/auth/user"), {
     headers: {
       Authorization: "Bearer ".concat(token)
     }
@@ -94542,7 +94542,7 @@ var getUserData = function getUserData(token) {
 var logout = function logout() {
   var token = localStorage.getItem("trailshub:all:userToken");
   localStorage.removeItem("trailshub:all:userToken");
-  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("".concat(_settings__WEBPACK_IMPORTED_MODULE_1__["default"].beBaseUrl, "/api/auth/logout"), {
+  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("".concat("http://localhost:8000", "/api/auth/logout"), {
     headers: {
       Authorization: "Bearer ".concat(token)
     }
@@ -94552,7 +94552,7 @@ var submitRoute = function submitRoute(trail) {
   var token = localStorage.getItem("trailshub:all:userToken");
   console.log('api submit');
   console.log(trail);
-  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("".concat(_settings__WEBPACK_IMPORTED_MODULE_1__["default"].beBaseUrl, "/api/auth/trail/submit"), trail, {
+  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("".concat("http://localhost:8000", "/api/auth/trail/submit"), trail, {
     headers: {
       Authorization: "Bearer ".concat(token)
     }
@@ -94560,14 +94560,14 @@ var submitRoute = function submitRoute(trail) {
 };
 var getTrailById = function getTrailById(id) {
   var token = localStorage.getItem("trailshub:all:userToken");
-  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("".concat(_settings__WEBPACK_IMPORTED_MODULE_1__["default"].beBaseUrl, "/api/auth/trail/gettrailbyid/").concat(id), {
+  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("".concat("http://localhost:8000", "/api/auth/trail/gettrailbyid/").concat(id), {
     headers: {
       Authorization: "Bearer ".concat(token)
     }
   });
 };
 var getLocationCoords = function getLocationCoords(location) {
-  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("".concat(_settings__WEBPACK_IMPORTED_MODULE_1__["default"].beBaseUrl, "/api/location/").concat(location));
+  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("".concat("http://localhost:8000", "/api/location/").concat(location));
 };
 
 /***/ }),
@@ -95508,37 +95508,37 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var MyRoutes = Object(_helpers__WEBPACK_IMPORTED_MODULE_1__["ReactLazyPreload"])(function () {
-  return __webpack_require__.e(/*! import() */ 3).then(__webpack_require__.bind(null, /*! ../components/MyTrails */ "./resources/js/components/MyTrails/index.js"));
+  return __webpack_require__.e(/*! import() */ 4).then(__webpack_require__.bind(null, /*! ../components/MyTrails */ "./resources/js/components/MyTrails/index.js"));
 });
 var DashboardWrapper = Object(_helpers__WEBPACK_IMPORTED_MODULE_1__["ReactLazyPreload"])(function () {
-  return __webpack_require__.e(/*! import() */ 5).then(__webpack_require__.bind(null, /*! ../containers/Dashboard */ "./resources/js/containers/Dashboard/index.js"));
+  return __webpack_require__.e(/*! import() */ 12).then(__webpack_require__.bind(null, /*! ../containers/Dashboard */ "./resources/js/containers/Dashboard/index.js"));
 });
 var Home = Object(_helpers__WEBPACK_IMPORTED_MODULE_1__["ReactLazyPreload"])(function () {
-  return Promise.all(/*! import() */[__webpack_require__.e(10), __webpack_require__.e(16), __webpack_require__.e(20)]).then(__webpack_require__.bind(null, /*! ../pages/HomePage */ "./resources/js/pages/HomePage.jsx"));
+  return Promise.all(/*! import() */[__webpack_require__.e(2), __webpack_require__.e(0), __webpack_require__.e(11)]).then(__webpack_require__.bind(null, /*! ../pages/HomePage */ "./resources/js/pages/HomePage.jsx"));
 });
 var RouteTemplate = Object(_helpers__WEBPACK_IMPORTED_MODULE_1__["ReactLazyPreload"])(function () {
-  return Promise.all(/*! import() */[__webpack_require__.e(19), __webpack_require__.e(10), __webpack_require__.e(0), __webpack_require__.e(8)]).then(__webpack_require__.bind(null, /*! ../containers/RoutePage/ */ "./resources/js/containers/RoutePage/index.js"));
+  return Promise.all(/*! import() */[__webpack_require__.e(1), __webpack_require__.e(2), __webpack_require__.e(6), __webpack_require__.e(9)]).then(__webpack_require__.bind(null, /*! ../containers/RoutePage/ */ "./resources/js/containers/RoutePage/index.js"));
 });
 var Tags = Object(_helpers__WEBPACK_IMPORTED_MODULE_1__["ReactLazyPreload"])(function () {
-  return Promise.all(/*! import() */[__webpack_require__.e(16), __webpack_require__.e(1)]).then(__webpack_require__.bind(null, /*! ../components/tags */ "./resources/js/components/tags/index.jsx"));
+  return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(14)]).then(__webpack_require__.bind(null, /*! ../components/tags */ "./resources/js/components/tags/index.jsx"));
 });
 var SignUpPage = Object(_helpers__WEBPACK_IMPORTED_MODULE_1__["ReactLazyPreload"])(function () {
-  return Promise.all(/*! import() */[__webpack_require__.e(2), __webpack_require__.e(4), __webpack_require__.e(9)]).then(__webpack_require__.bind(null, /*! ../components/SignUpPage */ "./resources/js/components/SignUpPage/index.jsx"));
+  return Promise.all(/*! import() */[__webpack_require__.e(3), __webpack_require__.e(5), __webpack_require__.e(10)]).then(__webpack_require__.bind(null, /*! ../components/SignUpPage */ "./resources/js/components/SignUpPage/index.jsx"));
 });
 var SignUpImage = Object(_helpers__WEBPACK_IMPORTED_MODULE_1__["ReactLazyPreload"])(function () {
-  return __webpack_require__.e(/*! import() */ 14).then(__webpack_require__.bind(null, /*! ../components/SignUpPage/SignUpHeaderImage */ "./resources/js/components/SignUpPage/SignUpHeaderImage.jsx"));
+  return __webpack_require__.e(/*! import() */ 17).then(__webpack_require__.bind(null, /*! ../components/SignUpPage/SignUpHeaderImage */ "./resources/js/components/SignUpPage/SignUpHeaderImage.jsx"));
 });
 var SignUpSuccess = Object(_helpers__WEBPACK_IMPORTED_MODULE_1__["ReactLazyPreload"])(function () {
-  return __webpack_require__.e(/*! import() */ 13).then(__webpack_require__.bind(null, /*! ../components/SignUpPage/SignUpSuccess */ "./resources/js/components/SignUpPage/SignUpSuccess.jsx"));
+  return __webpack_require__.e(/*! import() */ 16).then(__webpack_require__.bind(null, /*! ../components/SignUpPage/SignUpSuccess */ "./resources/js/components/SignUpPage/SignUpSuccess.jsx"));
 });
 var EmailValidationPage = Object(_helpers__WEBPACK_IMPORTED_MODULE_1__["ReactLazyPreload"])(function () {
-  return Promise.all(/*! import() */[__webpack_require__.e(4), __webpack_require__.e(11)]).then(__webpack_require__.bind(null, /*! ../components/EmailValidationPage */ "./resources/js/components/EmailValidationPage/index.jsx"));
+  return Promise.all(/*! import() */[__webpack_require__.e(5), __webpack_require__.e(13)]).then(__webpack_require__.bind(null, /*! ../components/EmailValidationPage */ "./resources/js/components/EmailValidationPage/index.jsx"));
 });
 var Test = Object(_helpers__WEBPACK_IMPORTED_MODULE_1__["ReactLazyPreload"])(function () {
-  return Promise.all(/*! import() */[__webpack_require__.e(2), __webpack_require__.e(15)]).then(__webpack_require__.bind(null, /*! ../components/test/index */ "./resources/js/components/test/index.jsx"));
+  return Promise.all(/*! import() */[__webpack_require__.e(3), __webpack_require__.e(18)]).then(__webpack_require__.bind(null, /*! ../components/test/index */ "./resources/js/components/test/index.jsx"));
 });
 var PlacePage = Object(_helpers__WEBPACK_IMPORTED_MODULE_1__["ReactLazyPreload"])(function () {
-  return Promise.all(/*! import() */[__webpack_require__.e(16), __webpack_require__.e(12)]).then(__webpack_require__.bind(null, /*! ../components/PlacePage */ "./resources/js/components/PlacePage/index.js"));
+  return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(15)]).then(__webpack_require__.bind(null, /*! ../components/PlacePage */ "./resources/js/components/PlacePage/index.js"));
 });
 
 

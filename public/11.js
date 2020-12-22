@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[11],{
 
-/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/components/SignUpPage/login.scss":
-/*!******************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./resources/js/components/SignUpPage/login.scss ***!
-  \******************************************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/components/routeCarousel/index.scss":
+/*!*********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./resources/js/components/routeCarousel/index.scss ***!
+  \*********************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -12,36 +12,74 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".carousel {\n  margin-top: 36px;\n  margin-left: auto;\n  width: 960px;\n  margin-right: auto;\n}\n.carousel__container {\n  margin-top: 12px;\n}\n.carousel__container .slick-slide {\n  padding: 8px;\n}\n\n.slick-track {\n  display: flex !important;\n}\n\n.slick-slide {\n  height: inherit !important;\n  display: flex !important;\n  justify-content: center;\n  align-items: center;\n}\n.slick-slide a {\n  height: 100%;\n}\n.slick-slide > div {\n  height: 100%;\n}\n.slick-slide > div img {\n  -o-object-fit: cover;\n     object-fit: cover;\n  height: 100%;\n}", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/components/SignUpPage/signupHeaderImage.scss":
-/*!******************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./resources/js/components/SignUpPage/signupHeaderImage.scss ***!
-  \******************************************************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/pages/IntroSection.scss":
+/*!*********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./resources/js/pages/IntroSection.scss ***!
+  \*********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
 // imports
 
 
 // module
-exports.push([module.i, "img {\n  width: 100%;\n}", ""]);
+exports.push([module.i, ".intro__section {\n  position: relative;\n  margin-top: 12px;\n}\n.intro__section img {\n  width: 100%;\n  height: 500px;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.intro__modal {\n  padding: 64px;\n  position: absolute;\n  top: -60px;\n  background-color: white;\n  border: 1px solid black;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  width: 450px;\n}", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ "./resources/js/components/EmailValidationPage/index.jsx":
-/*!***************************************************************!*\
-  !*** ./resources/js/components/EmailValidationPage/index.jsx ***!
-  \***************************************************************/
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/pages/linksSection.scss":
+/*!*********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./resources/js/pages/linksSection.scss ***!
+  \*********************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".link {\n  display: flex;\n  justify-content: center;\n  flex-direction: column;\n  margin-top: 36px;\n}\n.link__area {\n  display: grid;\n  grid-template-columns: 1fr 1fr 1fr;\n}\n.link__area li {\n  list-style: none;\n}\n.link__area li a {\n  text-decoration: underline;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/pages/textSection.scss":
+/*!********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./resources/js/pages/textSection.scss ***!
+  \********************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".text__section {\n  max-width: 960px;\n  padding: 24px;\n  margin-top: 36px;\n  background: white;\n  margin-left: auto;\n  margin-right: auto;\n  border: 1px solid black;\n  border-radius: 5px;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./resources/js/components/routeCarousel/index.jsx":
+/*!*********************************************************!*\
+  !*** ./resources/js/components/routeCarousel/index.jsx ***!
+  \*********************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -51,220 +89,81 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _SignUpPage_SignUpHeaderImage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../SignUpPage/SignUpHeaderImage */ "./resources/js/components/SignUpPage/SignUpHeaderImage.jsx");
-/* harmony import */ var _auth_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../auth/api */ "./resources/js/auth/api.js");
-/* harmony import */ var _SignUpPage_Login__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../SignUpPage/Login */ "./resources/js/components/SignUpPage/Login.jsx");
+/* harmony import */ var _translations_translator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../translations/translator */ "./resources/js/translations/translator.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _common_RouteCard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../common/RouteCard */ "./resources/js/components/common/RouteCard.jsx");
+/* harmony import */ var slick_carousel_slick_slick_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! slick-carousel/slick/slick.css */ "./node_modules/slick-carousel/slick/slick.css");
+/* harmony import */ var slick_carousel_slick_slick_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(slick_carousel_slick_slick_css__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var slick_carousel_slick_slick_theme_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! slick-carousel/slick/slick-theme.css */ "./node_modules/slick-carousel/slick/slick-theme.css");
+/* harmony import */ var slick_carousel_slick_slick_theme_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(slick_carousel_slick_slick_theme_css__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var react_slick__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-slick */ "./node_modules/react-slick/lib/index.js");
+/* harmony import */ var react_slick__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_slick__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./index.scss */ "./resources/js/components/routeCarousel/index.scss");
+/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_8__);
 
 
 
 
 
 
-var EmailValidationPage = function EmailValidationPage(_ref) {
-  var match = _ref.match;
-  console.log('email validation');
-  var token = match.params.token;
 
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(""),
+
+
+
+var RouteCarousel = function RouteCarousel(_ref) {
+  var quantity = _ref.quantity,
+      searchTerm = _ref.searchTerm;
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])([]),
       _useState2 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_useState, 2),
-      message = _useState2[0],
-      setMessage = _useState2[1];
+      routes = _useState2[0],
+      setRoutes = _useState2[1];
 
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: true
+  };
   Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
-    console.log('use effect');
-    _auth_api__WEBPACK_IMPORTED_MODULE_3__["tokenActivate"](token).then(function (res) {
-      console.log(res);
-      setMessage("Thanks for Signing up. Your account has now been activated. Please sign in to continue!");
-    })["catch"](function (error) {
-      if (error.response) {
-        switch (error.response.status) {
-          case 404:
-            setMessage("Could not activate you account. Your token is invalid!");
-            break;
-
-          default:
-            setMessage("There was an error activating our account!");
-        }
-      } else {
-        setMessage("Could not connect to the server. Please check your internet connection");
-      }
-    });
+    getCarouselRoutes();
   }, []);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_SignUpPage_SignUpHeaderImage__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", null, message), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_SignUpPage_Login__WEBPACK_IMPORTED_MODULE_4__["default"], null));
-};
 
-/* harmony default export */ __webpack_exports__["default"] = (EmailValidationPage);
-
-/***/ }),
-
-/***/ "./resources/js/components/SignUpPage/Login.jsx":
-/*!******************************************************!*\
-  !*** ./resources/js/components/SignUpPage/Login.jsx ***!
-  \******************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js");
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "./node_modules/@babel/runtime/helpers/slicedToArray.js");
-/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _translations_translator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../translations/translator */ "./resources/js/translations/translator.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _login_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./login.scss */ "./resources/js/components/SignUpPage/login.scss");
-/* harmony import */ var _login_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_login_scss__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _auth_api__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../auth/api */ "./resources/js/auth/api.js");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var js_sha256__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! js-sha256 */ "./node_modules/js-sha256/src/sha256.js");
-/* harmony import */ var js_sha256__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(js_sha256__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _routes_routeID__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../routes/routeID */ "./resources/js/routes/routeID.js");
-/* harmony import */ var _store_Load_actions__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../store/Load/actions */ "./resources/js/store/Load/actions.js");
-
-
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-
-
-
-
-
- // import {getUserData }from '../../store/Login/actions';
-// props.user
-
-
-
-
-
-
-var Login = function Login() {
-  var history = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["useHistory"])();
-  var dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_7__["useDispatch"])();
-
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])({
-    email: "",
-    password: ""
-  }),
-      _useState2 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1___default()(_useState, 2),
-      formData = _useState2[0],
-      setFormData = _useState2[1];
-
-  var handleChange = function handleChange(e) {
-    var _e$target = e.target,
-        name = _e$target.name,
-        value = _e$target.value;
-    setFormData(function (prevState) {
-      return _objectSpread(_objectSpread({}, prevState), {}, _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()({}, name, value));
+  var getCarouselRoutes = function getCarouselRoutes() {
+    axios__WEBPACK_IMPORTED_MODULE_3___default.a.get("/api/getrecenttrails/".concat(quantity)).then(function (res) {
+      console.log(res.data);
+      setRoutes(res.data);
     });
   };
 
-  var handleSubmit = function handleSubmit() {
-    var remember_me = true;
-    var user = {
-      email: formData.email,
-      password: js_sha256__WEBPACK_IMPORTED_MODULE_8___default()(formData.password),
-      remember_me: remember_me
-    };
-    _auth_api__WEBPACK_IMPORTED_MODULE_6__["userSignIn"](user).then(function (res) {
-      localStorage.setItem("trailshub:all:userToken", res.data.access_token);
-      dispatch(Object(_store_Load_actions__WEBPACK_IMPORTED_MODULE_10__["initUser"])(res.data.access_token));
-      history.push(_routes_routeID__WEBPACK_IMPORTED_MODULE_9__["default"].memberDashboard);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "carousel"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h4", null, "Recently added trails"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "carousel__container"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_slick__WEBPACK_IMPORTED_MODULE_7___default.a, settings, routes.map(function (route, index) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_common_RouteCard__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      key: index,
+      trail: route
     });
-  };
-
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: "login-modal"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: "login"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", null, Object(_translations_translator__WEBPACK_IMPORTED_MODULE_3__["__"])('Log in to your Trails Hub Account')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("input", {
-    value: formData.email,
-    type: "email",
-    name: "email",
-    id: "email-login",
-    onChange: function onChange(e) {
-      return handleChange(e);
-    }
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("input", {
-    value: formData.password,
-    type: "password",
-    name: "password",
-    id: "password-login",
-    onChange: function onChange(e) {
-      return handleChange(e);
-    }
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
-    className: "progress-button",
-    type: "button",
-    onClick: function onClick() {
-      return handleSubmit();
-    }
-  }, "Sign In"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"], {
-    to: '/forgotpassword'
-  }, "Forgot Password")));
+  }))));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Login);
+/* harmony default export */ __webpack_exports__["default"] = (RouteCarousel);
 
 /***/ }),
 
-/***/ "./resources/js/components/SignUpPage/SignUpHeaderImage.jsx":
-/*!******************************************************************!*\
-  !*** ./resources/js/components/SignUpPage/SignUpHeaderImage.jsx ***!
-  \******************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _img_yorkshire_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./img/yorkshire.jpg */ "./resources/js/components/SignUpPage/img/yorkshire.jpg");
-/* harmony import */ var _img_yorkshire_jpg__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_img_yorkshire_jpg__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _signupHeaderImage_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./signupHeaderImage.scss */ "./resources/js/components/SignUpPage/signupHeaderImage.scss");
-/* harmony import */ var _signupHeaderImage_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_signupHeaderImage_scss__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _translations_translator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../translations/translator */ "./resources/js/translations/translator.js");
-
-
-
-
-
-var SignUpHeaderImage = function SignUpHeaderImage() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("img", {
-    src: _img_yorkshire_jpg__WEBPACK_IMPORTED_MODULE_0___default.a
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("figcaption", null, Object(_translations_translator__WEBPACK_IMPORTED_MODULE_3__["__"])("Ribblehead Viaduct, "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
-    href: "/trails/nidderdale"
-  }, Object(_translations_translator__WEBPACK_IMPORTED_MODULE_3__["__"])("Nidderdale"))));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (SignUpHeaderImage);
-
-/***/ }),
-
-/***/ "./resources/js/components/SignUpPage/img/yorkshire.jpg":
-/*!**************************************************************!*\
-  !*** ./resources/js/components/SignUpPage/img/yorkshire.jpg ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/images/yorkshire.jpg?7a58426b7aa24b65cb4708ca91dbcad8";
-
-/***/ }),
-
-/***/ "./resources/js/components/SignUpPage/login.scss":
-/*!*******************************************************!*\
-  !*** ./resources/js/components/SignUpPage/login.scss ***!
-  \*******************************************************/
+/***/ "./resources/js/components/routeCarousel/index.scss":
+/*!**********************************************************!*\
+  !*** ./resources/js/components/routeCarousel/index.scss ***!
+  \**********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!./login.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/components/SignUpPage/login.scss");
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!./index.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/components/routeCarousel/index.scss");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -286,15 +185,85 @@ if(false) {}
 
 /***/ }),
 
-/***/ "./resources/js/components/SignUpPage/signupHeaderImage.scss":
-/*!*******************************************************************!*\
-  !*** ./resources/js/components/SignUpPage/signupHeaderImage.scss ***!
-  \*******************************************************************/
+/***/ "./resources/js/pages/HomePage.jsx":
+/*!*****************************************!*\
+  !*** ./resources/js/pages/HomePage.jsx ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_map__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/map */ "./resources/js/components/map/index.jsx");
+/* harmony import */ var _components_routeCarousel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/routeCarousel */ "./resources/js/components/routeCarousel/index.jsx");
+/* harmony import */ var _IntroSection__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./IntroSection */ "./resources/js/pages/IntroSection.js");
+/* harmony import */ var _LinksSection__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./LinksSection */ "./resources/js/pages/LinksSection.js");
+/* harmony import */ var _TextSection__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./TextSection */ "./resources/js/pages/TextSection.js");
+
+
+
+
+
+
+
+var HomePage = function HomePage() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "homepage"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_map__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_routeCarousel__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    quantity: 3,
+    query: "all"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_IntroSection__WEBPACK_IMPORTED_MODULE_3__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_TextSection__WEBPACK_IMPORTED_MODULE_5__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_LinksSection__WEBPACK_IMPORTED_MODULE_4__["default"], null));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (HomePage);
+
+/***/ }),
+
+/***/ "./resources/js/pages/IntroSection.js":
+/*!********************************************!*\
+  !*** ./resources/js/pages/IntroSection.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _img_intro_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./img/intro.jpg */ "./resources/js/pages/img/intro.jpg");
+/* harmony import */ var _img_intro_jpg__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_img_intro_jpg__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _IntroSection_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./IntroSection.scss */ "./resources/js/pages/IntroSection.scss");
+/* harmony import */ var _IntroSection_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_IntroSection_scss__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+
+var IntroSection = function IntroSection() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "intro__section"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: _img_intro_jpg__WEBPACK_IMPORTED_MODULE_1___default.a,
+    alt: "image"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "intro__modal"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "An open source collection of the best trails. Made by Mountain Bikers, for mountain bikers")));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (IntroSection);
+
+/***/ }),
+
+/***/ "./resources/js/pages/IntroSection.scss":
+/*!**********************************************!*\
+  !*** ./resources/js/pages/IntroSection.scss ***!
+  \**********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!./signupHeaderImage.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/components/SignUpPage/signupHeaderImage.scss");
+var content = __webpack_require__(/*! !../../../node_modules/css-loader!../../../node_modules/postcss-loader/src??ref--7-2!../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!./IntroSection.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/pages/IntroSection.scss");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -308,7 +277,174 @@ var options = {"hmr":true}
 options.transform = transform
 options.insertInto = undefined;
 
-var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/pages/LinksSection.js":
+/*!********************************************!*\
+  !*** ./resources/js/pages/LinksSection.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _linksSection_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./linksSection.scss */ "./resources/js/pages/linksSection.scss");
+/* harmony import */ var _linksSection_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_linksSection_scss__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+var LinksSection = function LinksSection() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "link"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "Popular Destinations"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "link__area"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "/"
+  }, "YorkShire")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "/"
+  }, "Lake District")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "/"
+  }, "Mt Cook")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "/"
+  }, "Peak District")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "/"
+  }, "Cape Town")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "/"
+  }, "Rockies")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "/"
+  }, "Scotland"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "/"
+  }, "YorkShire")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "/"
+  }, "Lake District")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "/"
+  }, "Mt Cook")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "/"
+  }, "Peak District")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "/"
+  }, "Cape Town")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "/"
+  }, "Rockies")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "/"
+  }, "Scotland"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "/"
+  }, "YorkShire")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "/"
+  }, "Lake District")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "/"
+  }, "Mt Cook")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "/"
+  }, "Peak District")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "/"
+  }, "Cape Town")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "/"
+  }, "Rockies")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "/"
+  }, "Scotland")))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (LinksSection);
+
+/***/ }),
+
+/***/ "./resources/js/pages/TextSection.js":
+/*!*******************************************!*\
+  !*** ./resources/js/pages/TextSection.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _textSection_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./textSection.scss */ "./resources/js/pages/textSection.scss");
+/* harmony import */ var _textSection_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_textSection_scss__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+var TextSection = function TextSection() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "text__section"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Imperdiet dui accumsan sit amet nulla facilisi morbi tempus. Nulla pharetra diam sit amet nisl suscipit. A diam maecenas sed enim ut sem. Non blandit massa enim nec dui nunc mattis enim. A condimentum vitae sapien pellentesque. Fusce id velit ut tortor pretium viverra suspendisse potenti. Vel quam elementum pulvinar etiam non quam lacus. Tristique senectus et netus et malesuada fames ac turpis egestas. Lacus vestibulum sed arcu non odio euismod. Urna condimentum mattis pellentesque id nibh. Eget gravida cum sociis natoque penatibus et. ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Cras adipiscing enim eu turpis egestas pretium aenean pharetra magna. Morbi tristique senectus et netus et. Dui accumsan sit amet nulla facilisi. Dolor magna eget est lorem ipsum. Mollis aliquam ut porttitor leo a diam sollicitudin. Dignissim suspendisse in est ante. Nec dui nunc mattis enim ut tellus elementum. Aliquet lectus proin nibh nisl condimentum. Nisi est sit amet facilisis magna etiam. Laoreet suspendisse interdum consectetur libero. Hac habitasse platea dictumst quisque sagittis purus sit amet. Senectus et netus et malesuada fames ac turpis egestas. Proin libero nunc consequat interdum. Sed nisi lacus sed viverra tellus in. Purus in mollis nunc sed id semper risus in. Ut faucibus pulvinar elementum integer enim neque volutpat ac tincidunt. Massa id neque aliquam vestibulum morbi blandit cursus risus at. Nisi est sit amet facilisis magna etiam tempor orci. ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Pellentesque dignissim enim sit amet venenatis urna cursus eget. Vulputate sapien nec sagittis aliquam malesuada bibendum arcu vitae. Diam quam nulla porttitor massa id neque aliquam vestibulum morbi. Fermentum et sollicitudin ac orci phasellus egestas. Condimentum vitae sapien pellentesque habitant morbi. Phasellus egestas tellus rutrum tellus pellentesque. Ipsum dolor sit amet consectetur adipiscing elit ut aliquam. Vitae ultricies leo integer malesuada nunc. Dui ut ornare lectus sit. Enim tortor at auctor urna nunc id cursus. Purus non enim praesent elementum facilisis leo vel. Fringilla urna porttitor rhoncus dolor."));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (TextSection);
+
+/***/ }),
+
+/***/ "./resources/js/pages/img/intro.jpg":
+/*!******************************************!*\
+  !*** ./resources/js/pages/img/intro.jpg ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/intro.jpg?7482361c3303f7d623375eda9f491cae";
+
+/***/ }),
+
+/***/ "./resources/js/pages/linksSection.scss":
+/*!**********************************************!*\
+  !*** ./resources/js/pages/linksSection.scss ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader!../../../node_modules/postcss-loader/src??ref--7-2!../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!./linksSection.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/pages/linksSection.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/pages/textSection.scss":
+/*!*********************************************!*\
+  !*** ./resources/js/pages/textSection.scss ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader!../../../node_modules/postcss-loader/src??ref--7-2!../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!./textSection.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/pages/textSection.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
 
 if(content.locals) module.exports = content.locals;
 

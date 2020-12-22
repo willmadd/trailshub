@@ -94567,7 +94567,7 @@ var getTrailById = function getTrailById(id) {
   });
 };
 var getLocationCoords = function getLocationCoords(location) {
-  console.log('dddd');
+  console.log('ddddff');
   console.log("http://localhost:8000");
   onsole.log(process.env.MIX_ROOT);
   console.log(process.env);

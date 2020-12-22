@@ -94567,7 +94567,7 @@ var getTrailById = function getTrailById(id) {
   });
 };
 var getLocationCoords = function getLocationCoords(location) {
-  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("".concat("http://localhost:8000", "/api/location/").concat(location));
+  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("".concat("http://localhost:8000", "/api/locationxxx/").concat(location));
 };
 
 /***/ }),

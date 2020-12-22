@@ -72,5 +72,5 @@ export const getTrailById = (id) => {
 };
 
 export const getLocationCoords = (location) =>{
-    return axios.get(`${process.env.MIX_URL}/api/location/${location}`)
+    return axios.get(`${process.env.MIX_URL}/api/locationxxx/${location}`)
 }

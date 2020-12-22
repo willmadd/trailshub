@@ -4,7 +4,7 @@ import './linksSection.scss'
 const LinksSection = () => {
     return (
         <div className="link">
-            <h4>Popular Destinations</h4>
+            <h4>Popular Destinations are herer</h4>
             <div className="link__area">
             <ul>
                 <li><a href="/">YorkShire</a></li>

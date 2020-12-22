@@ -94504,7 +94504,7 @@ __webpack_require__(/*! ./components/index */ "./resources/js/components/index.j
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "signUp", function() { return signUp; });
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "signUp", function() { return signUp; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "tokenActivate", function() { return tokenActivate; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "userSignIn", function() { return userSignIn; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getUserData", function() { return getUserData; });
@@ -94567,8 +94567,12 @@ var getTrailById = function getTrailById(id) {
   });
 };
 var getLocationCoords = function getLocationCoords(location) {
-  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("".concat("http://localhost:8000", "/api/locationxxx/").concat(location));
+  console.log('dddd');
+  console.log("http://localhost:8000");
+  console.log(process.env);
+  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("".concat("http://localhost:8000", "/api/location/").concat(location));
 };
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../node_modules/process/browser.js */ "./node_modules/process/browser.js")))
 
 /***/ }),
 

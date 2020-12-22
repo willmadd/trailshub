@@ -72,7 +72,7 @@ export const getTrailById = (id) => {
 };
 
 export const getLocationCoords = (location) =>{
-    console.log('ddddff');
+    console.log('ddddfffff');
     console.log(process.env.MIX_URL);
     console.log(process.env.MIX_ROOT);
     console.log(process.env);

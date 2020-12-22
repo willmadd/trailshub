@@ -1,1 +1,96 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[17],{395:function(n,e,t){var a=t(396);"string"==typeof a&&(a=[[n.i,a,""]]);var r={hmr:!0,transform:void 0,insertInto:void 0};t(6)(a,r);a.locals&&(n.exports=a.locals)},396:function(n,e,t){(n.exports=t(5)(!1)).push([n.i,".fade-enter {\n  opacity: 0;\n}\n\n.fade-exit {\n  opacity: 1;\n}\n\n.fade-enter-active {\n  opacity: 1;\n}\n\n.fade-exit-active {\n  opacity: 0;\n}\n\n.fade-enter-active,\n.fade-exit-active {\n  transition: opacity 500ms;\n}\n\n.test-container {\n  display: flex;\n  justify-content: center;\n  flex-direction: column;\n  align-items: center;\n}\n\n.swipr-enter {\n  transform: translateX(100vw);\n}\n\n.swipr-exit {\n  transform: translateX(0px);\n}\n\n.swipr-enter-active {\n  transform: translateX(0px);\n}\n\n.swipr-exit-active {\n  transform: translateX(-100vw);\n}\n\n.swipr-enter-active,\n.swipr-exit-active {\n  transition: transform 500ms;\n}",""])},622:function(n,e,t){"use strict";t.r(e);var a=t(0),r=t.n(a),i=(t(395),t(14));e.default=function(){var n=Object(i.d)((function(n){return n.user}));return console.log(n),Object(a.useEffect)((function(){}),[]),n.loading?r.a.createElement("p",null,"Loading"):r.a.createElement("div",null,r.a.createElement("h1",null,"Member Area"),r.a.createElement("p",null,"Your User name is"),n.username,"...")}}}]);
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[17],{
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/components/SignUpPage/signupHeaderImage.scss":
+/*!******************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./resources/js/components/SignUpPage/signupHeaderImage.scss ***!
+  \******************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "img {\n  width: 100%;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./resources/js/components/SignUpPage/SignUpHeaderImage.jsx":
+/*!******************************************************************!*\
+  !*** ./resources/js/components/SignUpPage/SignUpHeaderImage.jsx ***!
+  \******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _img_yorkshire_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./img/yorkshire.jpg */ "./resources/js/components/SignUpPage/img/yorkshire.jpg");
+/* harmony import */ var _img_yorkshire_jpg__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_img_yorkshire_jpg__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _signupHeaderImage_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./signupHeaderImage.scss */ "./resources/js/components/SignUpPage/signupHeaderImage.scss");
+/* harmony import */ var _signupHeaderImage_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_signupHeaderImage_scss__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _translations_translator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../translations/translator */ "./resources/js/translations/translator.js");
+
+
+
+
+
+var SignUpHeaderImage = function SignUpHeaderImage() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("img", {
+    src: _img_yorkshire_jpg__WEBPACK_IMPORTED_MODULE_0___default.a
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("figcaption", null, Object(_translations_translator__WEBPACK_IMPORTED_MODULE_3__["__"])("Ribblehead Viaduct, "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
+    href: "/trails/nidderdale"
+  }, Object(_translations_translator__WEBPACK_IMPORTED_MODULE_3__["__"])("Nidderdale"))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (SignUpHeaderImage);
+
+/***/ }),
+
+/***/ "./resources/js/components/SignUpPage/img/yorkshire.jpg":
+/*!**************************************************************!*\
+  !*** ./resources/js/components/SignUpPage/img/yorkshire.jpg ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/yorkshire.jpg?7a58426b7aa24b65cb4708ca91dbcad8";
+
+/***/ }),
+
+/***/ "./resources/js/components/SignUpPage/signupHeaderImage.scss":
+/*!*******************************************************************!*\
+  !*** ./resources/js/components/SignUpPage/signupHeaderImage.scss ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!./signupHeaderImage.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/components/SignUpPage/signupHeaderImage.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ })
+
+}]);

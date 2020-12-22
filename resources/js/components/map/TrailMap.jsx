@@ -85,7 +85,7 @@ console.log('map render');
       >
         <TileLayer
           attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-          url={'http://localhost:8000/api/location/mapstyles'}
+          // url={'http://localhost:8000/api/location/mapstyles'}
 
         />
         {/* {route && <GeoJSON positions={route.route} />} */}

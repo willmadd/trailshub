@@ -94199,7 +94199,7 @@ function symbolObservablePonyfill(root) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-var isProduction = "development" === 'production';
+var isProduction = "productionv" === 'production';
 var prefix = 'Invariant failed';
 function invariant(condition, message) {
     if (condition) {
@@ -94225,7 +94225,7 @@ function invariant(condition, message) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-var isProduction = "development" === 'production';
+var isProduction = "productionv" === 'production';
 function warning(condition, message) {
   if (!isProduction) {
     if (condition) {
@@ -94322,7 +94322,7 @@ function valueEqual(a, b) {
  * same logic and follow the same code paths.
  */
 
-var __DEV__ = "development" !== 'production';
+var __DEV__ = "productionv" !== 'production';
 
 var warning = function() {};
 
@@ -94504,7 +94504,7 @@ __webpack_require__(/*! ./components/index */ "./resources/js/components/index.j
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "signUp", function() { return signUp; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "signUp", function() { return signUp; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "tokenActivate", function() { return tokenActivate; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "userSignIn", function() { return userSignIn; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getUserData", function() { return getUserData; });
@@ -94524,16 +94524,16 @@ var axiosConfig = {
   }
 };
 var signUp = function signUp(user) {
-  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("/api/auth/signup", user, axiosConfig);
+  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("".concat(_settings__WEBPACK_IMPORTED_MODULE_1__["default"].beBaseUrl, "/api/auth/signup"), user, axiosConfig);
 };
 var tokenActivate = function tokenActivate(token) {
-  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/auth/signup/activate/".concat(token));
+  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("".concat(_settings__WEBPACK_IMPORTED_MODULE_1__["default"].beBaseUrl, "/api/auth/signup/activate/").concat(token));
 };
 var userSignIn = function userSignIn(user) {
-  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("/api/auth/login", user);
+  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("".concat(_settings__WEBPACK_IMPORTED_MODULE_1__["default"].beBaseUrl, "/api/auth/login"), user);
 };
 var getUserData = function getUserData(token) {
-  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/auth/user", {
+  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("".concat(_settings__WEBPACK_IMPORTED_MODULE_1__["default"].beBaseUrl, "/api/auth/user"), {
     headers: {
       Authorization: "Bearer ".concat(token)
     }
@@ -94542,7 +94542,7 @@ var getUserData = function getUserData(token) {
 var logout = function logout() {
   var token = localStorage.getItem("trailshub:all:userToken");
   localStorage.removeItem("trailshub:all:userToken");
-  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/auth/logout", {
+  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("".concat(_settings__WEBPACK_IMPORTED_MODULE_1__["default"].beBaseUrl, "/api/auth/logout"), {
     headers: {
       Authorization: "Bearer ".concat(token)
     }
@@ -94552,7 +94552,7 @@ var submitRoute = function submitRoute(trail) {
   var token = localStorage.getItem("trailshub:all:userToken");
   console.log('api submit');
   console.log(trail);
-  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("/api/auth/trail/submit", trail, {
+  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("".concat(_settings__WEBPACK_IMPORTED_MODULE_1__["default"].beBaseUrl, "/api/auth/trail/submit"), trail, {
     headers: {
       Authorization: "Bearer ".concat(token)
     }
@@ -94560,23 +94560,15 @@ var submitRoute = function submitRoute(trail) {
 };
 var getTrailById = function getTrailById(id) {
   var token = localStorage.getItem("trailshub:all:userToken");
-  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/auth/trail/gettrailbyid/".concat(id), {
+  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("".concat(_settings__WEBPACK_IMPORTED_MODULE_1__["default"].beBaseUrl, "/api/auth/trail/gettrailbyid/").concat(id), {
     headers: {
       Authorization: "Bearer ".concat(token)
     }
   });
 };
 var getLocationCoords = function getLocationCoords(location) {
-  console.log('ddddfffff');
-  console.log("http://localhost:8000");
-  console.log("asdasd");
-  console.log("testtest");
-  console.log("thisisthings");
-  console.log("thingsagain");
-  console.log(process.env);
-  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/location/".concat(location));
+  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("".concat(_settings__WEBPACK_IMPORTED_MODULE_1__["default"].beBaseUrl, "/api/location/").concat(location));
 };
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../node_modules/process/browser.js */ "./node_modules/process/browser.js")))
 
 /***/ }),
 
@@ -96152,7 +96144,7 @@ if(false) {}
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   feBaseUrl: 'localhost',
-  beBaseUrl: 'http://localhost:8000',
+  beBaseUrl:  false ? undefined : "https://www.trailshub.com",
   timeFormat: {
     day: 'numeric',
     month: 'short',

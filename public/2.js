@@ -2057,7 +2057,7 @@ var Slider = /*#__PURE__*/function (_React$Component) {
 
 
       if (settings.centerMode) {
-        if (settings.slidesToScroll > 1 && "development" !== "production") {
+        if (settings.slidesToScroll > 1 && "productionv" !== "production") {
           console.warn("slidesToScroll should be equal to 1 in centerMode, you are using ".concat(settings.slidesToScroll));
         }
 
@@ -2066,11 +2066,11 @@ var Slider = /*#__PURE__*/function (_React$Component) {
 
 
       if (settings.fade) {
-        if (settings.slidesToShow > 1 && "development" !== "production") {
+        if (settings.slidesToShow > 1 && "productionv" !== "production") {
           console.warn("slidesToShow should be equal to 1 when fade is true, you're using ".concat(settings.slidesToShow));
         }
 
-        if (settings.slidesToScroll > 1 && "development" !== "production") {
+        if (settings.slidesToScroll > 1 && "productionv" !== "production") {
           console.warn("slidesToScroll should be equal to 1 when fade is true, you're using ".concat(settings.slidesToScroll));
         }
 

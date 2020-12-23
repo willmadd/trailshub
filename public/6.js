@@ -29586,12 +29586,7 @@ exports['default'] = reorderKeys;
 var hasWarned = false;
 
 function reorderKeys() {
-  if (true) {
-    if (!hasWarned) {
-      hasWarned = true;
-      console.error('`reorderKeys` has been removed, since it is no longer needed for TransitionMotion\'s new styles array API.');
-    }
-  }
+  if (false) {}
 }
 
 module.exports = exports['default'];
@@ -42661,7 +42656,7 @@ function warning(message) {
   var onlyShowMessageOnce = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
 
   /* eslint-disable no-undef, no-process-env */
-  if (global.process && HIDDEN_PROCESSES["development"]) {
+  if (global.process && HIDDEN_PROCESSES["productionv"]) {
     return;
   }
   /* eslint-enable no-undef, no-process-env */

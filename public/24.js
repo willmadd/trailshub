@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[12],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[24],{
 
 /***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/components/Dashboard/index.scss":
 /*!*****************************************************************************************************************************************************************************!*\
@@ -128,7 +128,7 @@ var LogOut = Object(_routes_helpers__WEBPACK_IMPORTED_MODULE_5__["ReactLazyPrelo
   return __webpack_require__.e(/*! import() */ 20).then(__webpack_require__.bind(null, /*! ./LogOut */ "./resources/js/components/Dashboard/LogOut.js"));
 });
 var CreateTrail = Object(_routes_helpers__WEBPACK_IMPORTED_MODULE_5__["ReactLazyPreload"])(function () {
-  return Promise.all(/*! import() */[__webpack_require__.e(1), __webpack_require__.e(7), __webpack_require__.e(9)]).then(__webpack_require__.bind(null, /*! ../MyTrails/CreateTrail */ "./resources/js/components/MyTrails/CreateTrail.js"));
+  return Promise.all(/*! import() */[__webpack_require__.e(2), __webpack_require__.e(6), __webpack_require__.e(8), __webpack_require__.e(23)]).then(__webpack_require__.bind(null, /*! ../MyTrails/CreateTrail */ "./resources/js/components/MyTrails/CreateTrail.js"));
 });
 
 var DashboardLayout = function DashboardLayout(props) {

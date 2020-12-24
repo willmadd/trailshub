@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[15],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[25],{
 
 /***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/components/common/routeCardArea.scss":
 /*!**********************************************************************************************************************************************************************************!*\
@@ -273,6 +273,60 @@ var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/a
 if(content.locals) module.exports = content.locals;
 
 if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/constants/index.js":
+/*!*****************************************!*\
+  !*** ./resources/js/constants/index.js ***!
+  \*****************************************/
+/*! exports provided: tileLayerUrl, mapAttribution */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "tileLayerUrl", function() { return tileLayerUrl; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mapAttribution", function() { return mapAttribution; });
+var style_id = "cka5ncmgs19io1io3qn27wejb";
+var access_token = "pk.eyJ1Ijoid2lsbG1hZGQiLCJhIjoiY2thNW43amlvMDFteDNtcGEyMWpxeWwzcCJ9.wfx7i_G1rWq3roofKl7XhQ"; //map style url
+
+var tileLayerUrl = "https://api.mapbox.com/styles/v1/willmadd/".concat(style_id, "/tiles/{z}/{x}/{y}?access_token=").concat(access_token);
+var mapAttribution = '&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors';
+
+/***/ }),
+
+/***/ "./resources/js/utils/slugify.js":
+/*!***************************************!*\
+  !*** ./resources/js/utils/slugify.js ***!
+  \***************************************/
+/*! exports provided: slugify, unslugify */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "slugify", function() { return slugify; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unslugify", function() { return unslugify; });
+var slugify = function slugify(str) {
+  str = str.replace(/^\s+|\s+$/g, ''); // trim
+
+  str = str.toLowerCase(); // remove accents, swap ñ for n, etc
+
+  var from = "àáäâèéëêìíïîòóöôùúüûñç·/_,:;";
+  var to = "aaaaeeeeiiiioooouuuunc------";
+
+  for (var i = 0, l = from.length; i < l; i++) {
+    str = str.replace(new RegExp(from.charAt(i), 'g'), to.charAt(i));
+  }
+
+  str = str.replace(/[^a-z0-9 -]/g, '') // remove invalid chars
+  .replace(/\s+/g, '-') // collapse whitespace and replace by -
+  .replace(/-+/g, '-'); // collapse dashes
+
+  return str;
+};
+var unslugify = function unslugify(slug) {
+  return slug.replace(/-/gi, ' ');
+};
 
 /***/ })
 

@@ -16,6 +16,15 @@ import {
 
 const PlaceMap = ({ trails, bounds }) => {
     console.log(trails);
+    const history = useHistory();
+
+    const fetchRoute = (routeSlug, coords) => {
+        history.push({
+            pathname: `/${slugify(routeSlug)}`,
+            state: { coords: coords }
+        });
+    };
+
     return (
         <Map
             className={`mapid`}
@@ -35,7 +44,7 @@ const PlaceMap = ({ trails, bounds }) => {
                                 key={`${i}`}
                                 onMouseEnter={() =>
                                     preloadRouteComponent(
-                                        `trails/${route.slug}`
+                                        `${route.slug}`
                                     )
                                 }
                                 positions={JSON.parse(route.coords)}

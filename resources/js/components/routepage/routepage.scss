@@ -5,6 +5,10 @@
 
 .route{
     background-color: $shade;
+    &__header{
+        display: flex;
+        justify-content: space-around;
+    }
     &__one{
         width:90%;
         max-width: 1220px;
@@ -19,7 +23,7 @@
     }
     h1 {
         text-transform: uppercase;
-        width: 100%;
+        // width: 100%;
         text-align: center;
         padding: 12px;
     }

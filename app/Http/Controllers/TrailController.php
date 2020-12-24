@@ -22,11 +22,11 @@ class TrailController extends Controller
  
     public function getTrails () {
         
-        $trails = DB::table('trails')->select(['coords','id', 'slug'])->where([
+        $trails = DB::table('trails')->select(['coords','id', 'slug', 'title' , 'difficulty'])->where([
             ['activity', 'mtb'],
             ['status', "approved"],
         ])->get()->map(function($trail) {
-            return Array('coords' => json_decode($trail->coords), 'id' => $trail->id, 'slug'=>$trail->slug);
+            return Array('coords' => json_decode($trail->coords), 'id' => $trail->id, 'slug'=>$trail->slug, 'title'=>$trail->title, 'difficulty' => $trail->difficulty);
         });
 
         return response()->json(
@@ -79,16 +79,25 @@ class TrailController extends Controller
     public function getTrailByTag($tag)
     {
 
-        $tagId = DB::table('tags')->select(['id'])->where('tag', $tag)->first();
-        $trailsIdArr = DB::table('tags_lookUps')->select(['trail_id'])->where('tag_id', $tagId)->get();
+        $tagRecord = DB::table('tags')->select(['id'])->where('tag', $tag)->first();
+        $trailsIdArr = DB::table('tags_lookUps')->select(['trail_id'])->where('tag_id', $tagRecord->id)->get();
 
-        $trails = DB::table('trails')->select(['id', 'user_id', 'activity', 'title', 'hire_centre' , 'tags', 'difficulty', 'slug', 'ascent', 'descent', 'distance', 'time'])->where('tags', 'LIKE', "%{$tag}%")->get();
-        $regionData = DB::table('region_data')->select(['id', 'title', 'image', 'slug', 'description'])->where('slug', $tag)->first();
+        $trails=[];
+
+        foreach($trailsIdArr as $trailId){
+            $trail = DB::table('trails')->select(['id', 'user_id', 'activity', 'title', 'hire_centre' , 'tags', 'difficulty', 'slug', 'ascent', 'descent', 'distance', 'time'])->where('id', $trailId->trail_id)->first();
+            $trail->images = DB::table('images')->select(['url'])->where('trail_id',  $trail->id)->get();
+            array_push($trails, $trail);
+           }
+
+
+        // $regionData = DB::table('region_data')->select(['id', 'title', 'image', 'slug', 'description'])->where('slug', $tag)->first();
         return response()->json(
             [
+                // 'dddd'=>$trailsIdArr,
             'trails'=>$trails,
-            'regionData'=>$regionData,
-            'arr'=>json_decose($trailsIdArr),
+            // 'regionData'=>$regionData,
+            'arr'=>json_decode($trailsIdArr),
             ],
              200);
     
@@ -99,7 +108,7 @@ class TrailController extends Controller
         $recentTrails = DB::table('trails')->select(['id', 'user_id', 'activity', 'title', 'hire_centre' , 'tags', 'difficulty', 'slug', 'ascent', 'descent', 'distance', 'time'])->latest('created_at')->limit($limit)->get();
     
         foreach($recentTrails as $trail){
-            $trail->image = $imagesArr = DB::table('images')->select(['url'])->where('trail_id', $trail->id)->first();
+            $trail->images = DB::table('images')->select(['url'])->where('trail_id', $trail->id)->get()->pluck('url');
         }
 
 

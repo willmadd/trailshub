@@ -1,0 +1,15 @@
+@import "../../../sass/styles/ui/colours";
+
+.socials {
+    display: flex;
+    justify-content: space-between;
+    &__button {
+        align-items: center;
+        display: flex;
+        margin-left: 16px;
+    }
+    img {
+        height: 24px;
+        margin-left: 12px;
+    }
+}

@@ -1,3 +1,8 @@
+AuthType Basic
+AuthName "restricted area"
+AuthUserFile /home/u982972214/public_html/.htpasswd
+require valid-user
+
 # Handle Authorization Header
 RewriteCond %{HTTP:Authorization} .
 RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]

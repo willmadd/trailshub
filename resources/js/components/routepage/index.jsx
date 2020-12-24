@@ -14,6 +14,7 @@ import "./routepage.scss";
 import ImageCarousel from "./ImageCarousel";
 import StatsTab from "../common/StatsTab";
 import DifficultyTab from "../common/DifficultyTab";
+import Socials from "./Socials";
 
 const RouteTemplate = ({ match, location, units }) => {
     let { trailIdentifier } = match.params;
@@ -46,7 +47,10 @@ const RouteTemplate = ({ match, location, units }) => {
             lng: 0
         }
     ]);
-
+    console.log('dddddssss');
+console.log(trail);
+console.log(trail.coords)
+console.log(JSON.parse(location.state.coords));
     useEffect(() => {
         // async function fetchData() {
         //     const result = await axios(`/api/gettrail/${id}`);
@@ -75,7 +79,7 @@ const RouteTemplate = ({ match, location, units }) => {
                         ...res.data,
                         coords: res.data.coords
                             ? JSON.parse(res.data.coords)
-                            : location.state.coords
+                            : JSON.parse(location.state.coords)
                     });
                     setLoading(false);
                 });
@@ -109,7 +113,8 @@ const RouteTemplate = ({ match, location, units }) => {
             /> */}
             {!loading && (
                 <div className="route">
-                    <h1>{decodeURIComponent(`${trail.title}`)}</h1>
+                    <div className="route__header"><h1>{decodeURIComponent(`${trail.title}`)}</h1><Socials/></div>
+                    
                     <div className="route__one">
                         <div className="route__one__left">
                             <Tags tagsArr={trail.tags} />

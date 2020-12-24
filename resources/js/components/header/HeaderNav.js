@@ -1,14 +1,17 @@
 import React from 'react';
 import './headerNav.scss';
+import { Link, NavLink } from "react-router-dom";
 
 const HeaderNav = () => {
     return (
         <nav>
             <ul>
-                <li>{`Home`}</li>
-                <li>{`Trails`}</li>
-                <li>{`News`}</li>
-                <li>{`Create a Trail`}</li>
+                <li><NavLink exact to={'/'}>{`Home`}</NavLink></li>
+                <li><NavLink exact to={'/'}>{`Trails`}</NavLink></li>
+                <li><NavLink exact to={'/'}>{`Create a Trail`}</NavLink></li>
+                <li><NavLink exact to={'/'}>{`Blog`}</NavLink></li>
+                <li><NavLink exact to={'/signup'}>{`Sign Up`}</NavLink></li>
+                <li><NavLink exact to={'/signup'}>{`Sign In`}</NavLink></li>
             </ul>
         </nav>
     );

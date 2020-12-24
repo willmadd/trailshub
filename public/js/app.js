@@ -94786,11 +94786,31 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _headerNav_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./headerNav.scss */ "./resources/js/components/header/headerNav.scss");
 /* harmony import */ var _headerNav_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_headerNav_scss__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+
 
 
 
 var HeaderNav = function HeaderNav() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Home"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Trails"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "News"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Create a Trail")));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["NavLink"], {
+    exact: true,
+    to: '/'
+  }, "Home")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["NavLink"], {
+    exact: true,
+    to: '/'
+  }, "Trails")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["NavLink"], {
+    exact: true,
+    to: '/'
+  }, "Create a Trail")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["NavLink"], {
+    exact: true,
+    to: '/'
+  }, "Blog")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["NavLink"], {
+    exact: true,
+    to: '/signup'
+  }, "Sign Up")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["NavLink"], {
+    exact: true,
+    to: '/signup'
+  }, "Sign In"))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (HeaderNav);
@@ -95224,15 +95244,22 @@ var MapWrapper = function MapWrapper(_ref) {
   var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(10),
       _useState4 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_useState3, 2),
       mapZoom = _useState4[0],
-      setMatZoom = _useState4[1];
+      setMapZoom = _useState4[1];
 
   var position = [mapViewport.lat, mapViewport.lng];
   var routesOverview = Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["useSelector"])(function (state) {
     return state.trails;
   });
 
+  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])({
+    show: false,
+    title: ""
+  }),
+      _useState6 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_useState5, 2),
+      ummary = _useState6[0],
+      setSummary = _useState6[1];
+
   var fetchRoute = function fetchRoute(routeSlug, coords) {
-    console.log('fetch!!');
     history.push({
       pathname: "".concat(Object(_utils_slugify__WEBPACK_IMPORTED_MODULE_5__["slugify"])(routeSlug)),
       state: {
@@ -95241,7 +95268,13 @@ var MapWrapper = function MapWrapper(_ref) {
     });
   };
 
-  console.log('trails overview');
+  var handleTrailHover = function handleTrailHover(route) {
+    console.log('hover');
+    console.log(route);
+    Object(_routes_helpers__WEBPACK_IMPORTED_MODULE_6__["preloadRouteComponent"])("".concat(route.slug));
+  };
+
+  console.log('trails overview bbb');
   console.log(routesOverview);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_leaflet__WEBPACK_IMPORTED_MODULE_7__["Map"], {
     className: "mapid",
@@ -95258,8 +95291,8 @@ var MapWrapper = function MapWrapper(_ref) {
   }, routesOverview && routesOverview.map(function (route, i) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_leaflet__WEBPACK_IMPORTED_MODULE_7__["Polyline"], {
       key: "".concat(route.coords[0].lat, "-").concat(i),
-      onMouseEnter: function onMouseEnter() {
-        return Object(_routes_helpers__WEBPACK_IMPORTED_MODULE_6__["preloadRouteComponent"])("trails/".concat(route.slug));
+      onMouseOver: function onMouseOver() {
+        return handleTrailHover(route);
       },
       positions: route.coords,
       onClick: function onClick() {
@@ -95517,7 +95550,7 @@ var Home = Object(_helpers__WEBPACK_IMPORTED_MODULE_1__["ReactLazyPreload"])(fun
   return Promise.all(/*! import() */[__webpack_require__.e(2), __webpack_require__.e(0), __webpack_require__.e(11)]).then(__webpack_require__.bind(null, /*! ../pages/HomePage */ "./resources/js/pages/HomePage.jsx"));
 });
 var RouteTemplate = Object(_helpers__WEBPACK_IMPORTED_MODULE_1__["ReactLazyPreload"])(function () {
-  return Promise.all(/*! import() */[__webpack_require__.e(1), __webpack_require__.e(2), __webpack_require__.e(6), __webpack_require__.e(9)]).then(__webpack_require__.bind(null, /*! ../containers/RoutePage/ */ "./resources/js/containers/RoutePage/index.js"));
+  return Promise.all(/*! import() */[__webpack_require__.e(1), __webpack_require__.e(2), __webpack_require__.e(6), __webpack_require__.e(8)]).then(__webpack_require__.bind(null, /*! ../containers/RoutePage/ */ "./resources/js/containers/RoutePage/index.js"));
 });
 var Tags = Object(_helpers__WEBPACK_IMPORTED_MODULE_1__["ReactLazyPreload"])(function () {
   return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(14)]).then(__webpack_require__.bind(null, /*! ../components/tags */ "./resources/js/components/tags/index.jsx"));

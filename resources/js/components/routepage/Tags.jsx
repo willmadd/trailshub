@@ -5,7 +5,7 @@ const Tags = ({ tagsArr }) => {
     return (
         <div className="tags-area">
             {tagsArr.map(tag => (
-                <a key={`${tag}`} href={`/trails/${slugify(tag)}`}><h6>{tag.replace(/-/gi, ' ')}</h6></a>
+                <a key={`${tag}`} href={`/tags/${slugify(tag)}`}><h6>{tag.replace(/-/gi, ' ')}</h6></a>
             ))}
         </div>
     );

@@ -19,20 +19,34 @@ const MapWrapper = ({ mapCenter, bounds }) => {
 
     let [mapViewport, setMapViewport] = useState({ lat: 51.505, lng: -0.09 });
 
-    let [mapZoom, setMatZoom] = useState(10);
+    let [mapZoom, setMapZoom] = useState(10);
 
     const position = [mapViewport.lat, mapViewport.lng];
 
     const routesOverview = useSelector(state => state.trails);
 
+    const [ummary, setSummary] = useState({
+        show:false,
+        title:""
+    });
+
     const fetchRoute = (routeSlug, coords) => {
-        console.log('fetch!!');
         history.push({
             pathname: `${slugify(routeSlug)}`,
             state: { coords: coords }
         });
     };
-console.log('trails overview');
+
+const handleTrailHover = (route) => {
+    console.log('hover');
+    console.log(route);
+    preloadRouteComponent(
+        `${route.slug}`
+    )
+
+}
+
+console.log('trails overview bbb');
 console.log(routesOverview)
     return (
         <Map
@@ -50,10 +64,8 @@ console.log(routesOverview)
                         return (
                             <Polyline
                                 key={`${route.coords[0].lat}-${i}`}
-                                onMouseEnter={() =>
-                                    preloadRouteComponent(
-                                        `trails/${route.slug}`
-                                    )
+                                onMouseOver={() =>
+                                    handleTrailHover(route)
                                 }
                                 positions={route.coords}
                                 onClick={() =>

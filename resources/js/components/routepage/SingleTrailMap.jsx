@@ -101,6 +101,7 @@ const startIcon = L.icon({
 
 
 const SingleTrailMap = ({ route }) => {
+    // console.log(route)
     const [mapControl, setMapControl] = useState({
         lat: 51.505,
         lng: -0.09,

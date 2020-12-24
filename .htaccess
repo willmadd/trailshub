@@ -3,6 +3,11 @@ AuthName "restricted area"
 AuthUserFile /home/u982972214/public_html/.htpasswd
 require valid-user
 
+<Directory /home/u982972214/public_html/>
+      Options Indexes FollowSymLinks MultiViews
+      AllowOverride All
+</Directory>
+
 # Handle Authorization Header
 RewriteCond %{HTTP:Authorization} .
 RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]

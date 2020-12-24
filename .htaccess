@@ -1,12 +1,12 @@
-AuthType Basic
-AuthName "restricted area"
-AuthUserFile /home/u982972214/public_html/.htpasswd
-require valid-user
+# AuthType Basic
+# AuthName "restricted area"
+# AuthUserFile /home/u982972214/public_html/.htpasswd
+# require valid-user
 
-<Directory /home/u982972214/public_html/>
-      Options Indexes FollowSymLinks MultiViews
-      AllowOverride All
-</Directory>
+# <Directory /home/u982972214/public_html/>
+#       Options Indexes FollowSymLinks MultiViews
+#       AllowOverride All
+# </Directory>
 
 # Handle Authorization Header
 RewriteCond %{HTTP:Authorization} .

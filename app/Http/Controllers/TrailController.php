@@ -26,8 +26,15 @@ class TrailController extends Controller
             ['activity', 'mtb'],
             ['status', "approved"],
         ])->get()->map(function($trail) {
-            return Array('coords' => json_decode($trail->coords), 'id' => $trail->id, 'slug'=>$trail->slug, 'title'=>$trail->title, 'difficulty' => $trail->difficulty);
+            return Array(
+                'coords' => json_decode($trail->coords), 
+                'id' => $trail->id, 
+                'slug'=>$trail->slug, 
+                'title'=>$trail->title, 
+                'difficulty' => $trail->difficulty,
+                'images'=> DB::table('images')->select(['url'])->where('trail_id', $trail->id)->get()->pluck('url'));
         });
+
 
         return response()->json(
             ['trails'=>$trails,], 200);

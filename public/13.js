@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[13],{
 
-/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/components/SignUpPage/login.scss":
-/*!******************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./resources/js/components/SignUpPage/login.scss ***!
-  \******************************************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/components/Dashboard/index.scss":
+/*!*****************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./resources/js/components/Dashboard/index.scss ***!
+  \*****************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -12,17 +12,17 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".account-dashboard {\n  display: grid;\n  grid-template-columns: 230px auto;\n  margin-top: 24px;\n  grid-gap: 24px;\n}\n.account-dashboard main {\n  margin-right: 24px;\n}\n\nimg {\n  width: 100%;\n}", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/components/SignUpPage/signupHeaderImage.scss":
-/*!******************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./resources/js/components/SignUpPage/signupHeaderImage.scss ***!
-  \******************************************************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/components/Dashboard/menu.scss":
+/*!****************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./resources/js/components/Dashboard/menu.scss ***!
+  \****************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -31,240 +31,153 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "img {\n  width: 100%;\n}", ""]);
+exports.push([module.i, "ul {\n  margin: 0;\n  padding: 0;\n  list-style: none;\n}\n\nli {\n  margin: 0;\n  padding: 0;\n  text-transform: capitalize;\n  margin-bottom: 4px;\n  margin-left: 24px;\n  padding: 8px;\n  background: #2B303A;\n  color: #fff;\n}\n\na.active {\n  text-decoration: underline;\n}", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ "./resources/js/components/EmailValidationPage/index.jsx":
-/*!***************************************************************!*\
-  !*** ./resources/js/components/EmailValidationPage/index.jsx ***!
-  \***************************************************************/
+/***/ "./resources/js/components/Dashboard/Menu.js":
+/*!***************************************************!*\
+  !*** ./resources/js/components/Dashboard/Menu.js ***!
+  \***************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "./node_modules/@babel/runtime/helpers/slicedToArray.js");
-/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _SignUpPage_SignUpHeaderImage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../SignUpPage/SignUpHeaderImage */ "./resources/js/components/SignUpPage/SignUpHeaderImage.jsx");
-/* harmony import */ var _auth_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../auth/api */ "./resources/js/auth/api.js");
-/* harmony import */ var _SignUpPage_Login__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../SignUpPage/Login */ "./resources/js/components/SignUpPage/Login.jsx");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _menu_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./menu.scss */ "./resources/js/components/Dashboard/menu.scss");
+/* harmony import */ var _menu_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_menu_scss__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _menuitems__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./menuitems */ "./resources/js/components/Dashboard/menuitems.js");
+/* harmony import */ var _routes_helpers__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../routes/helpers */ "./resources/js/routes/helpers.js");
 
 
 
 
 
 
-var EmailValidationPage = function EmailValidationPage(_ref) {
-  var match = _ref.match;
-  console.log('email validation');
-  var token = match.params.token;
-
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(""),
-      _useState2 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_useState, 2),
-      message = _useState2[0],
-      setMessage = _useState2[1];
-
-  Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
-    console.log('use effect');
-    _auth_api__WEBPACK_IMPORTED_MODULE_3__["tokenActivate"](token).then(function (res) {
-      console.log(res);
-      setMessage("Thanks for Signing up. Your account has now been activated. Please sign in to continue!");
-    })["catch"](function (error) {
-      if (error.response) {
-        switch (error.response.status) {
-          case 404:
-            setMessage("Could not activate you account. Your token is invalid!");
-            break;
-
-          default:
-            setMessage("There was an error activating our account!");
-        }
-      } else {
-        setMessage("Could not connect to the server. Please check your internet connection");
+var Menu = function Menu() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, _menuitems__WEBPACK_IMPORTED_MODULE_3__["default"].map(function (menuItem) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+      key: menuItem.name
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+      exact: true,
+      to: menuItem.url,
+      onMouseOver: function onMouseOver() {
+        return Object(_routes_helpers__WEBPACK_IMPORTED_MODULE_4__["preloadRouteComponent"])(menuItem.url);
       }
-    });
-  }, []);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_SignUpPage_SignUpHeaderImage__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", null, message), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_SignUpPage_Login__WEBPACK_IMPORTED_MODULE_4__["default"], null));
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, menuItem.name)));
+  }));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (EmailValidationPage);
+/* harmony default export */ __webpack_exports__["default"] = (Menu);
 
 /***/ }),
 
-/***/ "./resources/js/components/SignUpPage/Login.jsx":
-/*!******************************************************!*\
-  !*** ./resources/js/components/SignUpPage/Login.jsx ***!
-  \******************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js");
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "./node_modules/@babel/runtime/helpers/slicedToArray.js");
-/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _translations_translator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../translations/translator */ "./resources/js/translations/translator.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _login_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./login.scss */ "./resources/js/components/SignUpPage/login.scss");
-/* harmony import */ var _login_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_login_scss__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _auth_api__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../auth/api */ "./resources/js/auth/api.js");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var js_sha256__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! js-sha256 */ "./node_modules/js-sha256/src/sha256.js");
-/* harmony import */ var js_sha256__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(js_sha256__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _routes_routeID__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../routes/routeID */ "./resources/js/routes/routeID.js");
-/* harmony import */ var _store_Load_actions__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../store/Load/actions */ "./resources/js/store/Load/actions.js");
-
-
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-
-
-
-
-
- // import {getUserData }from '../../store/Login/actions';
-// props.user
-
-
-
-
-
-
-var Login = function Login() {
-  var history = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["useHistory"])();
-  var dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_7__["useDispatch"])();
-
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])({
-    email: "",
-    password: ""
-  }),
-      _useState2 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1___default()(_useState, 2),
-      formData = _useState2[0],
-      setFormData = _useState2[1];
-
-  var handleChange = function handleChange(e) {
-    var _e$target = e.target,
-        name = _e$target.name,
-        value = _e$target.value;
-    setFormData(function (prevState) {
-      return _objectSpread(_objectSpread({}, prevState), {}, _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()({}, name, value));
-    });
-  };
-
-  var handleSubmit = function handleSubmit() {
-    var remember_me = true;
-    var user = {
-      email: formData.email,
-      password: js_sha256__WEBPACK_IMPORTED_MODULE_8___default()(formData.password),
-      remember_me: remember_me
-    };
-    _auth_api__WEBPACK_IMPORTED_MODULE_6__["userSignIn"](user).then(function (res) {
-      localStorage.setItem("trailshub:all:userToken", res.data.access_token);
-      dispatch(Object(_store_Load_actions__WEBPACK_IMPORTED_MODULE_10__["initUser"])(res.data.access_token));
-      history.push(_routes_routeID__WEBPACK_IMPORTED_MODULE_9__["default"].memberDashboard);
-    });
-  };
-
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: "login-modal"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: "login"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", null, Object(_translations_translator__WEBPACK_IMPORTED_MODULE_3__["__"])('Log in to your Trails Hub Account')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("input", {
-    value: formData.email,
-    type: "email",
-    name: "email",
-    id: "email-login",
-    onChange: function onChange(e) {
-      return handleChange(e);
-    }
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("input", {
-    value: formData.password,
-    type: "password",
-    name: "password",
-    id: "password-login",
-    onChange: function onChange(e) {
-      return handleChange(e);
-    }
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
-    className: "progress-button",
-    type: "button",
-    onClick: function onClick() {
-      return handleSubmit();
-    }
-  }, "Sign In"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"], {
-    to: '/forgotpassword'
-  }, "Forgot Password")));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Login);
-
-/***/ }),
-
-/***/ "./resources/js/components/SignUpPage/SignUpHeaderImage.jsx":
-/*!******************************************************************!*\
-  !*** ./resources/js/components/SignUpPage/SignUpHeaderImage.jsx ***!
-  \******************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _img_yorkshire_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./img/yorkshire.jpg */ "./resources/js/components/SignUpPage/img/yorkshire.jpg");
-/* harmony import */ var _img_yorkshire_jpg__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_img_yorkshire_jpg__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _signupHeaderImage_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./signupHeaderImage.scss */ "./resources/js/components/SignUpPage/signupHeaderImage.scss");
-/* harmony import */ var _signupHeaderImage_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_signupHeaderImage_scss__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _translations_translator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../translations/translator */ "./resources/js/translations/translator.js");
-
-
-
-
-
-var SignUpHeaderImage = function SignUpHeaderImage() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("img", {
-    src: _img_yorkshire_jpg__WEBPACK_IMPORTED_MODULE_0___default.a
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("figcaption", null, Object(_translations_translator__WEBPACK_IMPORTED_MODULE_3__["__"])("Ribblehead Viaduct, "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
-    href: "/trails/nidderdale"
-  }, Object(_translations_translator__WEBPACK_IMPORTED_MODULE_3__["__"])("Nidderdale"))));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (SignUpHeaderImage);
-
-/***/ }),
-
-/***/ "./resources/js/components/SignUpPage/img/yorkshire.jpg":
-/*!**************************************************************!*\
-  !*** ./resources/js/components/SignUpPage/img/yorkshire.jpg ***!
-  \**************************************************************/
+/***/ "./resources/js/components/Dashboard/img/accountHeader.jpg":
+/*!*****************************************************************!*\
+  !*** ./resources/js/components/Dashboard/img/accountHeader.jpg ***!
+  \*****************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/yorkshire.jpg?7a58426b7aa24b65cb4708ca91dbcad8";
+module.exports = "/images/accountHeader.jpg?414ec66232e8e77cb0bb1549ca146fc7";
 
 /***/ }),
 
-/***/ "./resources/js/components/SignUpPage/login.scss":
-/*!*******************************************************!*\
-  !*** ./resources/js/components/SignUpPage/login.scss ***!
-  \*******************************************************/
+/***/ "./resources/js/components/Dashboard/index.js":
+/*!****************************************************!*\
+  !*** ./resources/js/components/Dashboard/index.js ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! leaflet */ "./node_modules/leaflet/dist/leaflet-src.js");
+/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(leaflet__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./index.scss */ "./resources/js/components/Dashboard/index.scss");
+/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _Menu__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Menu */ "./resources/js/components/Dashboard/Menu.js");
+/* harmony import */ var _routes_helpers__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../routes/helpers */ "./resources/js/routes/helpers.js");
+/* harmony import */ var _routes_routeID__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../routes/routeID */ "./resources/js/routes/routeID.js");
+/* harmony import */ var _img_accountHeader_jpg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./img/accountHeader.jpg */ "./resources/js/components/Dashboard/img/accountHeader.jpg");
+/* harmony import */ var _img_accountHeader_jpg__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_img_accountHeader_jpg__WEBPACK_IMPORTED_MODULE_7__);
+
+
+
+
+
+
+
+
+var Dashboard = Object(_routes_helpers__WEBPACK_IMPORTED_MODULE_5__["ReactLazyPreload"])(function () {
+  return __webpack_require__.e(/*! import() */ 18).then(__webpack_require__.bind(null, /*! ./Dashboard */ "./resources/js/components/Dashboard/Dashboard.js"));
+});
+var MyTrails = Object(_routes_helpers__WEBPACK_IMPORTED_MODULE_5__["ReactLazyPreload"])(function () {
+  return __webpack_require__.e(/*! import() */ 3).then(__webpack_require__.bind(null, /*! ../MyTrails */ "./resources/js/components/MyTrails/index.js"));
+});
+var LogOut = Object(_routes_helpers__WEBPACK_IMPORTED_MODULE_5__["ReactLazyPreload"])(function () {
+  return __webpack_require__.e(/*! import() */ 19).then(__webpack_require__.bind(null, /*! ./LogOut */ "./resources/js/components/Dashboard/LogOut.js"));
+});
+var CreateTrail = Object(_routes_helpers__WEBPACK_IMPORTED_MODULE_5__["ReactLazyPreload"])(function () {
+  return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(6), __webpack_require__.e(8)]).then(__webpack_require__.bind(null, /*! ../MyTrails/CreateTrail */ "./resources/js/components/MyTrails/CreateTrail.js"));
+});
+
+var DashboardLayout = function DashboardLayout(props) {
+  var history = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["useHistory"])();
+  Object(react__WEBPACK_IMPORTED_MODULE_1__["useLayoutEffect"])(function () {
+    if (!props.user.loading && props.user.error) {
+      history.push(_routes_routeID__WEBPACK_IMPORTED_MODULE_6__["default"].signUp);
+    }
+  }, [props.user]);
+  console.log(props.user);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+    src: _img_accountHeader_jpg__WEBPACK_IMPORTED_MODULE_7___default.a,
+    alt: "bike in mountains"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "account-dashboard"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("nav", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Menu__WEBPACK_IMPORTED_MODULE_4__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+    exact: true,
+    path: "/dashboard"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Dashboard, {
+    user: props.user
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+    exact: true,
+    path: _routes_routeID__WEBPACK_IMPORTED_MODULE_6__["default"].mytrails
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MyTrails, {
+    myTrails: props.user.trails
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+    exact: true,
+    path: _routes_routeID__WEBPACK_IMPORTED_MODULE_6__["default"].creatTrail,
+    component: CreateTrail
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+    exact: true,
+    path: _routes_routeID__WEBPACK_IMPORTED_MODULE_6__["default"].logout,
+    component: LogOut
+  }))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (DashboardLayout);
+
+/***/ }),
+
+/***/ "./resources/js/components/Dashboard/index.scss":
+/*!******************************************************!*\
+  !*** ./resources/js/components/Dashboard/index.scss ***!
+  \******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!./login.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/components/SignUpPage/login.scss");
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!./index.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/components/Dashboard/index.scss");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -286,15 +199,15 @@ if(false) {}
 
 /***/ }),
 
-/***/ "./resources/js/components/SignUpPage/signupHeaderImage.scss":
-/*!*******************************************************************!*\
-  !*** ./resources/js/components/SignUpPage/signupHeaderImage.scss ***!
-  \*******************************************************************/
+/***/ "./resources/js/components/Dashboard/menu.scss":
+/*!*****************************************************!*\
+  !*** ./resources/js/components/Dashboard/menu.scss ***!
+  \*****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!./signupHeaderImage.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/components/SignUpPage/signupHeaderImage.scss");
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!./menu.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/components/Dashboard/menu.scss");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -313,6 +226,64 @@ var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/a
 if(content.locals) module.exports = content.locals;
 
 if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/components/Dashboard/menuitems.js":
+/*!********************************************************!*\
+  !*** ./resources/js/components/Dashboard/menuitems.js ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ([{
+  name: "overview",
+  url: "/dashboard"
+}, {
+  name: "Create a Trail",
+  url: "/dashboard/trails/create"
+}, {
+  name: "My Trails",
+  url: "/dashboard/trails"
+}, {
+  name: "Logout",
+  url: "/dashboard/logout"
+}]);
+
+/***/ }),
+
+/***/ "./resources/js/containers/Dashboard/index.js":
+/*!****************************************************!*\
+  !*** ./resources/js/containers/Dashboard/index.js ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _components_Dashboard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/Dashboard */ "./resources/js/components/Dashboard/index.js");
+
+
+
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    units: {
+      imperial: state.config.imperial
+    },
+    user: state.user
+  };
+}; // const mapDispatchToProps = dispatch => {
+//     return {
+//         toggleUnits: (bool) => {
+//             return dispatch(config({imperial:bool}))}
+//     }
+//   }
+
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mapStateToProps)(_components_Dashboard__WEBPACK_IMPORTED_MODULE_1__["default"]));
 
 /***/ })
 

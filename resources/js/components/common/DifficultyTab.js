@@ -2,7 +2,6 @@ import React from "react";
 import "./difficultyTab.scss";
 
 const DifficultyTab = ({ level }) => {
-
 const grade = level === 1
 ? "easy"
 : level === 2

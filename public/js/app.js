@@ -6864,6 +6864,25 @@ exports.push([module.i, "footer {\n  width: 100%;\n  padding: 32px;\n  display: 
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/components/common/difficultyTab.scss":
+/*!**********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./resources/js/components/common/difficultyTab.scss ***!
+  \**********************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".difficulty-indicator {\n  text-transform: uppercase;\n  padding: 8px;\n  display: flex;\n  align-items: center;\n}\n.difficulty-indicator h5 {\n  font-size: 10px;\n  font-weight: 700;\n}\n.difficulty-indicator.easy {\n  background-color: green;\n  color: #fff;\n}\n.difficulty-indicator.intermediate {\n  background-color: #0080ca;\n  color: #fff;\n}\n.difficulty-indicator.hard {\n  background-color: black;\n  color: #fff;\n}\n.difficulty-indicator.extreme {\n  background-color: orange;\n  color: #fff;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/components/header/headerNav.scss":
 /*!******************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./resources/js/components/header/headerNav.scss ***!
@@ -94773,6 +94792,64 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/common/DifficultyTab.js":
+/*!*********************************************************!*\
+  !*** ./resources/js/components/common/DifficultyTab.js ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _difficultyTab_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./difficultyTab.scss */ "./resources/js/components/common/difficultyTab.scss");
+/* harmony import */ var _difficultyTab_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_difficultyTab_scss__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+var DifficultyTab = function DifficultyTab(_ref) {
+  var level = _ref.level;
+  var grade = level === 1 ? "easy" : level === 2 ? "intermediate" : level === 3 ? "hard" : "extreme";
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "difficulty-indicator ".concat(grade)
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, grade));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (DifficultyTab);
+
+/***/ }),
+
+/***/ "./resources/js/components/common/difficultyTab.scss":
+/*!***********************************************************!*\
+  !*** ./resources/js/components/common/difficultyTab.scss ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!./difficultyTab.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/components/common/difficultyTab.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./resources/js/components/header/HeaderNav.js":
 /*!*****************************************************!*\
   !*** ./resources/js/components/header/HeaderNav.js ***!
@@ -95217,8 +95294,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _utils_slugify__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../utils/slugify */ "./resources/js/utils/slugify.js");
-/* harmony import */ var _routes_helpers__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../routes/helpers */ "./resources/js/routes/helpers.js");
-/* harmony import */ var react_leaflet__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-leaflet */ "./node_modules/react-leaflet/es/index.js");
+/* harmony import */ var react_leaflet__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-leaflet */ "./node_modules/react-leaflet/es/index.js");
+/* harmony import */ var _SummaryModal__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./SummaryModal */ "./resources/js/components/map/SummaryModal.js");
+/* harmony import */ var _routes_helpers__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../routes/helpers */ "./resources/js/routes/helpers.js");
+
 
 
 
@@ -95231,7 +95310,10 @@ __webpack_require__.r(__webpack_exports__);
 var MapWrapper = function MapWrapper(_ref) {
   var mapCenter = _ref.mapCenter,
       bounds = _ref.bounds;
-  var history = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["useHistory"])();
+  var history = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["useHistory"])(); // const [summary, setSummary] = useState({
+  //     show: false,
+  //     title: ""
+  // });
 
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])({
     lat: 51.505,
@@ -95251,13 +95333,14 @@ var MapWrapper = function MapWrapper(_ref) {
     return state.trails;
   });
 
-  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])({
-    show: false,
-    title: ""
-  }),
-      _useState6 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_useState5, 2),
-      ummary = _useState6[0],
-      setSummary = _useState6[1];
+  var handleTrailHover = function handleTrailHover(route) {
+    // setSummary(state => ({
+    //     ...state,
+    //     show: true,
+    //     title: route.title
+    // }));
+    Object(_routes_helpers__WEBPACK_IMPORTED_MODULE_8__["preloadRouteComponent"])("".concat(route.slug));
+  };
 
   var fetchRoute = function fetchRoute(routeSlug, coords) {
     history.push({
@@ -95268,28 +95351,20 @@ var MapWrapper = function MapWrapper(_ref) {
     });
   };
 
-  var handleTrailHover = function handleTrailHover(route) {
-    console.log('hover');
-    console.log(route);
-    Object(_routes_helpers__WEBPACK_IMPORTED_MODULE_6__["preloadRouteComponent"])("".concat(route.slug));
-  };
-
-  console.log('trails overview bbb');
-  console.log(routesOverview);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_leaflet__WEBPACK_IMPORTED_MODULE_7__["Map"], {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_leaflet__WEBPACK_IMPORTED_MODULE_6__["Map"], {
     className: "mapid",
     center: mapCenter,
     zoom: mapZoom,
     scrollWheelZoom: false,
     bounds: bounds,
     doubleClickZoom: true
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_leaflet__WEBPACK_IMPORTED_MODULE_7__["TileLayer"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_leaflet__WEBPACK_IMPORTED_MODULE_6__["TileLayer"], {
     attribution: _constants__WEBPACK_IMPORTED_MODULE_2__["mapAttribution"],
     url: _constants__WEBPACK_IMPORTED_MODULE_2__["tileLayerUrl"]
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "route-overview"
   }, routesOverview && routesOverview.map(function (route, i) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_leaflet__WEBPACK_IMPORTED_MODULE_7__["Polyline"], {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_leaflet__WEBPACK_IMPORTED_MODULE_6__["Polyline"], {
       key: "".concat(route.coords[0].lat, "-").concat(i),
       onMouseOver: function onMouseOver() {
         return handleTrailHover(route);
@@ -95301,11 +95376,41 @@ var MapWrapper = function MapWrapper(_ref) {
       doubleClickZoom: true,
       fill: "blue",
       color: "#D64933"
-    });
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_leaflet__WEBPACK_IMPORTED_MODULE_6__["Tooltip"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_SummaryModal__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      summary: route
+    })));
   })));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (MapWrapper);
+
+/***/ }),
+
+/***/ "./resources/js/components/map/SummaryModal.js":
+/*!*****************************************************!*\
+  !*** ./resources/js/components/map/SummaryModal.js ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _common_DifficultyTab__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../common/DifficultyTab */ "./resources/js/components/common/DifficultyTab.js");
+
+
+
+var SummaryModal = function SummaryModal(_ref) {
+  var summary = _ref.summary;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "summary"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, decodeURIComponent(summary.title)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_common_DifficultyTab__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    level: summary.difficulty
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (SummaryModal);
 
 /***/ }),
 
@@ -95541,37 +95646,37 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var MyRoutes = Object(_helpers__WEBPACK_IMPORTED_MODULE_1__["ReactLazyPreload"])(function () {
-  return __webpack_require__.e(/*! import() */ 4).then(__webpack_require__.bind(null, /*! ../components/MyTrails */ "./resources/js/components/MyTrails/index.js"));
+  return __webpack_require__.e(/*! import() */ 3).then(__webpack_require__.bind(null, /*! ../components/MyTrails */ "./resources/js/components/MyTrails/index.js"));
 });
 var DashboardWrapper = Object(_helpers__WEBPACK_IMPORTED_MODULE_1__["ReactLazyPreload"])(function () {
-  return __webpack_require__.e(/*! import() */ 12).then(__webpack_require__.bind(null, /*! ../containers/Dashboard */ "./resources/js/containers/Dashboard/index.js"));
+  return __webpack_require__.e(/*! import() */ 13).then(__webpack_require__.bind(null, /*! ../containers/Dashboard */ "./resources/js/containers/Dashboard/index.js"));
 });
 var Home = Object(_helpers__WEBPACK_IMPORTED_MODULE_1__["ReactLazyPreload"])(function () {
-  return Promise.all(/*! import() */[__webpack_require__.e(2), __webpack_require__.e(0), __webpack_require__.e(11)]).then(__webpack_require__.bind(null, /*! ../pages/HomePage */ "./resources/js/pages/HomePage.jsx"));
+  return Promise.all(/*! import() */[__webpack_require__.e(1), __webpack_require__.e(9)]).then(__webpack_require__.bind(null, /*! ../pages/HomePage */ "./resources/js/pages/HomePage.jsx"));
 });
 var RouteTemplate = Object(_helpers__WEBPACK_IMPORTED_MODULE_1__["ReactLazyPreload"])(function () {
-  return Promise.all(/*! import() */[__webpack_require__.e(1), __webpack_require__.e(2), __webpack_require__.e(6), __webpack_require__.e(8)]).then(__webpack_require__.bind(null, /*! ../containers/RoutePage/ */ "./resources/js/containers/RoutePage/index.js"));
+  return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(1), __webpack_require__.e(5), __webpack_require__.e(7)]).then(__webpack_require__.bind(null, /*! ../containers/RoutePage/ */ "./resources/js/containers/RoutePage/index.js"));
 });
 var Tags = Object(_helpers__WEBPACK_IMPORTED_MODULE_1__["ReactLazyPreload"])(function () {
-  return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(14)]).then(__webpack_require__.bind(null, /*! ../components/tags */ "./resources/js/components/tags/index.jsx"));
+  return __webpack_require__.e(/*! import() */ 10).then(__webpack_require__.bind(null, /*! ../components/tags */ "./resources/js/components/tags/index.jsx"));
 });
 var SignUpPage = Object(_helpers__WEBPACK_IMPORTED_MODULE_1__["ReactLazyPreload"])(function () {
-  return Promise.all(/*! import() */[__webpack_require__.e(3), __webpack_require__.e(5), __webpack_require__.e(10)]).then(__webpack_require__.bind(null, /*! ../components/SignUpPage */ "./resources/js/components/SignUpPage/index.jsx"));
+  return Promise.all(/*! import() */[__webpack_require__.e(2), __webpack_require__.e(4), __webpack_require__.e(11)]).then(__webpack_require__.bind(null, /*! ../components/SignUpPage */ "./resources/js/components/SignUpPage/index.jsx"));
 });
 var SignUpImage = Object(_helpers__WEBPACK_IMPORTED_MODULE_1__["ReactLazyPreload"])(function () {
-  return __webpack_require__.e(/*! import() */ 17).then(__webpack_require__.bind(null, /*! ../components/SignUpPage/SignUpHeaderImage */ "./resources/js/components/SignUpPage/SignUpHeaderImage.jsx"));
+  return __webpack_require__.e(/*! import() */ 16).then(__webpack_require__.bind(null, /*! ../components/SignUpPage/SignUpHeaderImage */ "./resources/js/components/SignUpPage/SignUpHeaderImage.jsx"));
 });
 var SignUpSuccess = Object(_helpers__WEBPACK_IMPORTED_MODULE_1__["ReactLazyPreload"])(function () {
-  return __webpack_require__.e(/*! import() */ 16).then(__webpack_require__.bind(null, /*! ../components/SignUpPage/SignUpSuccess */ "./resources/js/components/SignUpPage/SignUpSuccess.jsx"));
+  return __webpack_require__.e(/*! import() */ 15).then(__webpack_require__.bind(null, /*! ../components/SignUpPage/SignUpSuccess */ "./resources/js/components/SignUpPage/SignUpSuccess.jsx"));
 });
 var EmailValidationPage = Object(_helpers__WEBPACK_IMPORTED_MODULE_1__["ReactLazyPreload"])(function () {
-  return Promise.all(/*! import() */[__webpack_require__.e(5), __webpack_require__.e(13)]).then(__webpack_require__.bind(null, /*! ../components/EmailValidationPage */ "./resources/js/components/EmailValidationPage/index.jsx"));
+  return Promise.all(/*! import() */[__webpack_require__.e(4), __webpack_require__.e(14)]).then(__webpack_require__.bind(null, /*! ../components/EmailValidationPage */ "./resources/js/components/EmailValidationPage/index.jsx"));
 });
 var Test = Object(_helpers__WEBPACK_IMPORTED_MODULE_1__["ReactLazyPreload"])(function () {
-  return Promise.all(/*! import() */[__webpack_require__.e(3), __webpack_require__.e(18)]).then(__webpack_require__.bind(null, /*! ../components/test/index */ "./resources/js/components/test/index.jsx"));
+  return Promise.all(/*! import() */[__webpack_require__.e(2), __webpack_require__.e(17)]).then(__webpack_require__.bind(null, /*! ../components/test/index */ "./resources/js/components/test/index.jsx"));
 });
 var PlacePage = Object(_helpers__WEBPACK_IMPORTED_MODULE_1__["ReactLazyPreload"])(function () {
-  return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(15)]).then(__webpack_require__.bind(null, /*! ../components/PlacePage */ "./resources/js/components/PlacePage/index.js"));
+  return __webpack_require__.e(/*! import() */ 12).then(__webpack_require__.bind(null, /*! ../components/PlacePage */ "./resources/js/components/PlacePage/index.js"));
 });
 
 

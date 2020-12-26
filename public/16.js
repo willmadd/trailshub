@@ -52,33 +52,6 @@ var SignUpHeaderImage = function SignUpHeaderImage() {
 
 /***/ }),
 
-/***/ "./resources/js/components/SignUpPage/SignUpSuccess.jsx":
-/*!**************************************************************!*\
-  !*** ./resources/js/components/SignUpPage/SignUpSuccess.jsx ***!
-  \**************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _SignUpHeaderImage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SignUpHeaderImage */ "./resources/js/components/SignUpPage/SignUpHeaderImage.jsx");
-
-
-
-var SignUpSuccess = function SignUpSuccess(_ref) {
-  var history = _ref.history;
-  console.log('success page wrong');
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SignUpHeaderImage__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "success-message"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Thank you for signing up with Trails Hub"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "We've sent an email to ".concat(history.location.state.email, ", please check your email and verify your account!"))));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (SignUpSuccess);
-
-/***/ }),
-
 /***/ "./resources/js/components/SignUpPage/img/yorkshire.jpg":
 /*!**************************************************************!*\
   !*** ./resources/js/components/SignUpPage/img/yorkshire.jpg ***!

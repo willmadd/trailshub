@@ -2,8 +2,8 @@ import React, {useState} from 'react';
 import MapWrapper from './MapWrapper';
 import LocationSearch from '../locationSeach';
 
-
 const index = () => {
+    
 
     const [bounds, setBounds] = useState([
         [49.959999905, -7.57216793459],
@@ -20,8 +20,12 @@ const index = () => {
         setBounds(newBounds);
     } 
 
+
+
+
     return (
         <div className="map">
+            
             <LocationSearch submitLocation={submitLocation}/>
             <MapWrapper mapCenter={mapCenter} bounds={bounds} />
         </div>

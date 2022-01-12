@@ -1,118 +1,123 @@
 .search-wrapper {
-  // background-color: $blue;
-  width: 100%;
-  background-position: center;
-  background-size: cover;
-  padding:0;
-  @include breakpoint ($desktop){
-    position: absolute;
-    height: 544px;
-
-  }
+    // background-color: $blue;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    padding: 0;
+    @include breakpoint($desktop) {
+        position: absolute;
+        height: 544px;
+    }
 }
 .searchModal {
-  width: 100%;
-  height:0;
-  right: 32px;
-  top: 0px;
-  z-index: 450;
-  @include breakpoint ($desktop) {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 50%;
-    max-width: 450px;
-    display: flex;
-    flex-direction: column;
-    padding-top:16px;
-  }
-  h2 {
-    padding: 24px;
-    text-transform: uppercase;
-    font-size: 10px;
-    text-align: center;
-    font-weight: 600;
-    @include breakpoint($tablet){
-      padding:0;
-      width:100%;
-      font-size: 18px;
-      color: $white;
-      margin-bottom:16px;
+    width: 100%;
+    height: 0;
+    right: 32px;
+    top: 0px;
+    z-index: 450;
+    @include breakpoint($desktop) {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 50%;
+        max-width: 450px;
+        display: flex;
+        flex-direction: column;
+        padding-top: 16px;
     }
-  }
+    h2 {
+        padding: 24px;
+        text-transform: uppercase;
+        font-size: 10px;
+        text-align: center;
+        font-weight: 600;
+        @include breakpoint($tablet) {
+            padding: 0;
+            width: 100%;
+            font-size: 18px;
+            color: $white;
+            margin-bottom: 16px;
+        }
+    }
 }
-.searchBar{
-  @include breakpoint ($desktop){
-    padding: 0 24px;
-    display: grid;
-    grid-template-columns: auto 63px;
-  }
+.searchBar {
+    @include breakpoint($desktop) {
+        padding: 0 24px;
+        display: grid;
+        grid-template-columns: auto 63px;
+    }
 }
-.submit-location{
-  height:64px;
-  border: 1px solid $accent;
-  border-left-width:0;
-  background-color: $primary;
-  background-image: url(/images/find.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 36px;
-  @include breakpoint ($desktop){
-    border-radius: 0 5px 5px 0;
-  }
-}
-.geosuggest__input{
-      width: 100%;
-    padding: 18px 0  18px 24px;
-    box-sizing: border-box;
+.submit-location {
+    height: 64px;
     border: 1px solid $accent;
-    border-width: 1px 0 0 0;
-    font-family: orkneybold;
+    border-left-width: 0;
+    background-color: $primary;
+    background-image: url(/images/find.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 36px;
+    @include breakpoint($desktop) {
+        border-radius: 0 5px 5px 0;
+    }
+}
+.geosuggest__input {
+    width: 100%;
+    // padding: 18px 0  18px 24px;
+    box-sizing: border-box;
+    font-family: "Spartan";
     font-size: 16px;
-    @include breakpoint($desktop){
-      border-right-color:$shade;
-      border-radius: 5px 0 0 5px;
+    border: 0;
+    color: black;
+    @include breakpoint($desktop) {
+        //   border-right-color:$shade;
+        //   border-radius: 5px 0 0 5px;
     }
 }
-.geosuggest__input-wrapper{
-  padding:0;
-  border:0;
+.geosuggest__input-wrapper {
+    padding-left: 8px;
+    border: 0;
+    line-height: 22px;
+    margin-top: 3px;
 }
 
-
-.geosuggest__suggests{
-  list-style: none;
-  padding:0;
-  margin:0;
-  text-align: left;
-  border: 0 solid $accent;
-  border-top-width: 1px;
-  background-color: $white;
-  li{
-    cursor: pointer;
-    display: grid;
-    grid-template-columns: 24px auto;
-    grid-gap: 12px;;
-    padding:12px;
-    border-bottom: 1px solid $shade;
-
-    &::before{
-      content:"";
-      display: block;
-      height:24px;
-      width:24px;
-      align-self: center;
-      background-image: url(/images/search-location-marker.svg);
+.geosuggest__suggests {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    border: 0 solid $accent;
+    border-top-width: 1px;
+    background-color: $white;
+    li {
+        cursor: pointer;
+        display: grid;
+        grid-template-columns: 24px auto;
+        grid-gap: 12px;
+        padding: 12px;
+        border-bottom: 1px solid $shade;
+        span {
+            color: #140f2d;
+        }
+        &::before {
+            content: "";
+            display: block;
+            height: 24px;
+            width: 24px;
+            align-self: center;
+            background-image: url(/images/search-location-marker.svg);
+        }
+        &:hover {
+            background-color: #140f2d;
+            span {
+                color: #f49d37;
+            }
+        }
     }
-    &:hover{
-      background-color: $shade;
-    }
-  }
 }
 
 .geosuggest__suggests--hidden {
-  max-height: 0;
-  overflow: hidden;
-  border-width: 0;
+    max-height: 0;
+    overflow: hidden;
+    border-width: 0;
 }

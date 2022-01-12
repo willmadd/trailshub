@@ -14,7 +14,7 @@ import("../pages/HomePage")
 );
 
 const RouteTemplate = ReactLazyPreload(() =>
-import("../containers/RoutePage/")
+import("../pages/RoutePage")
 );
 
 const Tags = ReactLazyPreload(() =>

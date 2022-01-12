@@ -1,0 +1,37 @@
+export default {
+    container: {
+        position: "relative",
+        display: { xs: "flex", md: "block" },
+        flexDirection: { xs: "column-reverse" },
+    },
+    heroImage: {width:1},
+    modal: {
+        backgroundColor: (theme) => theme.palette.white,
+        border: 1,
+        borderColor: (theme) => theme.palette.primary.two,
+        position: { xs: "relative", md: "absolute" },
+        width: { xs: "100%", md: "calc(50% - 144px)" },
+        right: { xs: 0, md: 48 },
+        // top: 24,
+        color: "white",
+        borderRadius: { xs: 0, md: "50px" },
+        boxShadow: 3,
+        p: { xs: 0, md: 1 },
+        pl:4,
+        opacity: 0.85,
+        top: "50%",
+        display:'flex',
+        alignItems:'center',
+        transform: { xs: "100%", md: "translateY(-50%)" },
+    },
+    logo: {
+        width: 1 / 4,
+    },
+    nextButton:{
+        p: { xs: 0, md: 1 },
+        minWidth:'auto',
+        borderRadius: { xs: 0, md: 10 },
+        marginLeft: 'auto',
+    },
+    icon:{ml:1},
+};

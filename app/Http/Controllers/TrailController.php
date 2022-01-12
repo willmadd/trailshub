@@ -19,9 +19,9 @@ use Illuminate\Support\Str;
 
 class TrailController extends Controller
 {
- 
+
     public function getTrails () {
-        
+
         $trails = DB::table('trails')->select(['coords','id', 'slug'])->where([
             ['activity', 'mtb'],
             ['status', "approved"],
@@ -41,13 +41,13 @@ class TrailController extends Controller
         $trail = DB::table('trails')->select(['id', 'user_id', 'strava_link' , 'description', 'activity', 'title', 'hire_centre' , 'difficulty','youtube_link', 'summary', 'distance' , 'time' , 'ascent' ,'descent' , 'coords'])->where('slug', $slug)->first();
     }else{
         $trail = DB::table('trails')->select(['id', 'user_id', 'strava_link' , 'description', 'activity', 'title', 'hire_centre' , 'difficulty','youtube_link', 'summary', 'distance' , 'time' , 'ascent' ,'descent' ])->where('slug', $slug)->first();
-
     }
 
+    $trail->userName = DB::table('users')->select(['username'])->where('id', $trail->user_id)->value('username');
     // $trail->id.
-    
-    
-    // $tags = 
+
+
+    // $tags =
     $trail->images = DB::table('images')->select(['url'])->where('trail_id',  $trail->id)->get();
 
     $trail->tags=$this->getTagsById($trail->id);
@@ -58,9 +58,9 @@ class TrailController extends Controller
              200);
     }
 
-    public function dSlug($string) {
-        return strtolower(trim(preg_replace('~[^0-9a-z]+~i', '-', html_entity_decode(preg_replace('~&([a-z]{1,2})(?:acute|cedil|circ|grave|lig|orn|ring|slash|th|tilde|uml);~i', '$1',htmlentities(preg_replace('/[&]/', ' and ', $title), ENT_QUOTES, 'UTF-8')), ENT_QUOTES, 'UTF-8')), '-'));
-    }
+    // public function dSlug($string) {
+    //     return strtolower(trim(preg_replace('~[^0-9a-z]+~i', '-', html_entity_decode(preg_replace('~&([a-z]{1,2})(?:acute|cedil|circ|grave|lig|orn|ring|slash|th|tilde|uml);~i', '$1',htmlentities(preg_replace('/[&]/', ' and ', $title), ENT_QUOTES, 'UTF-8')), ENT_QUOTES, 'UTF-8')), '-'));
+    // }
 
     public function checkSlug($slug){
         $trail = DB::table('trails')->select(['slug'])->where('slug', $slug)->first();
@@ -68,7 +68,7 @@ class TrailController extends Controller
                return response()->json(
                 false,
                  200);
-        
+
         }else{
             return response()->json(
                 true,
@@ -88,16 +88,16 @@ class TrailController extends Controller
             [
             'trails'=>$trails,
             'regionData'=>$regionData,
-            'arr'=>json_decose($trailsIdArr),
+            'arr'=>json_decode($trailsIdArr),
             ],
              200);
-    
+
     }
 
     public function getRecentTrails($limit)
     {
-        $recentTrails = DB::table('trails')->select(['id', 'user_id', 'activity', 'title', 'hire_centre' , 'tags', 'difficulty', 'slug', 'ascent', 'descent', 'distance', 'time'])->latest('created_at')->limit($limit)->get();
-    
+        $recentTrails = DB::table('trails')->select(['id', 'user_id', 'activity', 'title', 'hire_centre' , 'tags', 'difficulty', 'slug', 'ascent', 'descent', 'distance', 'time' ,'description'])->latest('created_at')->limit($limit)->get();
+
         foreach($recentTrails as $trail){
             $trail->image = $imagesArr = DB::table('images')->select(['url'])->where('trail_id', $trail->id)->first();
         }
@@ -111,10 +111,10 @@ class TrailController extends Controller
     public function createTrail(Request $request)
     {
 
-       
+
 if($request->status==="pending"){
     $request->validate([
-    
+
         "title"=>'required|string',
         "slug"=>'required|string|unique:trails',
         "activity"=>'required|string',
@@ -179,10 +179,10 @@ if($request->status==="pending"){
 
         ]);
     }
-    
-    
-    
-    
+
+
+
+
     return response()->json(
         [
             "id"=>$trail ->id,
@@ -205,7 +205,7 @@ if($request->status==="pending"){
 
             $width = 1200;
             $height = 1200;
-            
+
             $filename = 't-'.$trail_id.'-'.Str::random(12).'.'.$type;
             $imgf = Image::make($image);
             $imgf->height() > $imgf->width() ? $width=null : $height=null;
@@ -221,9 +221,9 @@ if($request->status==="pending"){
     }
 
     public function getTagsById($id){
-        
+
         $tagsIdArr = DB::table('tags_lookUps')->select(['tag_id'])->where('trail_id', $id)->get();
-                
+
         $tags = [];
         foreach ($tagsIdArr as $tagId) {
             $tag = DB::table('tags')->select(['tag'])->where('id', $tagId->tag_id)->get();
@@ -235,7 +235,7 @@ if($request->status==="pending"){
     public function getImagesById($id){
         $images=[];
         $imagesArr = DB::table('images')->select(['url'])->where('trail_id', $id)->get();
-    
+
         foreach($imagesArr as $image){
             $url = $image->url;
             $type = pathinfo($image->url, PATHINFO_EXTENSION);
@@ -247,13 +247,13 @@ if($request->status==="pending"){
     }
 
     public function getTrailById($id){
-        
+
         $trail = DB::table('trails')->select(['id', 'strava_link' , 'description', 'activity', 'title', 'hire_centre' , 'tags', 'difficulty','youtube_link' , 'coords', 'summary', 'user_id','distance','descent','ascent','time' ,'status'])->where('id', $id)->first();
 
         $tags = $this->getTagsById($trail->id);
 
         $images = $this->getImagesById($trail->id);
-    
+
             if($trail->user_id == auth()->user()->id){
                 return response()->json(
                     [

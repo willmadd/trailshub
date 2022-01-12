@@ -11,8 +11,7 @@ import distanceIcon from '../../../images/icons/distance.svg';
 const StatsTab = props => {
     let { ascent, descent, time, distance, imperial } = props;
 
-    const MetersToFt = 3.28084;
-    const ftToMiles = 0.000189394;
+
 
 const [hours, min, sec] = secondsToTime(time);
 
@@ -33,7 +32,7 @@ return (
                 </h5>
             )}
             {time && <h5><img src={timeIcon}/>{hours}h {min}m</h5>}
-            
+
             {distance && (
                 <h5><img src={distanceIcon}/>
                     {imperial

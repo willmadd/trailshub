@@ -10,4 +10,5 @@ export default {
     tags:'/trails/:tag',
     trail:'/:trailIdentifier',
     stravaCallback:'/strava_auth',
+    difficulty:'/trail-grades-explained',
 }
